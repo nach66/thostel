@@ -8,7 +8,7 @@ export default function ContactForm() {
                         <Title title="דברו איתנו" />
                         <form className="mt-5">
                             {/* first */}
-                            <div className="form-group"
+                            <div className="form-groups"
                             >
                                 <input
                                 type="text"
@@ -18,7 +18,7 @@ export default function ContactForm() {
                                 />
                             </div>
                             {/* email */}
-                            <div className="form-group">
+                            <div className="form-groups">
                                 <input
                                 type="email"
                                 name="email"
@@ -27,7 +27,7 @@ export default function ContactForm() {
                                 />
                             </div>
                             {/* subject */}
-                            <div className="form-group">
+                            <div className="form-groups">
                                 <input
                                 type="text"
                                 name="subject"
@@ -45,6 +45,7 @@ export default function ContactForm() {
                                 />
                             </div>
                         </form>
+                        <button className="btn-primary">שלח</button>
                     </div>
             </section>
     );
