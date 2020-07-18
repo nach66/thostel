@@ -50,4 +50,4 @@ export default class Images extends Component {
             </div>
         );
     }
-    }
+}
