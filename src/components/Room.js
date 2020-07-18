@@ -10,12 +10,12 @@ export default function Room({room}) {
             <div className="img-container">
                 <img src={images[0] || def} alt="single room" />
                 <div className="price-top">
-                    <h6>${price}</h6>
-                    <p>per night</p>
+                    <h6>‎₪{price}</h6>
+                    <p>ללילה</p>
                 </div> 
                 <Link to={`/rooms/${slug}`} 
                 className="btn-primary room-link" >
-                    Features
+                    לפרטים
                 </Link>           
             </div> 
             <p className="room-info">{name}</p>   

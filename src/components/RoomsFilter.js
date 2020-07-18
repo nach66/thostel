@@ -12,14 +12,11 @@ export default function RoomsFilter({ rooms }) {
 
     const context = useContext(RoomContext);
     const {handleChange,type,capacity,price,
-        minPrice, maxPrice,minSize,maxSize,
-        breakfast,pets} = context;
-
-
+        minPrice, maxPrice, breakfast,pets} = context;
 // get unique types
     let types = getUnique(rooms,'type');
 // add all
-    types = ['all', ...types];
+    types = ['הכול', ...types];
 // map to jsx
     types = types.map((item, index) => {
         return (
@@ -28,7 +25,6 @@ export default function RoomsFilter({ rooms }) {
             </option>
         );
     });
-
     let people = getUnique(rooms, 'capacity');
      people = people.map((item, index) => {
         return (
@@ -40,11 +36,11 @@ export default function RoomsFilter({ rooms }) {
 
     return (
         <section className="filter-container">
-            <Title title="search rooms" />
+            <Title title="חיפוש חדר" />
             <form className="filter-form">
                 {/*select type  */}
                 <div className="form-group">
-                    <label htmlFor="type">room type</label>
+                    <label htmlFor="type">סוג החדר</label>
                     <select
                         name="type"
                         id="type"
@@ -57,7 +53,7 @@ export default function RoomsFilter({ rooms }) {
                 {/* end select type */}
                 {/*guests   */}
                 <div className="form-group">
-                <label htmlFor="capacity">Guests</label>
+                <label htmlFor="capacity">מספר אורחים</label>
                 <select
                     name="capacity"
                     id="capacity"
@@ -70,7 +66,7 @@ export default function RoomsFilter({ rooms }) {
                 {/* end guests  */}
                 {/* room price */}
                 <div className="form-group">
-                <label htmlFor="price">room price ${price}</label>
+                <label htmlFor="price">‎עד מחיר ₪{price}</label>
                 <input
                     type="range"
                     name="price"
@@ -80,32 +76,10 @@ export default function RoomsFilter({ rooms }) {
                     value={price}
                     onChange={handleChange}
                     className="form-control"
+                    style={{  direction: 'ltr'}}
                 />
                 </div>
                 {/* end of room price */}
-                {/* size */}
-                <div className="form-group">
-                <label htmlFor="size">room size</label>
-                <div className="size-inputs">
-                    <input
-                    type="number"
-                    name="minSize"
-                    id="size"
-                    value={minSize}
-                    onChange={handleChange}
-                    className="size-input"
-                    />
-                    <input
-                    type="number"
-                    name="maxSize"
-                    id="size"
-                    value={maxSize}
-                    onChange={handleChange}
-                    className="size-input"
-                    />
-                </div>
-                </div>
-                {/* end of size */}
                 {/* extras  */}
                 <div className="form-group">
                 <div className="single-extra">
@@ -116,7 +90,7 @@ export default function RoomsFilter({ rooms }) {
                     checked={breakfast}
                     onChange={handleChange}
                     />
-                    <label htmlFor="breakfast">breakfast</label>
+                    <label htmlFor="breakfast">ארוחת בוקר כלולה</label>
                 </div>
                 <div className="single-extra">
                     <input
@@ -126,7 +100,7 @@ export default function RoomsFilter({ rooms }) {
                     checked={pets}
                     onChange={handleChange}
                     />
-                    <label htmlFor="pets">pets</label>
+                    <label htmlFor="pets">חיות מחמד</label>
                 </div>
                 </div>
                 {/* end of extras  */}

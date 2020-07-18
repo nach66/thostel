@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Title from './Title';
-import {FaCocktail,FaHiking,FaShuttleVan,FaBeer} 
+import {FaCocktail,FaWifi,FaTemperatureLow,FaRegMoneyBillAlt} 
 from 'react-icons/fa';
 
 export default class Servies extends Component {
@@ -8,30 +8,27 @@ export default class Servies extends Component {
         services: [
             {
                 icon:<FaCocktail/>,
-                title:"free cocktails",
-                info:'lorem mmmmm'
+                title:"בר"
             },
             {
-                icon:<FaHiking/>,
-                title:"endless hiking",
-                info:'lorem mmmmm'
+                icon:<FaWifi/>,
+                title:"WiFi"
             },
             {
-                icon:<FaShuttleVan/>,
-                title:"good drivers",
-                info:'lorem mmmmm'
+                icon:<FaTemperatureLow/>,
+                title:"חדרים ממוזגים"
             },
             {
-                icon:<FaBeer/>,
-                title:"strongest beer",
-                info:'lorem mmmmm'
+                icon:<FaRegMoneyBillAlt/>,
+                title:"כספומט"
             }
         ]
     }
     render() {
         return (
             <section className="services">
-                <Title title="services"/> 
+                <Title title="שירותים"/> 
+                אנו מציעים את כל השירותים המודרניים לנוחותכם במהלך שהותכם! אם תזדקקו למשהו נוסף, נשמח לעזור לך בכל דרך
                 <div className="services-center">
                     {this.state.services.map(
                         (item, index) => {return (

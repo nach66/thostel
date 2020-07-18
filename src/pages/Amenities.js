@@ -1,15 +1,15 @@
 import React from 'react'
-import RoomsContainer from '../components/RoomsContainer';
+import Services from '../components/Servies';
 import Images from '../components/Images';
 
-export default function Rooms() {
+export default function Amenities() {
     return (
         <>
-            <Images title="החדרים שלנו" 
+            <Images title="השירותים שלנו" 
                     link="/"
                     link_text="חזרה לעמוד הבית"
             />
-            <RoomsContainer/>
+            <Services/>
         </>
-    );
+    )
 }

@@ -23,10 +23,11 @@ export default class RoomProvider extends Component {
   getData = async () => {
     try {
       let response = await Client.getEntries({
-        content_type: "beachResort",
+        content_type: "thostel",
 //        order:"sys.createdAt"
-        order:"-fields.price"
+        order:"fields.price"
       });
+
       let rooms = this.formatData(response.items);
       let featuredRooms = rooms.filter(room => room.featured === true);
       let maxPrice = Math.max(...rooms.map(item => item.price));

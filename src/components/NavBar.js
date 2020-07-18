@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import logo from '../images/logo.svg'
+import logo from '../images/logo.jpg'
 import {FaAlignRight} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
@@ -27,10 +27,27 @@ export default class NavBar extends Component {
                     </div>
                     <ul className={this.state.isOpen?"nav-links show-nav" : "nav-links"}>
                         <li>
-                            <Link to="/">Home</Link>
+                            <Link to="/amenities">שירותים</Link>
                         </li>
                         <li>
-                            <Link to="/rooms">Rooms</Link>
+                            <Link to="/rooms">חדרים</Link>
+                        </li>
+                        <li>
+                            <Link to="/gallery">גלריה</Link>
+                        </li>
+                        <li>
+                            <Link to="/error">פעילויות</Link>
+                        </li>
+                        <li>
+                            <Link to="/contact">צור-קשר</Link>
+                        </li>
+                        <li>
+                            <Link to="/location">מיקום</Link>
+                        </li>
+                        <li>                        
+                            <button className="book-btn">
+                                הזמן עכשיו!                                         
+                            </button>
                         </li>
                     </ul>
                 </div>     

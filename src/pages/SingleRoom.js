@@ -5,27 +5,34 @@ import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';
 import {RoomContext} from '../context';
 import StyledHero from "../components/StyledHero";
+import Lightbox from 'lightbox-react';
+import 'lightbox-react/style.css';
 
 export default class SingleRoom extends Component {
     constructor(props){
         super(props);
         this.state={
+            isOpen: false,
             slug:this.props.match.params.slug,
             def
         };
     }
-    
+
+    handleExpand() {
+        this.setState({ isOpen: true });
+    }
     static contextType = RoomContext;
     
     render() {
+        const { isOpen } = this.state;
         const { getRoom } = this.context;
         const room = getRoom(this.state.slug);
         if (!room){
             return (
                 <div className="error">
-                    <h3>no such a room!</h3>
+                    <h3>לצערנו אין חדר כזה</h3>
                     <Link to="/rooms" className="btn-primary">
-                        back to rooms
+                        בחזרה לחדרים
                     </Link>
                 </div>
             );
@@ -33,41 +40,49 @@ export default class SingleRoom extends Component {
         const {name, description, capacity, price,
             extras, breakfast, pets, size, images} = room;
         const [mainImg,...defuldImg] = images;
-            return (
+            
+        return (
             <>
                 <StyledHero img={mainImg || def}>
-                    <Banner title={`${name} room`}>
+                    <Banner title={name}>
                         <Link to="/rooms" className="btn-primary">
-                            back to rooms
+                            בחזרה לחדרים
                         </Link>
                     </Banner>
                 </StyledHero>
+
                 <section className="single-room">
                     <div className="single-room-images">
                         {defuldImg.map((item,index)=>{
-                            return <img key={index} src={item} alt={name}/>
+                            return ( <div
+                                    key={index} alt={name}
+                                    style={{backgroundImage: `url(${item})`}}
+                                    onClick={() => this.handleExpand()}>
+                                        {isOpen && (<Lightbox mainSrc={item} onCloseRequest=
+                                        {()=> this.setState({ isOpen: false })}/>)}    
+                            </div>);                       
                         })}
-                    </div> 
+                    </div>
                     <div className="single-room-info">
                         <article className="desc">
-                            <h3>details</h3>
+                            <h3>פרטים</h3>
                             <p>{description}</p>
                         </article>
                         <article className="info">
-                            <h3>info</h3>
-                            <h6>price: ${price}</h6>
-                            <h6>size: {`${size} SQFT`}</h6>
+                            <h3>מידע</h3>
+                            <h6>מחיר: ₪{price}</h6>
+                            <h6>גודל החדר: {`${size} מ"ר`}</h6>
                             <h6>
-                                max capacity : {" "} {capacity > 1? 
-                                `${capacity} pepole`: `${capacity} person`}
+                                כמות אנשים בחדר : {" "} {capacity > 1? 
+                                `${capacity} אנשים`: `${capacity} person`}
                             </h6>
-                            <h6> {pets? "pets allowed" : "no pets allowed"}</h6>
-                            <h6>{breakfast && "free breakfast included"} </h6>                            
+                            <h6> {pets? "מותר חיות" : "אין אפשרות להביא חיות מחמד"}</h6>
+                            <h6>{breakfast && "ארוחת בוקר כלולה"} </h6>                            
                         </article>
                     </div>
                 </section>
                 <section className="room-extras">
-                    <h6>extras</h6>
+                    <h6>בנוסף</h6>
                     <ul className="extras">
                         {extras.map((item,index)=>{
                         return<li key={index}>- {item}</li> })}
