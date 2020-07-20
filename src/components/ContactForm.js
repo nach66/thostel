@@ -36,7 +36,7 @@ export default function ContactForm() {
                                 />
                             </div>
                             {/* message */}
-                            <div className="form" style={{marginLeft:'330px',width:'700px'}}>
+                            <div className="form" style={{margin:'10px'}}>
                                 <textarea
                                 name="message"
                                 className="form-control"
