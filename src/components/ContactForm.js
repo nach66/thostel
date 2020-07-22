@@ -1,52 +1,33 @@
 import React from 'react'
 import Title from './Title'
+import {FaEnvelope, FaPhoneAlt, FaFacebookSquare} from 'react-icons/fa'
+import {Link} from 'react-router-dom'
 
 export default function ContactForm() {
     return (
-            <section className="services">
-                    <div className="col-10 mx-auto col-md-6 my-3">
-                        <Title title="דברו איתנו" />
-                        <form className="mt-5">
-                            {/* first */}
-                            <div className="form-groups"
-                            >
-                                <input
-                                type="text"
-                                name="firstName"
-                                className="form-control"
-                                placeholder="שם מלא"
-                                />
-                            </div>
-                            {/* email */}
-                            <div className="form-groups">
-                                <input
-                                type="email"
-                                name="email"
-                                className="form-control"
-                                placeholder="email@gmail.com"
-                                />
-                            </div>
-                            {/* subject */}
-                            <div className="form-groups">
-                                <input
-                                type="text"
-                                name="subject"
-                                className="form-control"
-                                placeholder="נושא"
-                                />
-                            </div>
-                            {/* message */}
-                            <div className="form" style={{margin:'10px'}}>
-                                <textarea
-                                name="message"
-                                className="form-control"
-                                rows="10"
-                                placeholder="הודעה"
-                                />
-                            </div>
-                        </form>
-                        <button className="btn-primary">שלח</button>
-                    </div>
-            </section>
+        <>
+        <section className="services">
+        <Title title="דברו איתנו"/> 
+
+                <Link to='https://react.semantic-ui.com/'>
+                <FaFacebookSquare 
+                    style={{color: 'blue'}}
+                    className="contact-icon"/>
+                </Link>
+            
+                <Link to='https://react.semantic-ui.com/'>
+                <FaEnvelope 
+                    style={{color: 'var(--mainWhite)'}}
+                    className="contact-icon"/>
+                </Link>
+
+                <Link to='https://react.semantic-ui.com/'>
+                <FaPhoneAlt 
+                    style={{color: 'rgb(7, 161, 58)'}}
+                    className="contact-icon"/>
+                </Link>
+            
+        </section>
+        </>
     );
 }

@@ -7,6 +7,7 @@
 }
 :root {
   --myblue: #050a5c;;
+  --yellow: #ebe050;;
   --primaryColor: #ecb80e;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
@@ -15,8 +16,28 @@
   --darkGrey: #cfcfcf;
   --mainTransition: all 0.3s linear;
   --mainSpacing: 3px;
+  --mainGreen: rgb(86, 204, 39);
+  --niceGreen: rgb(7, 161, 58);
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.contact-icon{
+  padding: 15px;
+  margin: 5px;
+  font-size: 7rem;
+  background-color: var(--darkGrey);
+  border-radius: 30%;
+}
+.contact-icon:hover{
+  font-size: 8rem;
+}
+
+.sep{
+    width: 85%;
+    height: 30px;
+    background-image: url("./images/mirror.png");
+    margin: 1.7rem auto;
 }
 
 .form-groups{
@@ -43,26 +64,25 @@
   width: 900px;
   height: 400px;
 }
+
 /*OLMap page*/
 .map {
-  margin-bottom: 30px;
   width: 450px;
   height: 300px;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: auto;
+  margin-bottom: 15px;
   background-color: #cccccc;
-  align-items: center;
-  justify-content: center;
 }
 .btns-container {
+  padding: 0 ;
   display: grid;
   text-align: center;
-  margin-bottom: 40px;
-  margin-left: 165px;
-  margin-right: 165px;
   grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
   grid-column-gap: 20px;
   grid-row-gap: 1rem;
+  justify-content: center;
+  margin-right: 200px;
+  margin-left: 200px;
 }
 /*end of olmap page*/
 
@@ -94,7 +114,6 @@
 body {
   padding-top: 66px;
   color: var(--mainBlack);
-  background: var(--offWhite);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.4;
 }
@@ -136,6 +155,9 @@ h6 {
   font-weight: bold;
   margin-bottom: 1.5em;
 }
+div{
+  direction: rtl;
+}
 
 .btn-primary {
   display: inline-block;
@@ -170,114 +192,16 @@ h6 {
   letter-spacing: var(--mainSpacing);
 }
 /* end of globals */
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 0.75rem 2rem;
-  background: var(--mainWhite);
-  z-index: 1;
-}
-.nav-header {
-      /*משנה סדר כותרת במסך קטן*/
-  display: flex;
-  justify-content: space-between;
-}
-/* במסך קטן - כפתור התפריט*/
-.nav-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-.nav-icon {
-  font-size: 1.5rem;
-  color:darkblue;
-}
-.nav-links {
-  /*מזיז את כפתור ההזמנה במסך קטן*/
-  direction: rtl;
-  overflow: hidden;
-  transition: var(--mainTransition);
-  list-style-type: none;
-}
-.nav-links a {
-  display: block;
-  text-decoration: none;
-  padding: 0.5rem 0;
-  color:darkblue;
-  transition: var(--mainTransition);
-  text-align: right;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: var(--mainSpacing);
-}
-.nav-links a:hover {
-  color: aliceblue;
-  background-color: #ecb80e;
-}
-
-.book-btn {
-  background-color: var(--primaryColor);
-  border-radius:10px;
-  border-width: thin;
-  color: #050a5c;
-  padding: 5px 25px;
-  margin-top: 5px;
-  text-align: center;
-  font-weight: bold;
-  display: inline-box;
-  font-size: 16px;
-  cursor: pointer;
-}
-.book-btn:hover,
-.book-btn:focus {
-  box-shadow: 0 0.5em 0.9em -0.4em #050a5c ;
-  transform: translateY(-0.25em);
-}
-
-/* תפריט של מסך קטן, כש0 הוא סגור*/
-.show-nav {
-  height: 0px;
-}
-
-/*מסך גדול מ768*/
-@media screen and (min-width: 768px) {
-  .nav-btn {
-    /*גורם לאייקון מסך קטן להיעלם*/
-    display: none;
-  }
-  .nav-center {
-    max-width: 1070px;
-    margin: 0 auto;
-    display: flex;
-    /*משנה סדר כותרת במסך מלא*/
-    direction: rtl;
-  }
-  .nav-links {
-    height: auto;
-    display: flex;
-    margin-left: 4rem;
-    /*מוריד שורת כותרת לגובה הלוגו במסך מלא*/
-    padding-top: 70px; 
-  }
-  .nav-links a {
-    margin: 0 1rem;
-    padding: 0.5rem;
-  }
-}
-/* end of navbar */
-
 
 .switch{
+  background-color: var(--offWhite);
   display: flex;
   justify-content: center;
 }
 /* Hero */
 .defaultHero,
 .roomsHero {
+  padding-top: 45px;
   width: 400px;
   display: flex;
   align-items: center;
@@ -301,74 +225,140 @@ h6 {
 }
 .banner div {
   width: 10rem;
-  height: 5px;
-  background: var(--primaryColor);
+  height: 8px;
+  background-color: var(--primaryColor);
   margin: 1.7rem auto;
 }
 .banner p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
-@media screen and (min-width: 576px) {
-  .map{
-    width: 550px;
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--mainWhite);
+  z-index: 1;
+}
+.nav-header {
+      /*משנה סדר כותרת במסך קטן*/
+  display: flex;
+  justify-content: space-between;
+}
+/* במסך קטן - כפתור התפריט*/
+.nav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.nav-icon {
+  font-size: 1.5rem;
+  color:var(--myblue);
+}
+.nav-links {
+  /*מזיז את כפתור ההזמנה במסך קטן*/
+  direction: rtl;
+  overflow: hidden;
+  transition: var(--mainTransition);
+  list-style-type: none;
+}
+.nav-links a {
+  color:var(--myblue);
+  font-weight: 600;
+  font-size: 1rem;
+  justify-content: center;  
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  transition: var(--mainTransition);
+  cursor: pointer;
+  border-radius:10px;
+}
+.nav-links a:hover,
+.nav-links a:focus {
+  box-shadow: 0 0.5em 0em -0.4em #050a5c ;
+  transform: translateY(-0.25em);
+}
+
+/* תפריט של מסך קטן, כש0 הוא סגור*/
+.show-nav {
+  height: 0px;
+}
+/*אייקון עוגן בין הכפתורי תפריט*/
+.anchor{
+  font-size: 0.5rem;
+}
+/*מסך גדול מ945*/
+@media screen and (min-width: 880px) {
+  .anchor{
+    font-size: 0.8rem;
+    color: var(--myblue);
+    margin: auto;
   }
-.defaultHero,
-.roomsHero {
-  width: 560px;
+  .nav-btn {
+    /*גורם לאייקון מסך קטן להיעלם*/
+    display: none;
+  }
+  .nav-center {
+    /*משנה סדר כותרת במסך מלא*/
+    direction: rtl;
+    margin: auto;
+    display: flex;
+    width: 1040px;
+  }
+  .nav-links {
+    height: auto;
+    display: flex;
+    /*מוריד שורת כותרת לגובה הלוגו במסך מלא*/
+    padding-top: 40px; 
+    margin: auto;
+  }
+  .nav-links a{
+    padding: 5px 12px;
+    margin: 12.4px;
+    background-color: var(--primaryColor);
+  }
+  .nav-links a:hover,
+  .nav-links a:focus {
+    box-shadow: 0 0.5em 0.9em -0.4em #050a5c ;
+    transform: translateY(-0.25em);
+    color: aliceblue;
+  }
+}
+/* end of navbar */
+
+@media screen and (min-width: 600px) {
+  .map, .defaultHero,
+  .roomsHero {
+  width: 600px;
 }
   .banner {
     padding: 2rem 3rem;
-  }
-  .banner h1 {
-    font-size: 2.5rem;
-  }
-}
-@media screen and (min-width: 700px) {
-  .map{
-    width: 700px;
-  }
-  .defaultHero,
-.roomsHero {
-  width: 700px;
-}
-}
-@media screen and (min-width: 820px) {
-  .map{
-    width: 850px;
-  }
-  .defaultHero,
-.roomsHero {
-  width: 800px;
-}
-}
-@media screen and (min-width: 992px) {
+  }}
+@media screen and (min-width: 880px) {
   .map, .defaultHero,
-.roomsHero {
-  width: 900px;
-}
+  .roomsHero {
+  width: 800px;
+}}
+@media screen and (min-width: 1050px) {
+  .map, .defaultHero,
+  .roomsHero {
+    width: 1030px;
+  }
   .banner {
     padding: 2rem 6rem;
-  }
-  .banner h1 {
-    font-size: 2.5rem;
-  }
-}
-@media screen and (min-width: 1050px) {
-  .map{
-    width: 1200px;
-  }
-  .defaultHero,
-  .roomsHero {
-    width: 1040px;
-  }
-}
+}}
+
 /* End of Banner */
 /* Title */
 .section-title {
   direction: rtl;
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 .section-title h4 {
   font-size: 2rem;
@@ -377,6 +367,7 @@ h6 {
   margin-bottom: 1rem;
 }
 .section-title div {
+  direction: rtl;
   width: 5rem;
   height: 5px;
   margin: 0 auto;
@@ -386,31 +377,31 @@ h6 {
 
 /* services */
 .services {
-  padding: 4rem 0;
-  background: var(--offWhite);
+  padding: 1rem 0;
   text-align: center;
 }
 .services-center {
   width: 90vw;
-  margin: 0 auto;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
-  grid-row-gap: 2rem;
+  grid-row-gap: 10px;
   grid-column-gap: 50px;
 }
-.service span {
-  display: inline-block;
+.services span {
   color: var(--primaryColor);
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+ /* border: 1px solid black;
+  border-radius: 50%;
+  padding: 3px 6px 3px 6px;
+  margin: 20px; */
 }
 .services h6 {
+  margin-top: 5px;
   letter-spacing: var(--mainSpacing);
-  text-transform: capitalize;
 }
 .services p {
   width: 80%;
-  margin: 0 auto;
 }
 @media screen and (min-width: 992px) {
   .services-center {

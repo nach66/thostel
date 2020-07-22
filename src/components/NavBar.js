@@ -1,53 +1,61 @@
 import React, { Component } from 'react'
 import logo from '../images/logo.jpg'
-import {FaAlignRight} from 'react-icons/fa'
+import {FaAlignLeft, FaAnchor} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 export default class NavBar extends Component {
     state={
-        isOpen: false
+        isOpen: true
     }
     handleToggle = () => {
         this.setState({
             isOpen: !this.state.isOpen
         })
     }
-
+    
     render() {
         return (
             <nav className="navbar">
                 <div className="nav-center">
                     <div className="nav-header">
                         <Link to="/">                        
-                            <img src={logo} alt="Beach Resort"/>
+                            <img src={logo} className="nav-icon" alt="logo"/>
                         </Link>
                         <button type="button" onClick={this.handleToggle} className="nav-btn">
-                            <FaAlignRight className="nav-icon"/>
+                            <FaAlignLeft className="nav-icon"/>
                         </button>
                     </div>
                     <ul className={this.state.isOpen?"nav-links show-nav" : "nav-links"}>
                         <li>
-                            <Link to="/amenities">שירותים</Link>
+                            <Link to="/amenities" className="nav-links">שירותים</Link>
                         </li>
+                        <FaAnchor className="anchor"/>
                         <li>
-                            <Link to="/rooms">חדרים</Link>
+                            <Link to="/rooms" className="nav-links">חדרים</Link>
                         </li>
+                        <FaAnchor className="anchor"/>
                         <li>
-                            <Link to="/gallery">גלריה</Link>
+                            <Link to="/gallery" className="nav-links">גלריה</Link>
                         </li>
+                        <FaAnchor className="anchor"/>
                         <li>
-                            <Link to="/error">פעילויות</Link>
+                            <Link to="/error" className="nav-links">פעילויות</Link>
                         </li>
+                        <FaAnchor className="anchor"/>
                         <li>
-                            <Link to="/contact">צור-קשר</Link>
+                            <Link to="/contact" className="nav-links">צור-קשר</Link>
                         </li>
+                        <FaAnchor className="anchor"/>
                         <li>
-                            <Link to="/location">מיקום</Link>
+                            <Link to="/location" className="nav-links">מיקום</Link>
                         </li>
-                        <li>                        
-                            <button className="book-btn">
-                                הזמן עכשיו!                                         
-                            </button>
+                        <FaAnchor className="anchor"/>
+                        <li>
+                        <Link className="nav-links"
+                        style={{border: '1px solid var(--myblue)',
+                                color: 'var(--mainWhite)',
+                            background: 'var(--niceGreen)'}}
+                        >הזמן עכשיו!</Link>
                         </li>
                     </ul>
                 </div>     

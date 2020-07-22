@@ -22,8 +22,8 @@ export default function Home() {
             <Title title="למה להתארח דווקא אצלנו?"/> 
                 <h5>המיקום שלנו נוח ומרכזי: 3 דקות הליכה מתחנה מרכזית טבריה, ו3 דקות הליכה מחופי הכנרת. </h5>
                 <h5>יש חניה זמינה ומסעדות, שווקים וחנויות ממש ברחוב שלנו.</h5>
-                <h5>שיפצנו ועיצבנו את ההוסטל לנוחות וביטחון, ואנו שומרים על זה.</h5>
-                <h5>אנו רוצים שתחזרו בעתיד לכן אנו שואפים להפוך את השהייה שלכם למהנה ונוחה!</h5>
+                <h5>ההוסטל מעוצב בצורה נוחה וחדשנית, ובהתאם לתו הסגול</h5>
+                <h5>אנחנו רוצים להפוך אתכם ללקוחות VIP שלנו, ולכן שואפים להפוך את השהייה שלכם למהנה ונוחה</h5>
             </section>
 
             <div className="abuot">
@@ -34,11 +34,15 @@ export default function Home() {
                 </article>
             </div>
 
-            <Services/>
-            <FeaturedRoom/>
-            <OLMap/>
-            <Gallerys/>
             <ContactForm/>
+            <div className="sep"/>
+            <Services/>
+            <div className="sep"/>
+            <FeaturedRoom/>
+            <div className="sep"/>
+            <OLMap/>
+            <div className="sep"/>
+            <Gallerys/>
             <Footer/>
         </>
     );
