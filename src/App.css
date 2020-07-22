@@ -35,7 +35,7 @@
 
 .sep{
     width: 85%;
-    height: 30px;
+    height: 33px;
     background-image: url("./images/mirror.png");
     margin: 1.7rem auto;
 }
@@ -49,6 +49,7 @@
 
 /*abuot in homepage*/
 .abuot { 
+  margin: auto;
   display: grid;
   color: var(--mainGrey);
   background: #050a5c;
@@ -74,7 +75,6 @@
   background-color: #cccccc;
 }
 .btns-container {
-  padding: 0 ;
   display: grid;
   text-align: center;
   grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
@@ -83,6 +83,7 @@
   justify-content: center;
   margin-right: 200px;
   margin-left: 200px;
+  margin-bottom: 3rem;
 }
 /*end of olmap page*/
 
@@ -240,7 +241,7 @@ div{
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 1rem 0rem;
   background: var(--mainWhite);
   z-index: 1;
 }
@@ -266,6 +267,7 @@ div{
   overflow: hidden;
   transition: var(--mainTransition);
   list-style-type: none;
+  height: 300px;
 }
 .nav-links a {
   color:var(--myblue);
@@ -277,10 +279,12 @@ div{
   transition: var(--mainTransition);
   cursor: pointer;
   border-radius:10px;
+  padding: 3px 6px;
+  margin: 2px;
 }
 .nav-links a:hover,
 .nav-links a:focus {
-  box-shadow: 0 0.5em 0em -0.4em #050a5c ;
+  box-shadow: 0 0.5em 0em -0.3em #050a5c ;
   transform: translateY(-0.25em);
 }
 
@@ -389,7 +393,7 @@ div{
   grid-column-gap: 50px;
 }
 .services span {
-  color: var(--primaryColor);
+  color: var(--mainBlack);
   font-size: 1.5rem;
  /* border: 1px solid black;
   border-radius: 50%;
