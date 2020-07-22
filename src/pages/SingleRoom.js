@@ -38,7 +38,7 @@ export default class SingleRoom extends Component {
             );
         }
         const {name, description, capacity, price,
-            extras, breakfast, pets, size, images} = room;
+            extras, minibar, tv, size, images} = room;
         const [mainImg,...defuldImg] = images;
             
         return (
@@ -51,8 +51,9 @@ export default class SingleRoom extends Component {
                     </Banner>
                 </StyledHero>
 
-                <section className="single-room">
-                    <div className="single-room-images">
+                <section className="services">
+
+                    <div className="container">
                         {defuldImg.map((item,index)=>{
                             return ( <div
                                     key={index} alt={name}
@@ -63,8 +64,13 @@ export default class SingleRoom extends Component {
                             </div>);                       
                         })}
                     </div>
+
+                    </section>
+                    
+                <section >
+
                     <div className="single-room-info">
-                        <article className="desc">
+                        <article className="description">
                             <h3>פרטים</h3>
                             <p>{description}</p>
                         </article>
@@ -76,11 +82,13 @@ export default class SingleRoom extends Component {
                                 כמות אנשים בחדר : {" "} {capacity > 1? 
                                 `${capacity} אנשים`: `${capacity} person`}
                             </h6>
-                            <h6> {pets? "מותר חיות" : "אין אפשרות להביא חיות מחמד"}</h6>
-                            <h6>{breakfast && "ארוחת בוקר כלולה"} </h6>                            
+                            <h6> {tv? "טלוויזיה בכבלים עם מסך שטוח" : "אין טלוויזיה"}</h6>
+                            <h6> {minibar && "מיני בר בחדר"} </h6>                            
                         </article>
                     </div>
+
                 </section>
+
                 <section className="room-extras">
                     <h6>בנוסף</h6>
                     <ul className="extras">

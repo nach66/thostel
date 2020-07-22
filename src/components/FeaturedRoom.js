@@ -3,6 +3,7 @@ import {RoomContext} from '../context';
 import Loading from "./Loading";
 import Title from "./Title";
 import Room from "./Room";
+import { Link } from 'react-router-dom'
 
 export default class FeaturedRoom extends Component {    
     static contextType = RoomContext;
@@ -12,9 +13,9 @@ export default class FeaturedRoom extends Component {
             return <Room key={room.id} room={room}/>;
         });
         return (
-            <section className="featured-rooms">
+            <section className="roomslist">
                 <Title title="חדרים "/>
-                <div className="featured-rooms-center">
+                <div className="roomslist-center">
                     {loading? <Loading/> : rooms}
                 </div>
             </section>

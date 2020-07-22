@@ -12,7 +12,7 @@ export default function RoomsFilter({ rooms }) {
 
     const context = useContext(RoomContext);
     const {handleChange,type,capacity,price,
-        minPrice, maxPrice, breakfast,pets} = context;
+        minPrice, maxPrice, minibar, tv} = context;
 // get unique types
     let types = getUnique(rooms,'type');
 // add all
@@ -26,7 +26,7 @@ export default function RoomsFilter({ rooms }) {
         );
     });
     let people = getUnique(rooms, 'capacity');
-     people = people.map((item, index) => {
+    people = people.map((item, index) => {
         return (
             <option key={index} value={item}>
                 {item}
@@ -53,55 +53,55 @@ export default function RoomsFilter({ rooms }) {
                 {/* end select type */}
                 {/*guests   */}
                 <div className="form-group">
-                <label htmlFor="capacity">מספר אורחים</label>
-                <select
-                    name="capacity"
-                    id="capacity"
-                    value={capacity}
-                    className="form-control"
-                    onChange={handleChange}>
-                    {people}
-                </select>
+                    <label htmlFor="capacity">מספר אורחים</label>
+                    <select
+                        name="capacity"
+                        id="capacity"
+                        value={capacity}
+                        className="form-control"
+                        onChange={handleChange}>
+                        {people}
+                    </select>
                 </div>
                 {/* end guests  */}
                 {/* room price */}
                 <div className="form-group">
-                <label htmlFor="price">‎עד מחיר ₪{price}</label>
-                <input
-                    type="range"
-                    name="price"
-                    min={minPrice}
-                    max={maxPrice}
-                    id="price"
-                    value={price}
-                    onChange={handleChange}
-                    className="form-control"
-                    style={{  direction: 'ltr'}}
-                />
+                    <label htmlFor="price">‎עד מחיר ₪{price}</label>
+                    <input
+                        type="range"
+                        name="price"
+                        min={minPrice}
+                        max={maxPrice}
+                        id="price"
+                        value={price}
+                        onChange={handleChange}
+                        className="form-control"
+                        style={{  direction: 'ltr'}}
+                    />
                 </div>
                 {/* end of room price */}
                 {/* extras  */}
                 <div className="form-group">
-                <div className="single-extra">
-                    <input
-                    type="checkbox"
-                    name="breakfast"
-                    id="breakfast"
-                    checked={breakfast}
-                    onChange={handleChange}
-                    />
-                    <label htmlFor="breakfast">ארוחת בוקר כלולה</label>
-                </div>
-                <div className="single-extra">
-                    <input
-                    type="checkbox"
-                    name="pets"
-                    id="pets"
-                    checked={pets}
-                    onChange={handleChange}
-                    />
-                    <label htmlFor="pets">חיות מחמד</label>
-                </div>
+                    <div className="single-extra">
+                        <input
+                        type="checkbox"
+                        name="minibar"
+                        id="minibar"
+                        checked={minibar}
+                        onChange={handleChange}
+                        />
+                        <label htmlFor="minibar">מיני בר</label>
+                    </div>
+                    <div className="single-extra">
+                        <input
+                        type="checkbox"
+                        name="tv"
+                        id="tv"
+                        checked={tv}
+                        onChange={handleChange}
+                        />
+                        <label htmlFor="tv">טלוויזיה בחדר</label>
+                    </div>
                 </div>
                 {/* end of extras  */}
         </form>

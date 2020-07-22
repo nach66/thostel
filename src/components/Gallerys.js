@@ -17,9 +17,8 @@ export default class Gallerys extends Component {
         const { isOpen } = this.state;
         return (
             <>
-            <section className="services">
+                <section className="services">
                 <Title title="תמונות מההוסטל"/> 
-                <div className="gallery-root">
                     <div className="container">
                         <div
                             style={{backgroundImage: `url(${c})`}}
@@ -70,8 +69,8 @@ export default class Gallerys extends Component {
                                 this.setState({ isOpen: false })}/>)}    
                         </div>
                     </div>
-                </div>
                 </section>
+                
 
                 <section className="services">
                 <Title title="נופים בסביבה"/> 

@@ -64,12 +64,13 @@ export default class OLMap extends Component {
                     </Grid>
 
                     <h6>הוראות להגעה ברכב או בתחבורה ציבורית -</h6>
-                    <div className="btns-container">
-                        <Link to="/tlv" className="btn-primary">מתל אביב</Link>
-                        <Link to="/haifa" className="btn-primary">מחיפה</Link>
-                        <Link to="/jerusalem" className="btn-primary">מירושלים</Link>
-                        <Link to="/nazeret" className="btn-primary">מנצרת</Link>
-                    </div>
+                    
+                    <div>
+                        <Link to="/tlv" className="btn-primary btns-map">מתל אביב</Link>
+                        <Link to="/haifa" className="btn-primary btns-map">מחיפה</Link>
+                        <Link to="/jerusalem" className="btn-primary btns-map">מירושלים</Link>
+                        <Link to="/nazeret" className="btn-primary btns-map">מנצרת</Link>
+                    </div >
 
                 </section>
             </>
