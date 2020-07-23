@@ -1,12 +1,22 @@
 import React, { Component } from 'react'
 import Lightbox from 'lightbox-react';
 import 'lightbox-react/style.css';
-import c from '../images/kinneret.jpg'
+import a from '../images/kinneret.jpg'
+import b from '../images/finjan.jpg'
+import c from '../images/cover.jpg'
+import d from '../images/boat.jpg'
 import Title from './Title';
+
+import e from '../images/rooms/room-2.jpeg'
+import f from '../images/rooms/room-3.jpeg'
+import g from '../images/rooms/room-4.jpeg'
+import h from '../images/rooms/room-5.jpeg'
 
 export default class Gallerys extends Component {
     state = {
-        isOpen: false
+        isOpen: false,
+        hostel_images: [e,f,g,h],
+        view_images: [a,b,c,d]
     }
 
     handleExpand() {
@@ -18,116 +28,35 @@ export default class Gallerys extends Component {
         return (
             <>
                 <section className="services">
-                <Title title="תמונות מההוסטל"/> 
+                    <Title title="תמונות מההוסטל"/> 
                     <div className="container">
-                        <div
-                            style={{backgroundImage: `url(${c})`}}
-                            onClick={() => this.handleExpand()}>
-                            {isOpen && (<Lightbox mainSrc={c} onCloseRequest={()=> 
-                                this.setState({ isOpen: false })}/>)}    
-                        </div>
-                        <div
-                            style={{backgroundImage: `url(${c})`}}
-                            onClick={() => this.handleExpand()}>
-                            {isOpen && (<Lightbox mainSrc={c} onCloseRequest={()=> 
-                                this.setState({ isOpen: false })}/>)}    
-                        </div>
-                        <div
-                            style={{backgroundImage: `url(${c})`}}
-                            onClick={() => this.handleExpand()}>
-                            {isOpen && (<Lightbox mainSrc={c} onCloseRequest={()=> 
-                                this.setState({ isOpen: false })}/>)}    
-                        </div>
-                        <div
-                            style={{backgroundImage: `url(${c})`}}
-                            onClick={() => this.handleExpand()}>
-                            {isOpen && (<Lightbox mainSrc={c} onCloseRequest={()=> 
-                                this.setState({ isOpen: false })}/>)}    
-                        </div>
-                        <div
-                            style={{backgroundImage: `url(${c})`}}
-                            onClick={() => this.handleExpand()}>
-                            {isOpen && (<Lightbox mainSrc={c} onCloseRequest={()=> 
-                                this.setState({ isOpen: false })}/>)}    
-                        </div>
-                        <div
-                            style={{backgroundImage: `url(${c})`}}
-                            onClick={() => this.handleExpand()}>
-                            {isOpen && (<Lightbox mainSrc={c} onCloseRequest={()=> 
-                                this.setState({ isOpen: false })}/>)}    
-                        </div>
-                        <div
-                            style={{backgroundImage: `url(${c})`}}
-                            onClick={() => this.handleExpand()}>
-                            {isOpen && (<Lightbox mainSrc={c} onCloseRequest={()=> 
-                                this.setState({ isOpen: false })}/>)}    
-                        </div>
-                        <div
-                            style={{backgroundImage: `url(${c})`}}
-                            onClick={() => this.handleExpand()}>
-                            {isOpen && (<Lightbox mainSrc={c} onCloseRequest={()=> 
-                                this.setState({ isOpen: false })}/>)}    
-                        </div>
+                        {this.state.hostel_images.map((item,index)=>{
+                            return ( <div
+                                    key={index} alt="pic"
+                                    style={{backgroundImage: `url(${item})`}}
+                                    onClick={() => this.handleExpand()}> 
+                                </div>);                       
+                        })}
                     </div>
                 </section>
                 
-
                 <section className="services">
-                <Title title="נופים בסביבה"/> 
-                <div className="gallery-root">
+                    <Title title="נופים בסביבה"/> 
                     <div className="container">
-                        <div
-                            style={{backgroundImage: `url(${c})`}}
-                            onClick={() => this.handleExpand()}>
-                            {isOpen && (<Lightbox mainSrc={c} onCloseRequest={()=> 
-                                this.setState({ isOpen: false })}/>)}    
-                        </div>
-                        <div
-                            style={{backgroundImage: `url(${c})`}}
-                            onClick={() => this.handleExpand()}>
-                            {isOpen && (<Lightbox mainSrc={c} onCloseRequest={()=> 
-                                this.setState({ isOpen: false })}/>)}    
-                        </div>
-                        <div
-                            style={{backgroundImage: `url(${c})`}}
-                            onClick={() => this.handleExpand()}>
-                            {isOpen && (<Lightbox mainSrc={c} onCloseRequest={()=> 
-                                this.setState({ isOpen: false })}/>)}    
-                        </div>
-                        <div
-                            style={{backgroundImage: `url(${c})`}}
-                            onClick={() => this.handleExpand()}>
-                            {isOpen && (<Lightbox mainSrc={c} onCloseRequest={()=> 
-                                this.setState({ isOpen: false })}/>)}    
-                        </div>
-                        <div
-                            style={{backgroundImage: `url(${c})`}}
-                            onClick={() => this.handleExpand()}>
-                            {isOpen && (<Lightbox mainSrc={c} onCloseRequest={()=> 
-                                this.setState({ isOpen: false })}/>)}    
-                        </div>
-                        <div
-                            style={{backgroundImage: `url(${c})`}}
-                            onClick={() => this.handleExpand()}>
-                            {isOpen && (<Lightbox mainSrc={c} onCloseRequest={()=> 
-                                this.setState({ isOpen: false })}/>)}    
-                        </div>
-                        <div
-                            style={{backgroundImage: `url(${c})`}}
-                            onClick={() => this.handleExpand()}>
-                            {isOpen && (<Lightbox mainSrc={c} onCloseRequest={()=> 
-                                this.setState({ isOpen: false })}/>)}    
-                        </div>
-                        <div
-                            style={{backgroundImage: `url(${c})`}}
-                            onClick={() => this.handleExpand()}>
-                            {isOpen && (<Lightbox mainSrc={c} onCloseRequest={()=> 
-                                this.setState({ isOpen: false })}/>)}    
-                        </div>
+                            {this.state.view_images.map((item,index)=>{
+                                return ( <div
+                                        key={index} alt="pic"
+                                        style={{backgroundImage: `url(${item})`}}
+                                        onClick={() => this.handleExpand()}>    
+                                    </div>);                       
+                            })}
                     </div>
-                </div>
-            </section>
+                </section>
             </>
         );
     }
 }
+
+
+/* {isOpen && (<Lightbox mainSrc={item} onCloseRequest=
+    {()=> this.setState({ isOpen: false })}/>)} */  

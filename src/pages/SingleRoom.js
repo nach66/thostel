@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import def from '../images/room-1.jpeg';
-//import Hero from '../components/Hero';
-import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';
-import {RoomContext} from '../context';
+import def from '../images/room-1.jpeg';
 import StyledHero from "../components/StyledHero";
+import Banner from '../components/Banner';
+import {RoomContext} from '../context';
 import Lightbox from 'lightbox-react';
 import 'lightbox-react/style.css';
 

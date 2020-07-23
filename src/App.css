@@ -215,7 +215,7 @@ div{
   min-height: calc(100vh - 120px);
 }
 .roomsHero {
-  background-image: url("./images/room-2.jpeg");
+  background-image: url("./images/rooms/room-2.jpeg");
   min-height: 60vh;
 }
 /* End of Hero */
