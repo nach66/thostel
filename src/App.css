@@ -122,6 +122,7 @@ div{
   width: 6.6rem;
   height: 6.6rem;
   border-radius: 20%;
+  border-color: black;
   background-position: center;
   cursor: pointer;
 }

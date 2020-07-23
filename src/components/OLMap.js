@@ -76,10 +76,10 @@ export default class OLMap extends Component {
                     <h6>הוראות להגעה ברכב או בתחבורה ציבורית -</h6>
                     
                     <div>
-                        <Link to="/tlv" className="btn-primary btns-map">מתל אביב</Link>
-                        <Link to="/haifa" className="btn-primary btns-map">מחיפה</Link>
-                        <Link to="/jerusalem" className="btn-primary btns-map">מירושלים</Link>
-                        <Link to="/nazeret" className="btn-primary btns-map">מנצרת</Link>
+                        <Link target={"_blank"} to="/tlv" className="btn-primary btns-map">מתל אביב</Link>
+                        <Link target={"_blank"} to="/haifa" className="btn-primary btns-map">מחיפה</Link>
+                        <Link target={"_blank"} to="/jerusalem" className="btn-primary btns-map">מירושלים</Link>
+                        <Link target={"_blank"} to="/nazeret" className="btn-primary btns-map">מנצרת</Link>
                     </div >
 
                 </section>

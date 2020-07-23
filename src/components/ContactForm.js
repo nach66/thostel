@@ -34,7 +34,9 @@ export default function ContactForm() {
                     <div style={{backgroundImage: `url(${instagram})`}}/>   
                 </Link>
                 <Link target={"_blank"} to='/ilh'>
-                    <div style={{backgroundImage: `url(${ilh})`}}/>   
+                    <div style={{
+                          borderColor: '#222',
+                          backgroundImage: `url(${ilh})`}}/>   
                 </Link>
 
             </article>
