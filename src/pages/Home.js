@@ -1,13 +1,11 @@
 import React from 'react'
-import Images from '../components/Images';
-import Services from '../components/Servies';
-import FeaturedRoom from '../components/FeaturedRoom';
-import OLMap from '../components/OLMap'
-import Gallerys from '../components/Gallerys'
-import ContactForm from '../components/ContactForm'
-import Footer from '../components/Footer'
 import About from '../components/About'
-import c from '../images/finjan.jpg'
+import Images from '../components/Images'
+import Services from '../components/Servies'
+import ContactForm from '../components/ContactForm'
+import Gallerys from '../components/Gallerys'
+import Footer from '../components/Footer'
+import OLMap from '../components/OLMap'
 
 export default function Home() {
     return (

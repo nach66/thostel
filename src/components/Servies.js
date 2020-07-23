@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Title from './Title';
-import {FaCocktail,FaWifi,FaSoup,FaParking,
-    FaTemperatureLow,FaRegMoneyBillAlt, FaAnchor} 
+import {FaCocktail,FaWifi,FaUtensils,FaParking,
+    FaSmileBeam,FaRegMoneyBillAlt,FaAngellist, FaAnchor} 
 from 'react-icons/fa';
 
 export default class Servies extends Component {
@@ -20,7 +20,7 @@ export default class Servies extends Component {
                 title:"כספומט"
             },
             {
-                icon:<FaCocktail/>,
+                icon:<FaAngellist/>,
                 title:"גג עם נוף פנורמי"
             },
             {
@@ -28,11 +28,11 @@ export default class Servies extends Component {
                 title:"אטרקציות במחירים מוזלים"
             },
             {
-                icon:<FaTemperatureLow/>,
+                icon:<FaSmileBeam/>,
                 title:"צוות מנוסה ואדיב"
             },
             {
-                icon:<FaWifi/>,
+                icon:<FaUtensils/>,
                 title:"מטבח מאובזר"
             },
             {
@@ -45,7 +45,7 @@ export default class Servies extends Component {
         return (
             <section className="services">
                 <Title title="שירותים"/>
-                 <div>אם תזדקקו למשהו נוסף, נשמח לעזור לכם בכל דרך!</div>
+                 <h5>אם תזדקקו למשהו נוסף, נשמח לעזור לכם בכל דרך!</h5>
                 <div className="services-center">
                     {this.state.services.map(
                         (item, index) => {return (

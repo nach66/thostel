@@ -67,6 +67,12 @@ function App() {
             return null;
         }} />
 
+        <Route exact path="/mail" component={() => { 
+            window.location = 
+            'mailto:tiberiashostel@gmail.com'
+            return null;
+        }} />
+
         <Route component={Error}/>
       </Switch>
     </>

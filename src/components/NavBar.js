@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import logo from '../images/logo.jpg'
+import logo from '../images/icons/logo.jpg'
 import {FaAlignLeft, FaAnchor} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 

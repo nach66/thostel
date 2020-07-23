@@ -1,61 +1,71 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 import Title from './Title';
-import {Link} from 'react-router-dom';
-import Grid from '@material-ui/core/Grid'
 
-import 'ol/ol.css';
+import 'ol/ol.css'
+import {OSM} from 'ol/source'
 import { Map, View } from 'ol'
-import {fromLonLat} from 'ol/proj';
+import {fromLonLat, transform} from 'ol/proj'
+import Grid from '@material-ui/core/Grid'
 import {defaults as defaultInteractions, DragRotateAndZoom} from 'ol/interaction';
-import {
-    Tile as TileLayer,
-    Vector as VectorLayer
-} from 'ol/layer'
-import {
-    Vector as VectorSource,
-    OSM as OSM,
-    XYZ as XYZSource,
-    TileWMS as TileWMSSource
-} from 'ol/source'
+import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer'
 import { 
-    ScaleLine, ZoomSlider,
-    MousePosition, OverviewMap,
+    ScaleLine, MousePosition,
     defaults as DefaultControls
 } from 'ol/control'
 
+import Feature from 'ol/Feature';
+import Overlay from 'ol/Overlay';
+import Point from 'ol/geom/Point';
+import TileJSON from 'ol/source/TileJSON';
+import VectorS from 'ol/source/Vector';
+import {Icon, Style} from 'ol/style';
+
 export default class OLMap extends Component {    
+
     componentDidMount() {
+
         const map = new Map({
-        interactions: defaultInteractions().extend([
-        new DragRotateAndZoom()
-        ]),
-        layers: [
-        new TileLayer({
-            source: new OSM()
-        })
-        ],
-        target: 'map',
-            // Add in the following map controls
-        controls: DefaultControls().extend([
-                new ZoomSlider(),
-                new MousePosition(),
+            interactions: defaultInteractions().extend([
+                new DragRotateAndZoom()
+            ]),
+            target: 'map',
+            layers: [
+                new TileLayer({source: new OSM()})
+            ],
+            controls: DefaultControls().extend([
                 new ScaleLine(),
-                new OverviewMap()
-        ]),
-        view: new View({
-            center: fromLonLat([35.518766, 32.789541]),
-            zoom: 13
-        })
-      });
+            ]),
+            view: new View({
+                center: fromLonLat([35.539460, 32.7885]),
+                zoom: 13
+            })
+        });
+
+        const layer = new VectorLayer({
+            source: new VectorS({
+                features: [
+                    new Feature({
+                        geometry: new Point(fromLonLat([35.53947, 32.7887]))
+                    })
+                ]
+            }),
+            style: new Style({
+                image: new Icon({
+                  src: 'https://openlayers.org/en/latest/examples/data/icon.png'
+                })
+              })
+        });
+        map.addLayer(layer);
     }
+
 
     render() {
         return (
             <>
                 <section className="services">
                     <Title title="איך למצוא אותנו?"/>
-                    <h5>3 דקות מתחנת האוטובוס,
-3 דקות מקו המים ...</h5>
+                    <h5>3 דקות מתחנת האוטובוס,3 דקות מקו המים ...</h5>
                     <Grid container>
                         <Grid item xs={12}>
                             <div id='map' className="map" >

@@ -23,103 +23,13 @@
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-.contact-icon{
-  display: inline-flex;
-  font-size: 7.5rem;
-  cursor: auto;
-  background-color: rgb(151, 45, 45);
-  padding: 30px;
-}
-.contact-icon div{
-  width: 7.5rem;
-  height: 7.5rem;
-  margin-left: 20px;
-  margin-right: 20px;
-  justify-content: center;
-  cursor: pointer;
-}
-.contact-icon div:hover{
-  width: 7.7rem;
-  height: 7.7rem;
-}
-
-.sep{
-    width: 85%;
-    height: 33px;
-    background-image: url("./images/mirror.png");
-    margin: 1.7rem auto;
-}
-
-/*abuot in homepage*/
-.abuot { 
-  display: grid;
-  padding: 2px;
-  grid-template-columns: 1fr;
-  background: var(--lightblue);
-}
-.pic div{
-  height: 386px;
-}
-@media screen and (min-width: 935px) {
-  .abuot {
-    display: grid;
-    grid-row-gap: 2rem;
-    grid-column-gap: 10px;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-.abuot h3 {
-    padding-right: 1rem;
-    padding-top: 20px;
-    margin-bottom: 0.6rem;
-  }
-.abuot h6 {
-  padding-right: 1rem;
-  padding-left: 1rem;
-  font-weight: 500;
-  margin-bottom: 0.3rem;
-}
-.abuot img{
-  width: 900px;
-  height: 400px;
-}
-
-/*OLMap page*/
-.map {
-  width: 450px;
-  height: 300px;
-  margin: auto;
-  margin-bottom: 15px;
-  background-color: #cccccc;
-}
-.btns-map {
-  width: 215px;
-  display: inline-block;
-  margin: 7px 15px;
-}
-/*end of olmap page*/
-
-/*gallery page*/
-.container {
-  position: relative;
-}
-.container div {
-  display: inline-block;
-  transition: var(--mainTransition);
-  margin: 10px 18px 10px 18px;
-  border: 1px solid rgb(126, 145, 145);
-  background-Size: cover;
-  width: 250px;
-  height: 200px;
-  cursor: pointer;
-}
-.container div:hover {
-  box-shadow: var(--lightShadow);
-}
-
-/*end of gallery page*/
-
 /* globals */
+.sep{
+  width: 85%;
+  height: 33px;
+  background-image: url("./images/icons/mirror.png");
+  margin: 1.7rem auto;
+}
 body {
   padding-top: 66px;
   color: var(--mainBlack);
@@ -202,6 +112,93 @@ div{
 }
 /* end of globals */
 
+/*contact form*/
+.contact-icon{
+  display: inline-flex;
+  cursor: auto;
+}
+.contact-icon div{
+  margin: 20px;
+  width: 6.6rem;
+  height: 6.6rem;
+  border-radius: 20%;
+  background-position: center;
+  cursor: pointer;
+}
+.contact-icon div:hover{
+  width: 7.7rem;
+  height: 7.7rem;
+}
+
+/*abuot in homepage*/
+.abuot { 
+  display: grid;
+  padding: 2px;
+  grid-template-columns: 1fr;
+  background: var(--lightblue);
+}
+.pic div{
+  height: 386px;
+}
+@media screen and (min-width: 935px) {
+  .abuot {
+    display: grid;
+    grid-row-gap: 2rem;
+    grid-column-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.abuot h3 {
+    padding-right: 1rem;
+    padding-top: 20px;
+    margin-bottom: 0.6rem;
+  }
+.abuot h6 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+.abuot img{
+  width: 900px;
+  height: 400px;
+}
+
+/*OLMap page*/
+.map {
+  width: 450px;
+  height: 300px;
+  margin: auto;
+  margin-bottom: 15px;
+  background-color: #cccccc;
+}
+.btns-map {
+  width: 215px;
+  display: inline-block;
+  margin: 7px 15px;
+}
+/*end of olmap page*/
+
+/*gallery page*/
+.container {
+  position: relative;
+}
+.container div {
+  display: inline-block;
+  transition: var(--mainTransition);
+  margin: 10px 18px 10px 18px;
+  border: 1px solid rgb(126, 145, 145);
+  background-Size: cover;
+  width: 250px;
+  height: 200px;
+  cursor: pointer;
+}
+.container div:hover {
+  box-shadow: var(--lightShadow);
+}
+/*end of gallery page*/
+
+/*switch pictures hero*/
 .switch{
   background-color: var(--offWhite);
   display: flex;
@@ -407,8 +404,11 @@ div{
   margin: auto;
 }
 .services span {
+  background-color: var(--lightblue);
   color: var(--mainBlack);
-  font-size: 1rem;
+  padding: 0.4rem 0.5rem 0.1rem;
+  border-radius: 50%;
+  font-size: 2rem;
 }
 .services h6 {
   margin-top: 5px;
