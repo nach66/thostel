@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Gallerys from '../components/Gallerys';
 import Images from '../components/Images';
+import Footer from '../components/Footer'
 
 export default class Gallery extends Component {    
 
@@ -20,6 +21,7 @@ export default class Gallery extends Component {
                     link_text="חזרה לעמוד הבית"
                 />
                 <Gallerys/>
+                <Footer/>
             </>
         );
     }

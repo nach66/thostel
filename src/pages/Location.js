@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import OLMap from '../components/OLMap'
 import Images from '../components/Images';
+import Footer from '../components/Footer'
 
 export default class Location extends Component {    
     render() {
@@ -11,6 +12,7 @@ export default class Location extends Component {
                 link_text="חזרה לעמוד הבית"
             />
             <OLMap/>
+            <Footer/>
             </>
         );
     }

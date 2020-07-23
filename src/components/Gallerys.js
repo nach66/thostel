@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Lightbox from 'lightbox-react';
+//import Lightbox from 'lightbox-react';
 import 'lightbox-react/style.css';
 import a from '../images/kinneret.jpg'
 import b from '../images/finjan.jpg'
@@ -14,17 +14,17 @@ import h from '../images/rooms/room-5.jpeg'
 
 export default class Gallerys extends Component {
     state = {
-        isOpen: false,
+//        isOpen: false,
         hostel_images: [e,f,g,h],
         view_images: [a,b,c,d]
     }
 
-    handleExpand() {
-        this.setState({ isOpen: true });
-    }
+//    handleExpand() {
+  //      this.setState({ isOpen: true });
+    //}
 
     render() {
-        const { isOpen } = this.state;
+ //       const { isOpen } = this.state;
         return (
             <>
                 <section className="services">

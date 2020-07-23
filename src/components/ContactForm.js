@@ -7,6 +7,23 @@ import instagram from '../images/icons/instagram.png'
 import ilh from '../images/icons/ilh.jpeg'
 import face from '../images/icons/fa.png'
 
+import createDOMPurify from 'dompurify'
+import { JSDOM } from 'jsdom'
+
+const window = (new JSDOM('')).window
+const DOMPurify = createDOMPurify(window)
+
+const rawHTML = `
+<script type="text/javascript">
+var vsid = "sa23145";
+(function() { 
+var vsjs = document.createElement('script'); vsjs.type = 'text/javascript'; vsjs.async = true; vsjs.setAttribute('defer', 'defer');
+vsjs.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.virtualspirits.com/vsa/chat-'+vsid+'.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vsjs, s);
+})();
+</script>
+`
+
 export default function ContactForm() {
 
     return (
@@ -17,7 +34,7 @@ export default function ContactForm() {
             <FaPhone style={{ color:'rgb(7, 161, 58)'}}/>
             <h5>04-679-2611</h5>
 
-            <a href={"mailto:tiberiashostel@gmail.com"} target="_blank">
+            <a href={"mailto:tiberiashostel@gmail.com"} rel="noopener noreferrer" target="_blank">
                 <FaEnvelope style={{ color:'#ebe050'}}/>
             </a>
 
@@ -30,17 +47,17 @@ export default function ContactForm() {
                 <Link target={"_blank"} to='/trip'>
                     <div style={{backgroundImage: `url(${tripadvisor})`}}/>   
                 </Link>
-                <Link target={"_blank"} to='/insta'>
+                <Link target={"_blank"} to='/ilh'>
+                    <div style={{backgroundImage: `url(${ilh})`}}/>   
+                </Link>                <Link target={"_blank"} to='/insta'>
                     <div style={{backgroundImage: `url(${instagram})`}}/>   
                 </Link>
-                <Link target={"_blank"} to='/ilh'>
-                    <div style={{
-                          borderColor: '#222',
-                          backgroundImage: `url(${ilh})`}}/>   
-                </Link>
-
             </article>
         </section>
+
+        <div>
+            { <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(rawHTML) }} /> }
+        </div>
         </>
     );
 }

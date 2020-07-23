@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import def from '../images/room-1.jpeg';
 import StyledHero from "../components/StyledHero";
 import Banner from '../components/Banner';
+import Footer from '../components/Footer'
 import {RoomContext} from '../context';
 import Lightbox from 'lightbox-react';
 import 'lightbox-react/style.css';
@@ -95,6 +96,7 @@ export default class SingleRoom extends Component {
                         return<li key={index}>- {item}</li> })}
                     </ul>
                 </section>
+                <Footer/>
             </>
         );
     }

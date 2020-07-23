@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { capitalize } from "@material-ui/core";
 
 export default function Footer() {
     return (
@@ -22,4 +21,4 @@ const FooterWrapper = styled.footer`
     height: 40px;
     padding: 10px;
     text-align:center;
-`;
+    `;

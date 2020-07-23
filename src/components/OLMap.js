@@ -5,19 +5,17 @@ import Title from './Title';
 import 'ol/ol.css'
 import {OSM} from 'ol/source'
 import { Map, View } from 'ol'
-import {fromLonLat, transform} from 'ol/proj'
+import {fromLonLat} from 'ol/proj'
 import Grid from '@material-ui/core/Grid'
 import {defaults as defaultInteractions, DragRotateAndZoom} from 'ol/interaction';
 import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer'
 import { 
-    ScaleLine, MousePosition,
+    ScaleLine,
     defaults as DefaultControls
 } from 'ol/control'
 
 import Feature from 'ol/Feature';
-import Overlay from 'ol/Overlay';
 import Point from 'ol/geom/Point';
-import TileJSON from 'ol/source/TileJSON';
 import VectorS from 'ol/source/Vector';
 import {Icon, Style} from 'ol/style';
 

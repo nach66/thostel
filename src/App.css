@@ -10,6 +10,7 @@
   --lightblue: rgb(154, 189, 189);
   --yellow: #ebe050;
   --primaryColor: #ecb80e;
+  --orange:  #ecb80e;
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
   --mainBlack: #222;
@@ -123,6 +124,7 @@ div{
   height: 6.6rem;
   border-radius: 20%;
   border-color: black;
+  border: double;
   background-position: center;
   cursor: pointer;
 }
@@ -626,3 +628,10 @@ div{
   }
 }
 /* end of rooms fitler*/
+
+
+  /*  הצמדה לתחתית העמוד תמיד גם בגלילה
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0rem;
+  align-self: flex-end;*/
