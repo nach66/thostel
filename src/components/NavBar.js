@@ -53,8 +53,8 @@ export default class NavBar extends Component {
                         <li>
                         <Link to="/rooms" className="nav-links"
                         style={{border: '1px solid var(--myblue)',
-                                color: 'var(--mainWhite)',
-                            background: 'var(--myblue)'}}
+                        background    : 'var(--myblue)',
+                        color: 'var(--mainWhite)'}}
                         >הזמן עכשיו!</Link>
                         </li>
                     </ul>

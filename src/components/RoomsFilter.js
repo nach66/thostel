@@ -26,7 +26,8 @@ export default function RoomsFilter({ rooms }) {
         );
     });
     let people = getUnique(rooms, 'capacity');
-    people = people.map((item, index) => {
+    let p = people.sort();
+    people = p.map((item, index) => {
         return (
             <option key={index} value={item}>
                 {item}

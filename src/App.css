@@ -119,18 +119,19 @@ div{
   cursor: auto;
 }
 .contact-icon div{
-  margin: 20px;
-  width: 6.6rem;
-  height: 6.6rem;
+  margin: 5px;
+  width: 6.5rem;
+  height: 6.5rem;
   border-radius: 20%;
   border-color: black;
   border: double;
   background-position: center;
+  background-attachment: scroll;
   cursor: pointer;
 }
 .contact-icon div:hover{
-  width: 7.7rem;
-  height: 7.7rem;
+  width: 7rem;
+  height: 7rem;
 }
 
 /*abuot in homepage*/
@@ -300,6 +301,7 @@ div{
 /* תפריט של מסך קטן, כש0 הוא סגור*/
 .show-nav {
   height: 0px;
+  
 }
 /*אייקון עוגן בין הכפתורי תפריט*/
 .anchor{
@@ -349,9 +351,11 @@ div{
   .roomsHero {
   width: 550px;
 }
-  .banner {
-    padding: 2rem 3rem;
-  }}
+.banner {
+  padding: 2rem 3rem;
+}
+}
+
 @media screen and (min-width: 880px) {
   .map, .defaultHero,
   .roomsHero {
@@ -409,7 +413,7 @@ div{
 .services span {
   background-color: var(--lightblue);
   color: var(--mainBlack);
-  padding: 0.4rem 0.5rem 0.1rem;
+  padding: 0.6rem 0.7rem 0.2rem;
   border-radius: 50%;
   font-size: 2rem;
 }

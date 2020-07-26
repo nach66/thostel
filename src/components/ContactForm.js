@@ -7,22 +7,18 @@ import instagram from '../images/icons/instagram.png'
 import ilh from '../images/icons/ilh.jpeg'
 import face from '../images/icons/fa.png'
 
-import createDOMPurify from 'dompurify'
-import { JSDOM } from 'jsdom'
+import DOMPurify from 'dompurify'
 
-const window = (new JSDOM('')).window
-const DOMPurify = createDOMPurify(window)
-
-const rawHTML = `
+const Mybot = `
 <script type="text/javascript">
-var vsid = "sa23145";
-(function() { 
-var vsjs = document.createElement('script'); vsjs.type = 'text/javascript'; vsjs.async = true; vsjs.setAttribute('defer', 'defer');
-vsjs.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.virtualspirits.com/vsa/chat-'+vsid+'.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vsjs, s);
-})();
+    var vsid = "sa23145";
+    (function() { 
+        var vsjs = document.createElement('script'); vsjs.type = 'text/javascript'; vsjs.async = true; vsjs.setAttribute('defer', 'defer');
+        vsjs.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.virtualspirits.com/vsa/chat-'+vsid+'.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vsjs, s);
+    })();
 </script>
-`
+`;
 
 export default function ContactForm() {
 
@@ -55,9 +51,8 @@ export default function ContactForm() {
             </article>
         </section>
 
-        <div>
-            { <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(rawHTML) }} /> }
-        </div>
+        <div dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(Mybot)}}></div>
+
         </>
     );
 }
