@@ -124,8 +124,8 @@ div{
   height: 5rem;
   border-radius: 20%;
   border: groove;
-  background-position: center;
   cursor: pointer;
+  background-position: center;
 }
 .contact-icon div:hover{
   width: 5.5rem;

@@ -7,19 +7,6 @@ import instagram from '../images/icons/instagram.png'
 import ilh from '../images/icons/ilh.png'
 import face from '../images/icons/fa.png'
 
-import DOMPurify from 'dompurify'
-
-const Mybot = `
-<script type="text/javascript">
-    var vsid = "sa23145";
-    (function() { 
-        var vsjs = document.createElement('script'); vsjs.type = 'text/javascript'; vsjs.async = true; vsjs.setAttribute('defer', 'defer');
-        vsjs.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.virtualspirits.com/vsa/chat-'+vsid+'.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vsjs, s);
-    })();
-</script>
-`;
-
 export default function ContactForm() {
 
     return (
@@ -51,8 +38,6 @@ export default function ContactForm() {
                 </Link>
             </article>
         </section>
-
-        <div dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(Mybot)}}></div>
 
         </>
     );
