@@ -130,8 +130,8 @@ div{
   cursor: pointer;
 }
 .contact-icon div:hover{
-  width: 7rem;
-  height: 7rem;
+  width: 6rem;
+  height: 6rem;
 }
 
 /*abuot in homepage*/
@@ -149,7 +149,7 @@ div{
     display: grid;
     grid-row-gap: 2rem;
     grid-column-gap: 10px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 3fr;
   }
 }
 .abuot h3 {
@@ -413,7 +413,7 @@ div{
 .services span {
   background-color: var(--lightblue);
   color: var(--mainBlack);
-  padding: 0.6rem 0.7rem 0.2rem;
+  padding: 0.7rem 0.7rem 0.2rem;
   border-radius: 50%;
   font-size: 2rem;
 }
