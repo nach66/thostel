@@ -120,18 +120,16 @@ div{
 }
 .contact-icon div{
   margin: 5px;
-  width: 6.5rem;
-  height: 6.5rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 20%;
-  border-color: black;
-  border: double;
+  border: groove;
   background-position: center;
-  background-attachment: scroll;
   cursor: pointer;
 }
 .contact-icon div:hover{
-  width: 6rem;
-  height: 6rem;
+  width: 5.5rem;
+  height: 5.5rem;
 }
 
 /*abuot in homepage*/
@@ -149,7 +147,7 @@ div{
     display: grid;
     grid-row-gap: 2rem;
     grid-column-gap: 10px;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 3fr 2fr;
   }
 }
 .abuot h3 {
