@@ -5,7 +5,12 @@ import Title from '../components/Title';
 export default function About() {
     return (
         <>
-            <section className="services">
+            <section 
+            style={{
+                backgroundColor: 'var(--offWhite)',
+                padding: '1rem 0'
+            }}
+            >
             <Title title="למה להתארח דווקא אצלנו?"/> 
                 <h5>המיקום שלנו נוח ומרכזי: 3 דקות הליכה מתחנה מרכזית טבריה, ו3 דקות הליכה מחופי הכנרת. </h5>
                 <h5>יש חניה זמינה ומסעדות, שווקים וחנויות ממש ברחוב שלנו.</h5>

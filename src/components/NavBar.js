@@ -51,7 +51,7 @@ export default class NavBar extends Component {
                         </li>
                         <FaAnchor className="anchor"/>
                         <li>
-                        <Link to="/rooms" className="nav-links"
+                        <Link target={"_blank"} to="/booking" className="nav-links"
                         style={{border: '1px solid var(--myblue)',
                         background    : 'var(--myblue)',
                         color: 'var(--mainWhite)'}}

@@ -51,9 +51,8 @@ export default class SingleRoom extends Component {
                     </Banner>
                 </StyledHero>
 
-                <section className="services">
-
-                    <div className="container">
+                <section className="room-extras">
+                    <div className="container" style={{marginTop: '70px'}}>
                         {defuldImg.map((item,index)=>{
                             return ( <div
                                     key={index} alt={name}
@@ -64,11 +63,9 @@ export default class SingleRoom extends Component {
                             </div>);                       
                         })}
                     </div>
-
-                    </section>
+                </section>
                     
                 <section >
-
                     <div className="single-room-info">
                         <article className="description">
                             <h3>פרטים</h3>
@@ -86,7 +83,6 @@ export default class SingleRoom extends Component {
                             <h6> {minibar && "מיני בר בחדר"} </h6>                            
                         </article>
                     </div>
-
                 </section>
 
                 <section className="room-extras">
@@ -96,6 +92,11 @@ export default class SingleRoom extends Component {
                         return<li key={index}>- {item}</li> })}
                     </ul>
                 </section>
+
+                    <Link target={"_blank"} to="/booking" className="book-now-btn">
+                        הזמן עכשיו!
+                    </Link>
+
                 <Footer/>
             </>
         );

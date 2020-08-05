@@ -39,7 +39,7 @@ export default class Gallerys extends Component {
                         })}
                     </div>
                 </section>
-                
+                <div className="sep"/>
                 <section className="services">
                     <Title title="נופים בסביבה"/> 
                     <div className="container">

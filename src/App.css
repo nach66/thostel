@@ -12,7 +12,8 @@
   --primaryColor: #ecb80e;
   --orange:  #ecb80e;
   --mainWhite: #fff;
-  --offWhite: #f7f7f7;
+  --offWhite:rgba(154, 189, 189, 0.432);
+  --yellow: #ebe050;
   --mainBlack: #222;
   --mainGrey: #ececec;
   --darkGrey: #cfcfcf;
@@ -23,6 +24,33 @@
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
+
+.book-now-btn {
+  padding: 0.5rem;
+  margin: 0 9rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  border: 2px groove ;
+  color: var(--mainWhite);
+  background : var(--niceGreen);
+  transition: var(--mainTransition);
+  letter-spacing: var(--mainSpacing);
+  justify-content: center;  
+  text-decoration: none;
+  cursor: pointer;
+  border-radius:10px;
+}
+.book-now-btn:hover,
+.book-now-btn:focus {
+  box-shadow: 0 0.5em 0.5em -0.2em #0a916f ;
+  transform: translateY(-0.25em);
+}
+
+@media screen and (min-width: 600px) {
+  .book-now-btn {
+    font-size: 2rem;
+}}
 
 /* globals */
 .sep{
@@ -165,6 +193,7 @@ div{
   width: 900px;
   height: 400px;
 }
+/*end of abuot*/
 
 /*OLMap page*/
 .map {
@@ -198,31 +227,11 @@ div{
 .container div:hover {
   box-shadow: var(--lightShadow);
 }
-/*end of gallery page*/
+/*end of gallery*/
 
-/*switch pictures hero*/
-.switch{
-  background-color: var(--offWhite);
-  display: flex;
-  justify-content: center;
-}
-/* Hero */
-.defaultHero,
-.roomsHero {
-  padding-top: 45px;
-  width: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: calc(100vh - 120px);
-}
-.roomsHero {
-  background-image: url("./images/rooms/room-2.jpeg");
-  min-height: 60vh;
-}
-/* End of Hero */
 /* Banner */
 .banner {
+  margin: auto;
   padding: 1rem 1rem;
   text-align: center;
   color: var(--mainWhite);
@@ -230,7 +239,7 @@ div{
   letter-spacing: var(--mainSpacing);
 }
 .banner h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 .banner div {
   width: 10rem;
@@ -242,6 +251,7 @@ div{
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
+/*end of Banner */
 
 /* Navbar */
 .navbar {
@@ -295,7 +305,6 @@ div{
   box-shadow: 0 0.5em 0em -0.3em #050a5c ;
   transform: translateY(-0.25em);
 }
-
 /* תפריט של מסך קטן, כש0 הוא סגור*/
 .show-nav {
   height: 0px;
@@ -305,8 +314,8 @@ div{
 .anchor{
   font-size: 0.5rem;
 }
-/*מסך גדול מ945*/
-@media screen and (min-width: 880px) {
+/*מסך גדול */
+@media screen and (min-width: 960px) {
   .anchor{
     font-size: 0.8rem;
     color: var(--myblue);
@@ -321,7 +330,7 @@ div{
     direction: rtl;
     margin: auto;
     display: flex;
-    width: 1040px;
+    width: 1140px;
   }
   .nav-links {
     height: auto;
@@ -332,7 +341,7 @@ div{
   }
   .nav-links a{
     padding: 5px 12px;
-    margin: 12.4px;
+    margin: 15px;
     background-color: var(--primaryColor);
   }
   .nav-links a:hover,
@@ -344,31 +353,67 @@ div{
 }
 /* end of navbar */
 
+
+/*switch pictures hero*/
+.switch{
+  background-color: var(--offWhite);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+/* Hero */
+.defaultHero,
+.roomsHero {
+  width: 400px;
+  margin: auto;
+  position: sticky;
+  padding-top: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 120px);
+}
+.roomsHero {
+  background-image: url("./images/rooms/room-2.jpeg");
+  min-height: 60vh;
+}
+/* End of Hero */
+
 @media screen and (min-width: 600px) {
   .map, .defaultHero,
   .roomsHero {
-  width: 550px;
+  width: 580px;
 }
 .banner {
   padding: 2rem 3rem;
-}
-}
-
-@media screen and (min-width: 880px) {
-  .map, .defaultHero,
-  .roomsHero {
-  width: 800px;
 }}
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 680px) {
   .map, .defaultHero,
   .roomsHero {
-    width: 1030px;
+  width: 660px;
+}}
+@media screen and (min-width: 760px) {
+  .map, .defaultHero,
+  .roomsHero {
+  width: 740px;
+}}
+@media screen and (min-width: 800px) {
+  .map, .defaultHero,
+  .roomsHero {
+  width: 780px;
+}}
+@media screen and (min-width: 960px) {
+  .map{
+    width: 950px;
+  }
+  .defaultHero,
+  .roomsHero {
+  width: 1335px;
   }
   .banner {
     padding: 2rem 6rem;
 }}
 
-/* End of Banner */
 /* Title */
 .section-title {
   direction: rtl;
@@ -392,9 +437,12 @@ div{
 
 /* services */
 .services {
+  background-color: var(--offWhite);
   padding: 1rem 0;
   text-align: center;
-  margin-bottom: 10px;
+  margin: 10px 40px;
+  border-radius: 20px;
+  box-shadow: 0 0.5em 0em -0.3em #a84141 ;
 }
 .services-center {
   width: 90vw;
@@ -409,7 +457,7 @@ div{
   margin: auto;
 }
 .services span {
-  background-color: var(--lightblue);
+  background-color: var(--mainWhite);
   color: var(--mainBlack);
   padding: 0.7rem 0.7rem 0.2rem;
   border-radius: 50%;
@@ -501,7 +549,7 @@ div{
 /* end of room  */
 /* single room*/
 .single-room-info {
-  width: 80vw;
+  width: 75vw;
   display: grid;
   grid-template-columns: 1fr;
   margin: auto;
@@ -524,7 +572,7 @@ div{
   font-weight: 300;
 }
 .room-extras {
-  width: 80vw;
+  width: 75vw;
   margin: 0 auto 3rem auto;
 }
 .room-extras h6 {
@@ -540,7 +588,7 @@ div{
 @media screen and (min-width: 992px) {
   .single-room-info,
   .room-extras {
-    width: 95vw;
+    width: 75vw;
     max-width: 1170px;
   }
   .single-room-info {

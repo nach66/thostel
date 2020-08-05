@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';
 import Hero from '../components/Hero';
-import a from '../images/finjan.jpg'
-import b from '../images/cover.jpg'
-import c from '../images/kinneret.jpg'
-import d from '../images/boat.jpg'
+import a from '../images/n1.jpg'
+import b from '../images/n2.jpg'
+import c from '../images/n3.jpg'
+import d from '../images/n4.jpg'
 
 export default class Images extends Component {
     constructor(props) {
@@ -37,7 +37,8 @@ export default class Images extends Component {
     render() {
         return (
             <div className="switch">
-                <div style={{backgroundImage: `url(${this.state.images[this.state.currentImage]})`}}>
+                <div style={{ backgroundRepeat: 'no-repeat', 
+                    backgroundImage: `url(${this.state.images[this.state.currentImage]})`}}>
                     <Hero>
                         <Banner title={this.props.title}
                             subtitle={this.props.subtitle}>

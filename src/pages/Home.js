@@ -16,6 +16,7 @@ export default function Home() {
                     link_text="לחדרים"
             />
             
+            <div className="sep"/>            
             <About/>
             <div className="sep"/>
             <Services/>

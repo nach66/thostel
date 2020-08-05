@@ -73,6 +73,12 @@ function App() {
             return null;
         }} />
 
+        <Route exact path="/booking" component={() => { 
+            window.location = 
+            'https://new-booking.frontdeskmaster.com?hostelId=AJKOwMNX%2F5UDIgGxDhqQRY6JrRNTS%2BGr'
+            return null;
+        }} />
+
         <Route component={Error}/>
       </Switch>
     </>
