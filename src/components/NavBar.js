@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import logo from '../images/icons/logo.jpg'
-import {FaAlignLeft, FaAnchor} from 'react-icons/fa'
+import {FaAlignLeft, FaCalendarAlt, FaAnchor} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 export default class NavBar extends Component {
@@ -27,22 +27,6 @@ export default class NavBar extends Component {
                     </div>
                     <ul className={this.state.isOpen?"nav-links show-nav" : "nav-links"}>
                         <li>
-                            <Link to="/amenities" className="nav-links">שירותים</Link>
-                        </li>
-                        <FaAnchor className="anchor"/>
-                        <li>
-                            <Link to="/rooms" className="nav-links">חדרים</Link>
-                        </li>
-                        <FaAnchor className="anchor"/>
-                        <li>
-                            <Link to="/gallery" className="nav-links">גלריה</Link>
-                        </li>
-                        <FaAnchor className="anchor"/>
-                        <li>
-                            <Link to="/error" className="nav-links">פעילויות</Link>
-                        </li>
-                        <FaAnchor className="anchor"/>
-                        <li>
                             <Link to="/contact" className="nav-links">צור-קשר</Link>
                         </li>
                         <FaAnchor className="anchor"/>
@@ -51,11 +35,25 @@ export default class NavBar extends Component {
                         </li>
                         <FaAnchor className="anchor"/>
                         <li>
-                        <Link target={"_blank"} to="/booking" className="nav-links"
-                        style={{border: '1px solid var(--myblue)',
-                        background    : 'var(--myblue)',
-                        color: 'var(--mainWhite)'}}
-                        >הזמן עכשיו!</Link>
+                            <Link to="/gallery" className="nav-links">גלריה</Link>
+                        </li>
+                        <FaAnchor className="anchor"/>
+                        <li>
+                            <Link to="/rooms" className="nav-links">חדרים</Link>
+                        </li>
+                        <FaAnchor className="anchor"/>
+                        <li>
+                        <Link to="/bookhere" 
+                            className="nav-links"
+                            style={{width: '200px',                           
+                                color: 'var(--mainWhite)',
+                                background : 'var(--mainGreen)'}}
+                            >הזמן עכשיו!
+                            <span style={{ fontSize: '0.8rem',
+                                    marginTop: '3px',marginRight:'8px'}}>
+                                <FaCalendarAlt/>
+                            </span>
+                        </Link>
                         </li>
                     </ul>
                 </div>     

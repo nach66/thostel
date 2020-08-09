@@ -1,13 +1,14 @@
 import React from "react";
-import "./App.css";
-import Home from "./pages/Home";
-import Rooms from "./pages/Rooms";
-import Gallery from "./pages/Gallery";
+import SingleRoom from "./pages/SingleRoom";
 import Amenities from "./pages/Amenities";
 import Location from "./pages/Location";
+import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
-import SingleRoom from "./pages/SingleRoom";
+import Booking from "./pages/Booking";
+import Rooms from "./pages/Rooms";
 import Error from "./pages/Error";
+import Home from "./pages/Home";
+import "./App.css";
 import {Route, Switch} from "react-router-dom";
 import NavBar from "./components/NavBar"
 
@@ -23,6 +24,7 @@ function App() {
         <Route exact path="/location" component={Location}/>
         <Route exact path="/contact" component={Contact}/>
         <Route exact path="/error" component={Error}/>
+        <Route exact path="/bookhere" component={Booking}/>
         <Route exact path="/rooms/:slug" component={SingleRoom}/>
         
         <Route exact path="/jerusalem" component={() => { 

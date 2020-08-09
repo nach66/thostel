@@ -16,10 +16,10 @@
   --yellow: #ebe050;
   --mainBlack: #222;
   --mainGrey: #ececec;
-  --darkGrey: #cfcfcf;
+  --darkGrey: rgb(126, 145, 145);
   --mainTransition: all 0.3s linear;
   --mainSpacing: 3px;
-  --mainGreen: rgb(86, 204, 39);
+  --mainGreen: rgba(70, 155, 37, 0.788);
   --niceGreen: rgb(7, 161, 58);
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
@@ -27,37 +27,31 @@
 
 .book-now-btn {
   padding: 0.5rem;
-  margin: 0 9rem 1rem;
-  font-size: 1rem;
+  margin: 0 5rem 1rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  display: flex;
   border: 2px groove ;
   color: var(--mainWhite);
-  background : var(--niceGreen);
+  background : var(--mainGreen);
   transition: var(--mainTransition);
   letter-spacing: var(--mainSpacing);
   justify-content: center;  
   text-decoration: none;
-  cursor: pointer;
   border-radius:10px;
+  width: 250px;
 }
 .book-now-btn:hover,
 .book-now-btn:focus {
-  box-shadow: 0 0.5em 0.5em -0.2em #0a916f ;
+  box-shadow: 0 0.5em 0.5em -0.2em #3bb193 ;
   transform: translateY(-0.25em);
 }
 
-@media screen and (min-width: 600px) {
-  .book-now-btn {
-    font-size: 2rem;
-}}
-
 /* globals */
 .sep{
-  width: 85%;
-  height: 33px;
+  width: 65%;
+  height: 23px;
   background-image: url("./images/icons/mirror.png");
-  margin: 1.7rem auto;
+  margin: 1rem auto;
 }
 body {
   padding-top: 66px;
@@ -148,16 +142,16 @@ div{
 }
 .contact-icon div{
   margin: 5px;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 20%;
   border: groove;
   cursor: pointer;
   background-position: center;
 }
 .contact-icon div:hover{
-  width: 5.5rem;
-  height: 5.5rem;
+  width: 4.5rem;
+  height: 4.5rem;
 }
 
 /*abuot in homepage*/
@@ -197,7 +191,7 @@ div{
 
 /*OLMap page*/
 .map {
-  width: 450px;
+  width: 400px;
   height: 300px;
   margin: auto;
   margin-bottom: 15px;
@@ -218,9 +212,9 @@ div{
   display: inline-block;
   transition: var(--mainTransition);
   margin: 10px 18px 10px 18px;
-  border: 1px solid rgb(126, 145, 145);
+  border: 1px solid var(--darkGrey); 
   background-Size: cover;
-  width: 250px;
+  width: 250px; 
   height: 200px;
   cursor: pointer;
 }
@@ -259,12 +253,12 @@ div{
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0.75rem 1rem 0rem;
+  padding: 1rem 0.5rem 0rem;
   background: var(--mainWhite);
   z-index: 1;
 }
+/* כותרת במסך קטן*/
 .nav-header {
-      /*משנה סדר כותרת במסך קטן*/
   display: flex;
   justify-content: space-between;
 }
@@ -275,18 +269,19 @@ div{
   cursor: pointer;
   outline: none;
 }
+/*אייקון התפריט*/
 .nav-icon {
   font-size: 1.5rem;
   color:var(--myblue);
 }
+  /*תפריט במסך קטן*/
 .nav-links {
-  /*מזיז את כפתור ההזמנה במסך קטן*/
-  direction: rtl;
-  overflow: hidden;
-  transition: var(--mainTransition);
+  text-align: center;
   list-style-type: none;
-  height: 300px;
+  overflow: hidden;
+  height: 220px;
 }
+  /*הכפתורים בתפריט במסך קטן*/
 .nav-links a {
   color:var(--myblue);
   font-weight: 600;
@@ -297,25 +292,25 @@ div{
   transition: var(--mainTransition);
   cursor: pointer;
   border-radius:10px;
-  padding: 3px 6px;
-  margin: 2px;
+  padding: 3px 9px;
 }
 .nav-links a:hover,
 .nav-links a:focus {
-  box-shadow: 0 0.5em 0em -0.3em #050a5c ;
+  box-shadow: 0 0.5em 0em -0.3em var(--myblue) ;
   transform: translateY(-0.25em);
 }
 /* תפריט של מסך קטן, כש0 הוא סגור*/
 .show-nav {
   height: 0px;
-  
 }
 /*אייקון עוגן בין הכפתורי תפריט*/
 .anchor{
-  font-size: 0.5rem;
+  margin: 3px;
+  font-size: 0.7rem;
+  color: var(--myblue);
 }
 /*מסך גדול */
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 900px) {
   .anchor{
     font-size: 0.8rem;
     color: var(--myblue);
@@ -328,20 +323,20 @@ div{
   .nav-center {
     /*משנה סדר כותרת במסך מלא*/
     direction: rtl;
-    margin: auto;
     display: flex;
-    width: 1140px;
+/*    width: 1140px;*/
   }
   .nav-links {
     height: auto;
     display: flex;
     /*מוריד שורת כותרת לגובה הלוגו במסך מלא*/
     padding-top: 40px; 
-    margin: auto;
+    margin-right: auto;
   }
   .nav-links a{
     padding: 5px 12px;
-    margin: 15px;
+    width: 100px;
+    margin: 10px;
     background-color: var(--primaryColor);
   }
   .nav-links a:hover,
@@ -382,7 +377,7 @@ div{
 @media screen and (min-width: 600px) {
   .map, .defaultHero,
   .roomsHero {
-  width: 580px;
+  width: 560px;
 }
 .banner {
   padding: 2rem 3rem;
@@ -435,14 +430,21 @@ div{
 }
 /* end of Title */
 
+.empty-services {
+  padding-bottom: 1rem;
+  text-align: center;
+  justify-content: center;
+  margin: 10px auto 10px;
+}
+
 /* services */
 .services {
   background-color: var(--offWhite);
   padding: 1rem 0;
   text-align: center;
-  margin: 10px 40px;
-  border-radius: 20px;
-  box-shadow: 0 0.5em 0em -0.3em #a84141 ;
+  margin: 10px 10px;
+  border-radius: 10px;
+  box-shadow: 0 0.4em 0em -0.3em var(--darkGrey) ;
 }
 .services-center {
   width: 90vw;

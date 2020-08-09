@@ -7,11 +7,14 @@ import Footer from '../components/Footer'
 import {RoomContext} from '../context';
 import Lightbox from 'lightbox-react';
 import 'lightbox-react/style.css';
+import {FaCalendarAlt} from 'react-icons/fa';
+
 
 export default class SingleRoom extends Component {
     constructor(props){
         super(props);
         this.state={
+            photoIndex: 0,
             isOpen: false,
             slug:this.props.match.params.slug,
             def
@@ -24,8 +27,10 @@ export default class SingleRoom extends Component {
     static contextType = RoomContext;
     
     render() {
+        
         const { isOpen } = this.state;
         const { getRoom } = this.context;
+        const { photoIndex } = this.state;
         const room = getRoom(this.state.slug);
         if (!room){
             return (
@@ -55,13 +60,25 @@ export default class SingleRoom extends Component {
                     <div className="container" style={{marginTop: '70px'}}>
                         {defuldImg.map((item,index)=>{
                             return ( <div
-                                    key={index} alt={name}
-                                    style={{backgroundImage: `url(${item})`}}
-                                    onClick={() => this.handleExpand()}>
-                                        {isOpen && (<Lightbox mainSrc={item} onCloseRequest=
-                                        {()=> this.setState({ isOpen: false })}/>)}    
-                            </div>);                       
+                                key={index} alt="pic"
+                                style={{backgroundImage: `url(${item})`}}
+                                onClick={() => this.setState({ isOpen: true, photoIndex: index })}
+                                ></div>);                       
                         })}
+                        {isOpen && (
+                            <Lightbox
+                                mainSrc={defuldImg[photoIndex]}
+                                nextSrc={defuldImg[(photoIndex + 1) % defuldImg.length]}
+                                prevSrc={defuldImg[(photoIndex + defuldImg.length - 1) % defuldImg.length]}
+                                onCloseRequest={() => this.setState({ isOpen: false })}
+                                onMovePrevRequest={() => this.setState({
+                                    photoIndex: (photoIndex + defuldImg.length - 1) % defuldImg.length
+                                })}
+                                onMoveNextRequest={() => this.setState({
+                                    photoIndex: (photoIndex + 1) % defuldImg.length
+                                })}
+                            />
+                        )}
                     </div>
                 </section>
                     
@@ -93,9 +110,16 @@ export default class SingleRoom extends Component {
                     </ul>
                 </section>
 
-                    <Link target={"_blank"} to="/booking" className="book-now-btn">
+                <section className="empty-services">
+                <Link to="/bookhere"
+                    className="book-now-btn"
+                    >
                         הזמן עכשיו!
+                        <span style={{ fontSize: '1.2rem',margin:'9px'}}>
+                            <FaCalendarAlt/>
+                        </span>
                     </Link>
+                </section>
 
                 <Footer/>
             </>

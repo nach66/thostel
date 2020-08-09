@@ -21,9 +21,9 @@ export default function Home() {
             <div className="sep"/>
             <Services/>
             <div className="sep"/>
-            <OLMap/>
-            <div className="sep"/>
             <Gallerys/>
+            <div className="sep"/>
+            <OLMap/>
             <div className="sep"/>
             <ContactForm/>
             <Footer/>
