@@ -94,7 +94,8 @@ export default class SingleRoom extends Component {
                             <h6>גודל החדר: {`${size} מ"ר`}</h6>
                             <h6>
                                 כמות אנשים בחדר : {" "} {capacity > 1? 
-                                `${capacity} אנשים`: `${capacity} person`}
+                                `${capacity} אנשים`: 
+                                `אדם אחד`}
                             </h6>
                             <h6> {tv? "טלוויזיה בכבלים עם מסך שטוח" : "אין טלוויזיה"}</h6>
                             <h6> {minibar && "מיני בר בחדר"} </h6>                            

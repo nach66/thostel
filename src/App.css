@@ -48,10 +48,10 @@
 
 /* globals */
 .sep{
-  width: 65%;
-  height: 23px;
+  width: 15%;
+  height: 25px;
   background-image: url("./images/icons/mirror.png");
-  margin: 1rem auto;
+  margin: 0.6rem auto;
 }
 body {
   padding-top: 66px;
@@ -324,7 +324,7 @@ div{
     /*משנה סדר כותרת במסך מלא*/
     direction: rtl;
     display: flex;
-/*    width: 1140px;*/
+    width: 1040px;
   }
   .nav-links {
     height: auto;
