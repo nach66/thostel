@@ -13,8 +13,11 @@ export default function RoomsContainer() {
                 }                    
                 return (
                     <>
-                        {/* <ActivitiesList rooms={restActivities}/> */}
-                        {/* <ActivitiesList rooms={waterActivities}/> */}
+                        <h5>פעילויות מים</h5>
+                        <ActivitiesList rooms={waterActivities}/>
+                        <h5>מקומות מרבץ</h5>
+                        <ActivitiesList rooms={restActivities}/>
+                        <h5>אטרקציות שוות</h5>
                         <ActivitiesList rooms={attractionActivities}/>
                     </>
                 );
