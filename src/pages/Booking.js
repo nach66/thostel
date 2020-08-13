@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Images from '../components/Images'
 import Footer from '../components/Footer'
 import {FaEnvelope,FaPhone} from 'react-icons/fa';
+import ContactForm from '../components/ContactForm'
 
 export default class Booking extends Component {
     render() {
@@ -9,7 +10,7 @@ export default class Booking extends Component {
             <>
                 <Images title="הזמנה" link="/"
                     link_text="חזרה לעמוד הבית"/>
-
+                <div className="sep"/>
                 <section className="empty-services">
                     <h5>להזמנות קבוצתיות של 10 אנשים ומעלה, אנא פנו אלינו - בדוא"ל, בטלפון, או בעזרת הצ'אטבוט</h5>
                         <article>
@@ -21,9 +22,11 @@ export default class Booking extends Component {
                             <FaEnvelope style={{ color:'#ebe050'}}/></a>
                             <h5>tiberiashostel@gmail.com</h5>
                         </article>
-                    <iframe width="85%" height="600px" scrolling="auto"
+                    <iframe title="book" width="85%" height="600px" scrolling="auto"
                         src="https://new-booking.frontdeskmaster.com?hostelId=AJKOwMNX%2F5UDIgGxDhqQRY6JrRNTS%2BGr"/>
                 </section>
+                <div className="sep"/>
+                <ContactForm/>
                 <Footer/>
             </>
         )

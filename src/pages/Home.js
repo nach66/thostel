@@ -2,10 +2,11 @@ import React from 'react'
 import About from '../components/About'
 import Images from '../components/Images'
 import Services from '../components/Servies'
+import RoomsContainer from '../components/RoomsContainer';
 import ContactForm from '../components/ContactForm'
-import Gallerys from '../components/Gallerys'
 import Footer from '../components/Footer'
-import OLMap from '../components/OLMap'
+//import OLMap from '../components/OLMap'
+//import Gallerys from '../components/Gallerys'
 
 export default function Home() {
     return (
@@ -21,9 +22,7 @@ export default function Home() {
             <div className="sep"/>
             <Services/>
             <div className="sep"/>
-            <Gallerys/>
-            <div className="sep"/>
-            <OLMap/>
+            <RoomsContainer/>
             <div className="sep"/>
             <ContactForm/>
             <Footer/>

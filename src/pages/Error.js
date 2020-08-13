@@ -1,6 +1,7 @@
 import React from 'react'
 import Images from '../components/Images';
 import Footer from '../components/Footer'
+import ContactForm from '../components/ContactForm'
 
 export default function Error() {
     return (
@@ -10,7 +11,8 @@ export default function Error() {
                 link="/"
                 link_text="חזרה לעמוד הבית"
             />
-            <div className="services"/>
+                        <div className="sep"/>
+            <ContactForm/>
             <Footer/>
             </>
     )

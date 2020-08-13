@@ -1,6 +1,6 @@
 import React from 'react'
 import {useContext} from 'react';
-import {RoomContext} from '../context';
+import {RoomContext} from '../contextRooms';
 import Title from '../components/Title';
 
 // get all unique values

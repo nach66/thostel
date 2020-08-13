@@ -27,7 +27,7 @@ export default class RoomProvider extends Component {
 //        order:"sys.createdAt"
         order:"fields.price"
       });
-
+console.log(response);
       let rooms = this.formatData(response.items);
       let featuredRooms = rooms.filter(room => room.featured === true);
       let maxPrice = Math.max(...rooms.map(item => item.price));
@@ -141,15 +141,5 @@ export default class RoomProvider extends Component {
 }
 
 const RoomConsumer = RoomContext.Consumer;
-
-export function withrRoomConsumer(Component){
-  return function ConsumerWrapper(props) {
-    return <RoomConsumer>
-            {value => 
-              <Component {...props} context={value}/>
-            }
-        </RoomConsumer>
-  }
-}
 
 export {RoomConsumer, RoomProvider, RoomContext}

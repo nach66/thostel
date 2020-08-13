@@ -10,6 +10,7 @@ export default function Amenities() {
                     link="/"
                     link_text="חזרה לעמוד הבית"
             />
+                        <div className="sep"/>
             <Services/>
             <Footer/>
         </>

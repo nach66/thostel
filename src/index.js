@@ -3,14 +3,18 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { BrowserRouter as Router} from "react-router-dom"; 
 import * as serviceWorker from "./serviceWorker";
-import {RoomProvider} from "./context";
+import {ActivityProvider} from "./contextActivities";
+import {RoomProvider} from "./contextRooms";
 
 ReactDOM.render(
   <RoomProvider>
-    <Router>
-      <App />
-    </Router>
-  </RoomProvider>,
+  <ActivityProvider>
+      <Router>
+        <App/>
+      </Router>
+  </ActivityProvider>
+  </RoomProvider>
+,
   document.getElementById("root")
 );
 

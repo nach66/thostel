@@ -12,7 +12,7 @@ export default function ContactForm() {
     return (
         <>
         <section className="services" >
-            <Title title="דברו איתנו"/> 
+            <Title title="דברו אלינו"/> 
 
             <FaPhone style={{ color:'rgb(7, 161, 58)'}}/>
             <h5>04-679-2611</h5>

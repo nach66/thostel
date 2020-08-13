@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
+import {FaCalendarAlt} from 'react-icons/fa';
+import Lightbox from 'lightbox-react';
+import 'lightbox-react/style.css';
 import {Link} from 'react-router-dom';
 import def from '../images/room-1.jpeg';
+import ContactForm from '../components/ContactForm';
 import StyledHero from "../components/StyledHero";
 import Banner from '../components/Banner';
 import Footer from '../components/Footer'
-import {RoomContext} from '../context';
-import Lightbox from 'lightbox-react';
-import 'lightbox-react/style.css';
-import {FaCalendarAlt} from 'react-icons/fa';
-
+import {RoomContext} from '../contextRooms';
 
 export default class SingleRoom extends Component {
     constructor(props){
@@ -43,7 +43,7 @@ export default class SingleRoom extends Component {
             );
         }
         const {name, description, capacity, price,
-            extras, minibar, tv, size, images} = room;
+            extras, minibar, tv, images} = room;
         const [mainImg,...defuldImg] = images;
             
         return (
@@ -55,6 +55,7 @@ export default class SingleRoom extends Component {
                         </Link>
                     </Banner>
                 </StyledHero>
+                <div className="sep"/>
 
                 <section className="room-extras">
                     <div className="container" style={{marginTop: '70px'}}>
@@ -90,15 +91,14 @@ export default class SingleRoom extends Component {
                         </article>
                         <article className="info">
                             <h3>מידע</h3>
-                            <h6>מחיר: ₪{price}</h6>
-                            <h6>גודל החדר: {`${size} מ"ר`}</h6>
                             <h6>
                                 כמות אנשים בחדר : {" "} {capacity > 1? 
                                 `${capacity} אנשים`: 
                                 `אדם אחד`}
                             </h6>
-                            <h6> {tv? "טלוויזיה בכבלים עם מסך שטוח" : "אין טלוויזיה"}</h6>
+                            <h6> {tv? "טלוויזיה בכבלים עם מסך שטוח" : "חדר טלוויזיה משותף בסמוך לחדר"}</h6>
                             <h6> {minibar && "מיני בר בחדר"} </h6>                            
+                            <h6>מחיר: ₪{price}</h6>
                         </article>
                     </div>
                 </section>
@@ -121,6 +121,10 @@ export default class SingleRoom extends Component {
                         </span>
                     </Link>
                 </section>
+
+                <div className="sep"/>
+
+                <ContactForm/>
 
                 <Footer/>
             </>

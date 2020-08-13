@@ -51,7 +51,7 @@
   width: 15%;
   height: 25px;
   background-image: url("./images/icons/mirror.png");
-  margin: 0.6rem auto;
+  margin: 1rem auto;
 }
 body {
   padding-top: 66px;
@@ -89,19 +89,18 @@ h5 {
   direction: rtl;
   font-size: 1em;
   font-weight: bold;
-  margin-bottom: 1.5em;
+  margin-bottom: 0.5em;
 }
 h6 {
   direction: rtl;
   font-size: 1em;
-  font-weight: bold;
-  margin-bottom: 1.5em;
+  margin-bottom: 0.5em;
 }
 div{
   direction: rtl;
 }
 
-.btn-primary {
+.btn-primary2 {
   display: inline-block;
   text-decoration: none;
   letter-spacing: var(--mainSpacing);
@@ -112,7 +111,7 @@ div{
   transition: var(--mainTransition);
   cursor: pointer;
 }
-.btn-primary:hover {
+.btn-primary2:hover {
   background: transparent;
   color: var(--primaryColor);
 }
@@ -274,6 +273,14 @@ div{
   font-size: 1.5rem;
   color:var(--myblue);
 }
+.nav-logo {
+ margin: 7px;
+ border-radius: 10px;
+}
+.nav-logo:hover {
+  box-shadow: 2 1em 2em -0.4em var(--myblue) ;
+  transform: translateY(-0.25em);
+}
   /*תפריט במסך קטן*/
 .nav-links {
   text-align: center;
@@ -299,6 +306,11 @@ div{
   box-shadow: 0 0.5em 0em -0.3em var(--myblue) ;
   transform: translateY(-0.25em);
 }
+
+
+
+
+
 /* תפריט של מסך קטן, כש0 הוא סגור*/
 .show-nav {
   height: 0px;
@@ -312,9 +324,9 @@ div{
 /*מסך גדול */
 @media screen and (min-width: 900px) {
   .anchor{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: var(--myblue);
-    margin: auto;
+    margin: auto 5px;
   }
   .nav-btn {
     /*גורם לאייקון מסך קטן להיעלם*/
@@ -324,25 +336,65 @@ div{
     /*משנה סדר כותרת במסך מלא*/
     direction: rtl;
     display: flex;
-    width: 1040px;
+    width: 1100px;
+    margin: auto;
   }
   .nav-links {
     height: auto;
     display: flex;
     /*מוריד שורת כותרת לגובה הלוגו במסך מלא*/
-    padding-top: 40px; 
-    margin-right: auto;
+    padding-top: 1px; 
+    padding-bottom: 8px; 
   }
-  .nav-links a{
+  .nav-links a {
     padding: 5px 12px;
     width: 100px;
-    margin: 10px;
+    margin: 4px;
     background-color: var(--primaryColor);
   }
-  .nav-links a:hover,
-  .nav-links a:focus {
+  .nav-links a:hover{
     box-shadow: 0 0.5em 0.9em -0.4em #050a5c ;
     transform: translateY(-0.25em);
+    color: aliceblue;
+  }
+  .nav-links a:focus {
+    transform: translateY(0em);
+    color: aliceblue;
+  }
+    /*activity-Dropdown-bcg*/
+  .scroll{
+    background-color: white;
+    padding: 0.2px;
+    position: relative;
+    right: 3px;
+    top: 3px;
+    border-radius: 10px;
+  }
+  /*activity-Dropdown-button*/
+  .btn-primary {
+    padding: 5px 12px;
+    width: 100px;
+    margin: 3px;
+    background-color: var(--primaryColor);
+    color:var(--myblue);
+    font-weight: 600;
+    font-size: 1rem;
+    justify-content: center;  
+    text-decoration: none;
+    letter-spacing: var(--mainSpacing);
+    transition: var(--mainTransition);
+    cursor: pointer;
+    border-radius:10px;
+    padding: 3px 9px;
+    border: hidden;
+  }
+  .btn-primary:hover {
+    box-shadow: 0 0.5em 0.9em -0.4em #050a5c ;
+    transform: translateY(-0.25em);
+    color: aliceblue;
+  }
+  .btn-primary:focus {
+    outline: none; 
     color: aliceblue;
   }
 }
@@ -466,8 +518,9 @@ div{
   font-size: 2rem;
 }
 .services h6 {
+  font-weight: 500;  
   margin-top: 5px;
-  letter-spacing: var(--mainSpacing);
+  letter-spacing: 2px;
 }
 .services p {
   width: 80%;
@@ -603,7 +656,7 @@ div{
 
 /* roomlist */
 .roomslist {
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
 }
 .roomslist-center {
   width: 80vw;
@@ -629,7 +682,7 @@ div{
 
 /*  rooms fitler*/
 .filter-container {
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 .filter-form {
   width: 60vw;
@@ -680,6 +733,93 @@ div{
   }
 }
 /* end of rooms fitler*/
+
+/* activitylist */
+.activitylist {
+  padding-bottom: 1rem;
+}
+.activitylist-center {
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 30px;
+}
+
+@media screen and (min-width: 776px) {
+  .activitylist-center {
+    width: 90vw;
+  }
+}
+@media screen and (min-width: 992px) {
+  .activitylist-center {
+    width: 95vw;
+    max-width: 1170px;
+  }
+}
+/* end of activitylist */
+
+/* activity */
+.activity {
+  border-radius: 10px;
+  background: var(--lightblue);
+  box-shadow: var(--lightShadow);
+}
+.activity p {
+  font-size: large;
+  font-weight: 600;
+  font-style: initial;
+}
+
+.img-container-activity {
+  padding: 2px;
+  position: relative;
+}
+.img-container-activity img {
+  border-radius: 10px;
+  width: 100%;
+  height: 280px;
+  display: block;
+  transition: var(--mainTransition);
+}
+
+/*hovering text effect*/
+.img__description {
+  background: var(--lightblue);
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  font-weight: 200;
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+.img-container-activity:hover .img__description {
+  visibility: visible;
+  opacity: 1;
+}
+
+.activity-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(0);
+  transition: all 0.3s linear;
+}.img-container-activity:hover .activity-link {
+  transform: translate(-50%, -50%) scale(1);
+}
+.activity-info {
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: small;
+  letter-spacing: var(--mainSpacing);
+}
+/* end of activity  */
 
 
   /*  הצמדה לתחתית העמוד תמיד גם בגלילה

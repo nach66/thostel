@@ -7,10 +7,11 @@ export default class Contact extends Component {
     render() {
         return (
             <>
-                <Images title="צור קשר" 
+                <Images title="מיקום והכוונה" 
                     link="/"
                     link_text="חזרה לעמוד הבית"
                 />
+                <div className="sep"/>
                 <ContactForm/>
                 <Footer/>
             </>

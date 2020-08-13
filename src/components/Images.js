@@ -42,7 +42,7 @@ export default class Images extends Component {
                     <Hero>
                         <Banner title={this.props.title}
                             subtitle={this.props.subtitle}>
-                            <Link to={this.props.link} className="btn-primary">
+                            <Link to={this.props.link} className="btn-primary2">
                                 {this.props.link_text}
                             </Link>
                         </Banner>
