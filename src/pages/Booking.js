@@ -27,6 +27,7 @@ export default class Booking extends Component {
                 </section>
                 <div className="sep"/>
                 <ContactForm/>
+                <ContactForm/>
                 <Footer/>
             </>
         )
