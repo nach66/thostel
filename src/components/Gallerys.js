@@ -4,10 +4,10 @@ import Title from './Title';
 import Lightbox from 'lightbox-react';
 import 'lightbox-react/style.css';
 
-import a from '../images/kinneret.jpg'
-import b from '../images/finjan.jpg'
-import c from '../images/cover.jpg'
-import d from '../images/boat.jpg'
+import a from '../images/נוף/kinneret.jpg'
+import b from '../images/נוף/finjan.jpg'
+import c from '../images/נוף/cover.jpg'
+import d from '../images/נוף/boat.jpg'
 
 import e from '../images/rooms/room-2.jpeg'
 import f from '../images/rooms/room-3.jpeg'
@@ -58,7 +58,6 @@ export default class Gallerys extends Component {
                         )}
                     </div>
                 </section>
-                <div className="sep"/>
                 <section className="services">
                     <Title title="נופים בסביבה"/> 
                     <div className="container">

@@ -10,11 +10,8 @@ import Booking from "./pages/Booking";
 import Rooms from "./pages/Rooms";
 import Error from "./pages/Error";
 import Home from "./pages/Home";
-
-import Attractions from "./pages/Attractions";
 import SingleRoom from "./pages/SingleRoom";
-import Water from "./pages/Water";
-import Rest from "./pages/Rest";
+import Activities from "./pages/Activities";
 import "./App.css";
 
 function App() {
@@ -30,9 +27,7 @@ function App() {
                 <Route exact path="/contact" component={Contact}/>
                 <Route exact path="/bookhere" component={Booking}/>
                 <Route exact path="/rooms/:slug" component={SingleRoom}/>
-                <Route exact path="/rest" component={Rest}/>
-                <Route exact path="/water" component={Water}/>
-                <Route exact path="/attractions" component={Attractions}/>
+                <Route exact path="/Activities" component={Activities}/>
                 
                 <Route exact path="/jerusalem" component={() => { 
                     window.location.href = 
@@ -52,33 +47,6 @@ function App() {
                 <Route exact path="/nazeret" component={() => { 
                     window.location = 
                     'https://www.google.co.il/maps/dir/Nazareth/Tiberias+Hostel,+%D7%9B%D7%99%D7%9B%D7%A8+%D7%A8%D7%91%D7%99%D7%9F,+%D7%98%D7%91%D7%A8%D7%99%D7%94%E2%80%AD/@32.7075631,35.2468783,11z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x151c4e7cf16c0fff:0xd2385b30c1275dd6!2m2!1d35.303546!2d32.699635!1m5!1m1!1s0x151c3e48ddd195df:0x2bf279e8d24c26b4!2m2!1d35.5394368!2d32.7887133!3e0?hl=en&shorturl=1'
-                    return null;
-                }} />
-                
-                <Route exact path="/face" component={() => { 
-                    window.location = 
-                    'https://www.facebook.com/Tiberias-Hostel-1419006915066941/'
-                    return null;
-                }} />
-                <Route exact path="/trip" component={() => { 
-                    window.location = 
-                    'https://www.tripadvisor.co.il/Hotel_Review-g297765-d1198814-Reviews-Tiberias_Hostel-Tiberias_Galilee_Region_Northern_District.html'
-                    return null;
-                }} />
-                <Route exact path="/insta" component={() => { 
-                    window.location = 
-                    'https://www.instagram.com/tiberiashostel/'
-                    return null;
-                }} />
-                <Route exact path="/ilh" component={() => { 
-                    window.location = 
-                    'http://www.hostels-israel.com/'
-                    return null;
-                }} />
-
-                <Route exact path="/mail" component={() => { 
-                    window.location = 
-                    'mailto:tiberiashostel@gmail.com'
                     return null;
                 }} />
 

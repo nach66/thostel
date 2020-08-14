@@ -7,7 +7,7 @@ export default class Contact extends Component {
     render() {
         return (
             <>
-                <Images title="מיקום והכוונה" 
+                <Images title="אנחנו כאן בשבילכם" 
                     link="/"
                     link_text="חזרה לעמוד הבית"
                 />

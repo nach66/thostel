@@ -25,8 +25,11 @@ export default function RoomsFilter({ rooms }) {
             </option>
         );
     });
+
     let people = getUnique(rooms, 'capacity');
-    let p = people.sort();
+    let max = Math.max(...people);
+    people = Array(max).join(0).split(0).map((v, i) => i + 1);
+    let p = people.sort(function(a, b){return a-b});
     people = p.map((item, index) => {
         return (
             <option key={index} value={item}>

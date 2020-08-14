@@ -6,13 +6,13 @@ import RoomsContainer from '../components/RoomsContainer';
 import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
 //import OLMap from '../components/OLMap'
-//import Gallerys from '../components/Gallerys'
+import Gallerys from '../components/Gallerys'
 
 export default function Home() {
     return (
         <>
-            <Images title="הבית שלך בצפון" 
-                    subtitle="חדרים החל מ200 ש''ח"
+            <Images title="אכסניית טבריה" 
+                    subtitle="הבית שלך בצפון"
                     link="/rooms"
                     link_text="לחדרים"
             />
@@ -20,9 +20,7 @@ export default function Home() {
             <div className="sep"/>            
             <About/>
             <div className="sep"/>
-            <Services/>
-            <div className="sep"/>
-            <RoomsContainer/>
+            <Gallerys/>
             <div className="sep"/>
             <ContactForm/>
             <Footer/>

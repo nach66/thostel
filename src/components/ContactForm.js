@@ -3,7 +3,7 @@ import Title from './Title'
 import {Link} from 'react-router-dom'
 import {FaEnvelope,FaPhone} from 'react-icons/fa';
 import tripadvisor from '../images/icons/tripadvisor.png'
-import instagram from '../images/icons/instagram.png'
+import instagram from '../images/icons/instagram.jpg'
 import ilh from '../images/icons/ilh.png'
 import face from '../images/icons/fa.png'
 
@@ -23,20 +23,28 @@ export default function ContactForm() {
 
             <h5>tiberiashostel@gmail.com</h5>
 
-            <article className="contact-icon">
-                <Link target={"_blank"} to="/face" >
+{/*             <article className="contact-icon">
+
+                <a rel="noopener noreferrer" target={"_blank"} 
+                    href='https://www.facebook.com/Tiberias-Hostel-1419006915066941/'>
                     <div style={{backgroundImage: `url(${face})`}}/>   
-                </Link>
-                <Link target={"_blank"} to='/trip'>
+                </a>
+
+                <a rel="noopener noreferrer" target={"_blank"} 
+                    href='https://www.tripadvisor.co.il/Hotel_Review-g297765-d1198814-Reviews-Tiberias_Hostel-Tiberias_Galilee_Region_Northern_District.html'>
                     <div style={{backgroundImage: `url(${tripadvisor})`}}/>   
-                </Link>
-                <Link target={"_blank"} to='/ilh'>
+                </a> 
+
+                <a rel="noopener noreferrer" target={"_blank"} 
+                    href='http://www.hostels-israel.com/'>
                     <div style={{backgroundImage: `url(${ilh})`}}/>   
-                </Link>                
-                <Link target={"_blank"} to='/insta'>
+                </a> 
+
+                <a rel="noopener noreferrer" target={"_blank"} 
+                    href='https://www.instagram.com/tiberiashostel/'>
                     <div style={{backgroundImage: `url(${instagram})`}}/>   
-                </Link>
-            </article>
+                </a>
+            </article> */}
         </section>
 
         </>

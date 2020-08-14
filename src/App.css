@@ -45,11 +45,21 @@
   box-shadow: 0 0.5em 0.5em -0.2em #3bb193 ;
   transform: translateY(-0.25em);
 }
-
+.calander-icon{
+  font-size: 1rem;
+  margin-top: 3px;
+  margin-right:8px;
+}
+@media screen and (min-width: 935px) {
+  .calander-icon{
+    font-size: 2rem;
+}}
 /* globals */
 .sep{
-  width: 15%;
-  height: 25px;
+  width: 49%;
+  height: 35px;
+  /* width: 15%; */
+  /* height: 25px; */
   background-image: url("./images/icons/mirror.png");
   margin: 1rem auto;
 }
@@ -136,61 +146,56 @@ div{
 
 /*contact form*/
 .contact-icon{
-  display: inline-flex;
-  cursor: auto;
+  position: absolute;
+  top:140px;
+  right: 10px;
 }
 .contact-icon div{
   margin: 5px;
+  margin-left: 20px;
   width: 4rem;
   height: 4rem;
   border-radius: 20%;
-  border: groove;
   cursor: pointer;
   background-position: center;
+  border: 1px groove var(--mainWhite);
 }
 .contact-icon div:hover{
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 4.2rem;
+  height: 4.2rem;
 }
 
 /*abuot in homepage*/
 .abuot { 
   display: grid;
-  padding: 2px;
   grid-template-columns: 1fr;
-  background: var(--lightblue);
+  padding-bottom: 20px;
 }
 .pic div{
-  height: 386px;
+  padding-bottom: 20px;
+  height: 240px;
+  width: 240px;
 }
 @media screen and (min-width: 935px) {
   .abuot {
     display: grid;
     grid-row-gap: 2rem;
     grid-column-gap: 10px;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 3fr 1fr;
   }
 }
-.abuot h3 {
-    padding-right: 1rem;
-    padding-top: 20px;
-    margin-bottom: 0.6rem;
-  }
-.abuot h6 {
+.abuot h5 {
+  letter-spacing: 2px;
   padding-right: 1rem;
   padding-left: 1rem;
   font-weight: 500;
-  margin-bottom: 0.3rem;
-}
-.abuot img{
-  width: 900px;
-  height: 400px;
+  text-align: right;
 }
 /*end of abuot*/
 
 /*OLMap page*/
 .map {
-  width: 400px;
+  width: 280px;
   height: 300px;
   margin: auto;
   margin-bottom: 15px;
@@ -224,8 +229,6 @@ div{
 
 /* Banner */
 .banner {
-  margin: auto;
-  padding: 1rem 1rem;
   text-align: center;
   color: var(--mainWhite);
   background: rgba(0, 0, 0, 0.377);
@@ -235,8 +238,8 @@ div{
   font-size: 2rem;
 }
 .banner div {
-  width: 10rem;
-  height: 8px;
+  width: 7rem;
+  height: 3px;
   background-color: var(--primaryColor);
   margin: 1.7rem auto;
 }
@@ -252,7 +255,7 @@ div{
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 0.5rem 0rem;
+  padding: 0.6rem 0rem 0.3rem;
   background: var(--mainWhite);
   z-index: 1;
 }
@@ -268,14 +271,15 @@ div{
   cursor: pointer;
   outline: none;
 }
-/*אייקון התפריט*/
+/* הקטן אייקון התפריט*/
 .nav-icon {
   font-size: 1.5rem;
   color:var(--myblue);
 }
+/* הגדול אייקון התפריט*/
 .nav-logo {
- margin: 7px;
- border-radius: 10px;
+  margin-left: 5px;
+  border-radius: 10px;
 }
 .nav-logo:hover {
   box-shadow: 2 1em 2em -0.4em var(--myblue) ;
@@ -286,7 +290,7 @@ div{
   text-align: center;
   list-style-type: none;
   overflow: hidden;
-  height: 220px;
+  height: 210px;
 }
   /*הכפתורים בתפריט במסך קטן*/
 .nav-links a {
@@ -298,7 +302,7 @@ div{
   letter-spacing: var(--mainSpacing);
   transition: var(--mainTransition);
   cursor: pointer;
-  border-radius:10px;
+  border-radius:7px;
   padding: 3px 9px;
 }
 .nav-links a:hover,
@@ -307,26 +311,23 @@ div{
   transform: translateY(-0.25em);
 }
 
-
-
-
-
 /* תפריט של מסך קטן, כש0 הוא סגור*/
 .show-nav {
   height: 0px;
 }
 /*אייקון עוגן בין הכפתורי תפריט*/
 .anchor{
-  margin: 3px;
-  font-size: 0.7rem;
+  margin-top: 2px;
+  height: 14px;
+  width: 8px;
   color: var(--myblue);
 }
 /*מסך גדול */
 @media screen and (min-width: 900px) {
   .anchor{
-    font-size: 0.7rem;
-    color: var(--myblue);
-    margin: auto 5px;
+    height: 34px;
+    width: 22px;
+    margin: auto 3px;
   }
   .nav-btn {
     /*גורם לאייקון מסך קטן להיעלם*/
@@ -336,66 +337,25 @@ div{
     /*משנה סדר כותרת במסך מלא*/
     direction: rtl;
     display: flex;
-    width: 1100px;
+    width: 800px;
     margin: auto;
   }
-  .nav-links {
+/*מוריד שורת כותרת לגובה הלוגו במסך מלא*/
+    .nav-links {
     height: auto;
     display: flex;
-    /*מוריד שורת כותרת לגובה הלוגו במסך מלא*/
-    padding-top: 1px; 
-    padding-bottom: 8px; 
   }
   .nav-links a {
-    padding: 5px 12px;
+    padding: 2px 12px;
     width: 100px;
     margin: 4px;
-    background-color: var(--primaryColor);
   }
-  .nav-links a:hover{
-    box-shadow: 0 0.5em 0.9em -0.4em #050a5c ;
-    transform: translateY(-0.25em);
-    color: aliceblue;
-  }
+  .nav-links a:hover,
   .nav-links a:focus {
-    transform: translateY(0em);
-    color: aliceblue;
-  }
-    /*activity-Dropdown-bcg*/
-  .scroll{
-    background-color: white;
-    padding: 0.2px;
-    position: relative;
-    right: 3px;
-    top: 3px;
-    border-radius: 10px;
-  }
-  /*activity-Dropdown-button*/
-  .btn-primary {
-    padding: 5px 12px;
-    width: 100px;
-    margin: 3px;
-    background-color: var(--primaryColor);
-    color:var(--myblue);
-    font-weight: 600;
-    font-size: 1rem;
-    justify-content: center;  
-    text-decoration: none;
-    letter-spacing: var(--mainSpacing);
-    transition: var(--mainTransition);
-    cursor: pointer;
-    border-radius:10px;
-    padding: 3px 9px;
-    border: hidden;
-  }
-  .btn-primary:hover {
     box-shadow: 0 0.5em 0.9em -0.4em #050a5c ;
     transform: translateY(-0.25em);
     color: aliceblue;
-  }
-  .btn-primary:focus {
-    outline: none; 
-    color: aliceblue;
+    background-color: var(--primaryColor);
   }
 }
 /* end of navbar */
@@ -403,18 +363,18 @@ div{
 
 /*switch pictures hero*/
 .switch{
+  position:relative;
   background-color: var(--offWhite);
   display: flex;
   justify-content: center;
   width: 100%;
 }
+
 /* Hero */
 .defaultHero,
 .roomsHero {
   width: 400px;
   margin: auto;
-  position: sticky;
-  padding-top: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -427,31 +387,43 @@ div{
 /* End of Hero */
 
 @media screen and (min-width: 600px) {
-  .map, .defaultHero,
+  .defaultHero,
   .roomsHero {
   width: 560px;
+}
+.map{
+  width: 350px;
 }
 .banner {
   padding: 2rem 3rem;
 }}
 @media screen and (min-width: 680px) {
-  .map, .defaultHero,
+  .defaultHero,
   .roomsHero {
   width: 660px;
+}
+.map{
+  width: 400px;
 }}
 @media screen and (min-width: 760px) {
-  .map, .defaultHero,
+  .defaultHero,
   .roomsHero {
   width: 740px;
+}
+.map{
+  width: 530px;
 }}
 @media screen and (min-width: 800px) {
-  .map, .defaultHero,
+  .defaultHero,
   .roomsHero {
   width: 780px;
+}
+.map{
+  width: 580px;
 }}
 @media screen and (min-width: 960px) {
   .map{
-    width: 950px;
+    width: 750px;
   }
   .defaultHero,
   .roomsHero {
@@ -475,8 +447,8 @@ div{
 }
 .section-title div {
   direction: rtl;
-  width: 5rem;
-  height: 5px;
+  width: 6rem;
+  height: 3px;
   margin: 0 auto;
   background: var(--primaryColor);
 }
@@ -487,26 +459,41 @@ div{
   text-align: center;
   justify-content: center;
   margin: 10px auto 10px;
+  width: 85vw;
+  padding: 1.2rem;
 }
 
 /* services */
 .services {
   background-color: var(--offWhite);
-  padding: 1rem 0;
+  padding: 1.2rem;
   text-align: center;
-  margin: 10px 10px;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 85vw;
   border-radius: 10px;
   box-shadow: 0 0.4em 0em -0.3em var(--darkGrey) ;
 }
 .services-center {
   width: 90vw;
-  margin: auto;
   padding-top: 30px;
+  padding-left: 10rem;
   display: grid;
   grid-row-gap: 2rem;
   grid-column-gap: 5rem;  
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
+@media screen and (min-width: 1245px) {
+  .services-center {
+    padding-right: 3rem;
+  }
+}@media screen and (min-width: 1300px) {
+  .services-center {
+    padding-right: 4rem;
+    padding-left: 5rem;
+  }
+}
+
 .services article {
   margin: auto;
 }
@@ -743,7 +730,7 @@ div{
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-row-gap: 2rem;
+  grid-row-gap: 3rem;
   grid-column-gap: 30px;
 }
 
@@ -754,7 +741,7 @@ div{
 }
 @media screen and (min-width: 992px) {
   .activitylist-center {
-    width: 95vw;
+    width: 80vw;
     max-width: 1170px;
   }
 }
@@ -786,7 +773,7 @@ div{
 
 /*hovering text effect*/
 .img__description {
-  background: var(--lightblue);
+  background: rgba(41, 39, 39, 0.815);
   visibility: hidden;
   position: absolute;
   opacity: 0;
@@ -796,35 +783,26 @@ div{
   right: 0;  
   border-radius: 10px;
   padding: 30px;
-  font-weight: 200;
   /* transition effect. not necessary */
   transition: opacity .2s, visibility .2s;
+}
+.img__description p{
+  color: var(--lightblue);
+  font-weight: 500;
+}
+.img__description a{
+ color: var(--primaryColor);
+ font-weight:600;
+ font-size: large;
 }
 .img-container-activity:hover .img__description {
   visibility: visible;
   opacity: 1;
 }
-
-.activity-link {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: scale(0);
-  transition: all 0.3s linear;
-}.img-container-activity:hover .activity-link {
-  transform: translate(-50%, -50%) scale(1);
-}
-.activity-info {
+.activity-name {
   padding: 0.5rem 1rem;
   text-align: center;
-  font-size: small;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   letter-spacing: var(--mainSpacing);
 }
 /* end of activity  */
-
-
-  /*  הצמדה לתחתית העמוד תמיד גם בגלילה
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0rem;
-  align-self: flex-end;*/

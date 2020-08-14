@@ -2,6 +2,7 @@ import React from 'react'
 import ActivitiesList from './ActivitiesList';
 import {ActivityConsumer} from '../contextActivities';
 import Loading from './Loading';
+import Title from './Title';
 
 export default function RoomsContainer() {  
     return (
@@ -13,11 +14,13 @@ export default function RoomsContainer() {
                 }                    
                 return (
                     <>
-                        <h5>פעילויות מים</h5>
+                        <Title title="פעילויות מים"/> 
                         <ActivitiesList rooms={waterActivities}/>
-                        <h5>מקומות מרבץ</h5>
+                        <div className="sep"/>
+                        <Title title="מקומות מרבץ"/> 
                         <ActivitiesList rooms={restActivities}/>
-                        <h5>אטרקציות שוות</h5>
+                        <div className="sep"/>
+                        <Title title="אטרקציות שוות"/> 
                         <ActivitiesList rooms={attractionActivities}/>
                     </>
                 );

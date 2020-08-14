@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import {FaCalendarAlt} from 'react-icons/fa';
-import Lightbox from 'lightbox-react';
-import 'lightbox-react/style.css';
-import {Link} from 'react-router-dom';
-import def from '../images/room-1.jpeg';
 import ContactForm from '../components/ContactForm';
 import StyledHero from "../components/StyledHero";
+import {RoomContext} from '../contextRooms';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer'
-import {RoomContext} from '../contextRooms';
+import def from '../images/def.jpg';
+import {FaCalendarAlt} from 'react-icons/fa';
+import {Link} from 'react-router-dom';
+import Lightbox from 'lightbox-react';
+import 'lightbox-react/style.css';
 
 export default class SingleRoom extends Component {
     constructor(props){
@@ -36,7 +36,7 @@ export default class SingleRoom extends Component {
             return (
                 <div className="error">
                     <h3>לצערנו אין חדר כזה</h3>
-                    <Link to="/rooms" className="btn-primary">
+                    <Link to="/rooms" className="btn-primary2">
                         בחזרה לחדרים
                     </Link>
                 </div>
@@ -50,7 +50,7 @@ export default class SingleRoom extends Component {
             <>
                 <StyledHero img={mainImg || def}>
                     <Banner title={name}>
-                        <Link to="/rooms" className="btn-primary">
+                        <Link to="/rooms" className="btn-primary2">
                             בחזרה לחדרים
                         </Link>
                     </Banner>
@@ -104,7 +104,7 @@ export default class SingleRoom extends Component {
                 </section>
 
                 <section className="room-extras">
-                    <h6>בנוסף</h6>
+                    <h6>מתקנים</h6>
                     <ul className="extras">
                         {extras.map((item,index)=>{
                         return<li key={index}>- {item}</li> })}

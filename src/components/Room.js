@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-import def from '../images/room-1.jpeg';
+import def from '../images/def.jpg';
 import PropTypes from 'prop-types';
 
 export default function Room({room}) {
