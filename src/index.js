@@ -5,12 +5,17 @@ import { BrowserRouter as Router} from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
 import {ActivityProvider} from "./contextActivities";
 import {RoomProvider} from "./contextRooms";
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 ReactDOM.render(
   <RoomProvider>
   <ActivityProvider>
       <Router>
+      <ParallaxProvider>
+
         <App/>
+        </ParallaxProvider>
+
       </Router>
   </ActivityProvider>
   </RoomProvider>

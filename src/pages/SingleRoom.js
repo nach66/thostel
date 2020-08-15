@@ -98,7 +98,7 @@ export default class SingleRoom extends Component {
                             </h6>
                             <h6> {tv? "טלוויזיה בכבלים עם מסך שטוח" : "חדר טלוויזיה משותף בסמוך לחדר"}</h6>
                             <h6> {minibar && "מיני בר בחדר"} </h6>                            
-                            <h6>מחיר: ₪{price}</h6>
+                            {/* <h6>מחיר: ₪{price}</h6> */}
                         </article>
                     </div>
                 </section>

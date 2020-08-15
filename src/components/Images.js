@@ -11,6 +11,7 @@ import tripadvisor from '../images/icons/tripadvisor.png'
 import instagram from '../images/icons/instagram.jpg'
 import ilh from '../images/icons/ilh.png'
 import face from '../images/icons/fa.png'
+import CrossfadeImage from 'react-crossfade-image'
 
 export default class Images extends Component {
     constructor(props) {
@@ -37,7 +38,7 @@ export default class Images extends Component {
 
     componentDidMount() {
         setInterval(this.switchImage, 3000);
-    }
+    } 
 
     render() {
         return (
@@ -53,28 +54,39 @@ export default class Images extends Component {
                         </Banner>
                     </Hero>
                     <div className="contact-icon">
-                    <a rel="noopener noreferrer" target={"_blank"} 
-                        href='https://www.facebook.com/Tiberias-Hostel-1419006915066941/'>
-                        <div style={{backgroundImage: `url(${face})`}}/>   
-                    </a>
+                        <a rel="noopener noreferrer" target={"_blank"} 
+                            href='https://www.facebook.com/Tiberias-Hostel-1419006915066941/'>
+                            <div style={{backgroundImage: `url(${face})`}}/>   
+                        </a>
 
-                    <a rel="noopener noreferrer" target={"_blank"} 
-                        href='https://www.tripadvisor.co.il/Hotel_Review-g297765-d1198814-Reviews-Tiberias_Hostel-Tiberias_Galilee_Region_Northern_District.html'>
-                        <div style={{backgroundImage: `url(${tripadvisor})`}}/>   
-                    </a> 
+                        <a rel="noopener noreferrer" target={"_blank"} 
+                            href='https://www.tripadvisor.co.il/Hotel_Review-g297765-d1198814-Reviews-Tiberias_Hostel-Tiberias_Galilee_Region_Northern_District.html'>
+                            <div style={{backgroundImage: `url(${tripadvisor})`}}/>   
+                        </a> 
 
-                    <a rel="noopener noreferrer" target={"_blank"} 
-                        href='http://www.hostels-israel.com/'>
-                        <div style={{backgroundImage: `url(${ilh})`}}/>   
-                    </a> 
+                        <a rel="noopener noreferrer" target={"_blank"} 
+                            href='http://www.hostels-israel.com/'>
+                            <div style={{backgroundImage: `url(${ilh})`}}/>   
+                        </a> 
 
-                    <a rel="noopener noreferrer" target={"_blank"} 
-                        href='https://www.instagram.com/tiberiashostel/'>
-                        <div style={{backgroundImage: `url(${instagram})`}}/>   
-                    </a>
-                </div>
+                        <a rel="noopener noreferrer" target={"_blank"} 
+                            href='https://www.instagram.com/tiberiashostel/'>
+                            <div style={{backgroundImage: `url(${instagram})`}}/>   
+                        </a>
+                    </div>
                 </div>
             </div>
         );
     }
 }
+
+
+{/* <CrossfadeImage
+                    src={this.state.images[this.state.currentImage]}
+                    timingFunction={"ease-out"}
+                /> 
+                    
+                    <div style={{ backgroundRepeat: 'no-repeat', 
+                    backgroundImage: `url(${this.state.images[this.state.currentImage]})`}}>
+                    <Hero>...</Hero>
+    </div> */}

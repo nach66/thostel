@@ -4,7 +4,6 @@ import NavBar from "./components/NavBar";
 
 import Location from "./pages/Location";
 import Aboutus from "./pages/Aboutus";
-import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Booking from "./pages/Booking";
 import Rooms from "./pages/Rooms";
@@ -22,7 +21,6 @@ function App() {
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/about" component={Aboutus}/>
                 <Route exact path="/rooms" component={Rooms}/>
-                <Route exact path="/gallery" component={Gallery}/>
                 <Route exact path="/location" component={Location}/>
                 <Route exact path="/contact" component={Contact}/>
                 <Route exact path="/bookhere" component={Booking}/>

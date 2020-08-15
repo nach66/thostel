@@ -63,7 +63,8 @@ export default class OLMap extends Component {
             <>
                 <section className="services">
                     <Title title="איך למצוא אותנו?"/>
-                    <h5>3 דקות מתחנת האוטובוס,3 דקות מקו המים ...</h5>
+                    <h6 style={{fontWeight: '600'}}
+                    >3 דקות מתחנת האוטובוס,3 דקות מקו המים ...</h6>
                     <Grid container>
                         <Grid item xs={12}>
                             <div id='map' className="map" >

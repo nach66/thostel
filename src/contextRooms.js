@@ -7,15 +7,12 @@ export default class RoomProvider extends Component {
   state = {
     rooms: [],
     sortedRooms: [],
-    featuredRooms: [],
     loading: true,
     type: 'all',
     capacity: 1,
     price: 0,
     minPrice: 0,
     maxPrice: 0,
-    minSize: 0,
-    maxSize: 0,
     minibar: false,
     tv: false
   };
@@ -27,19 +24,14 @@ export default class RoomProvider extends Component {
 //        order:"sys.createdAt"
         order:"fields.price"
       });
-console.log(response);
       let rooms = this.formatData(response.items);
-      let featuredRooms = rooms.filter(room => room.featured === true);
       let maxPrice = Math.max(...rooms.map(item => item.price));
-      let maxSize = Math.max(...rooms.map(item => item.size));
       this.setState({
           rooms,
-          featuredRooms,
           sortedRooms: rooms,
           loading: false,
           price: maxPrice,
-          maxPrice,
-          maxSize
+          maxPrice
         });
     } catch (error) {
       console.log(error);
@@ -85,8 +77,6 @@ console.log(response);
         type,
         capacity,
         price,
-        minSize,
-        maxSize,
         minibar,
         tv
       } = this.state;
@@ -97,7 +87,7 @@ console.log(response);
       price = parseInt(price);
 
       // filter by type
-      if (type !== "all") {
+      if (type !== "הכול") {
         tempRooms = tempRooms.filter(room => room.type === type);
       }
   
@@ -107,10 +97,6 @@ console.log(response);
       }
       // filter by price
       tempRooms = tempRooms.filter(room => room.price <= price);
-      // filter by size
-      tempRooms = tempRooms.filter(
-        room => room.size >= minSize && room.size <= maxSize
-      );
       // filter by minibar
       if (minibar) {
         tempRooms = tempRooms.filter(room => room.minibar === true);

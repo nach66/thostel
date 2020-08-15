@@ -8,60 +8,201 @@
 :root {
   --myblue: #050a5c;
   --lightblue: rgb(154, 189, 189);
-  --yellow: #ebe050;
   --primaryColor: #ecb80e;
-  --orange:  #ecb80e;
   --mainWhite: #fff;
   --offWhite:rgba(154, 189, 189, 0.432);
-  --yellow: #ebe050;
   --mainBlack: #222;
   --mainGrey: #ececec;
   --darkGrey: rgb(126, 145, 145);
+  --mainGreen: rgba(70, 155, 37, 0.788);
+
   --mainTransition: all 0.3s linear;
   --mainSpacing: 3px;
-  --mainGreen: rgba(70, 155, 37, 0.788);
-  --niceGreen: rgb(7, 161, 58);
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-.book-now-btn {
-  padding: 0.5rem;
-  margin: 0 5rem 1rem;
-  font-size: 1.4rem;
-  font-weight: 600;
-  border: 2px groove ;
-  color: var(--mainWhite);
-  background : var(--mainGreen);
-  transition: var(--mainTransition);
-  letter-spacing: var(--mainSpacing);
-  justify-content: center;  
-  text-decoration: none;
-  border-radius:10px;
-  width: 250px;
+/* services */
+.empty-services {
+  margin: auto;
+  width: 90vw;
+  padding: 1.2rem;
+  text-align: center;
 }
-.book-now-btn:hover,
-.book-now-btn:focus {
-  box-shadow: 0 0.5em 0.5em -0.2em #3bb193 ;
+.services {
+  margin: auto;
+  width: 90vw;
+  padding: 1.2rem;
+  text-align: center;
+  border-radius: 10px;
+  background-color: var(--offWhite);
+  box-shadow: 0 0.4em 0em -0.3em var(--darkGrey) ;
+}
+.services-center {
+  width: 80vw;
+  padding: 30px;
+  display: grid;
+  grid-row-gap: 2rem;
+  grid-column-gap: 5rem;  
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+@media screen and (min-width: 940px) {
+  .services-center {
+    width: 90vw;
+    max-width: 1170px;
+  }
+}
+
+.services article {
+  margin: auto;
+}
+/* אייקונים שירותים */
+.services span {
+  background-color: var(--mainWhite);
+  color: var(--mainBlack);
+  padding: 0.7rem 0.7rem 0.2rem;
+  border-radius: 50%;
+  font-size: 2rem;
+}
+.services h6 {
+  font-weight: 500;  
+  margin-top: 5px;
+  letter-spacing: 2px;
+}
+/*end of services */
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.6rem 0rem 0.3rem;
+  background: var(--mainWhite);
+  z-index: 1;
+}
+/*לוגו העוגן*/
+.nav-logo:hover {
+  box-shadow: 2 1em 2em -0.4em var(--myblue) ;
   transform: translateY(-0.25em);
 }
-.calander-icon{
-  font-size: 1rem;
-  margin-top: 3px;
-  margin-right:8px;
+/*** במסך קטן ***/
+/* כותרת*/
+.nav-header {
+  display: flex;
+  justify-content: space-between;
 }
-@media screen and (min-width: 935px) {
-  .calander-icon{
-    font-size: 2rem;
-}}
+/* כפתור התפריט*/
+.nav-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+/*אייקון התפריט*/
+.nav-icon {
+  font-size: 1.5rem;
+  color:var(--myblue);
+}
+  /*עיצוב התפריט */
+.nav-links {
+  text-align: center;
+  list-style-type: none;
+  overflow: hidden;
+  height: 210px;
+}
+  /*הכפתורים בתפריט*/
+.nav-links a {
+  color:var(--myblue);
+  font-weight: 600;
+  font-size: 1rem;
+  justify-content: center;  
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  transition: var(--mainTransition);
+  cursor: pointer;
+  border-radius:7px;
+  padding: 3px 9px;
+}
+.nav-links a:hover,
+.nav-links a:focus {
+  box-shadow: 0 0.5em 0em -0.3em var(--myblue) ;
+  transform: translateY(-0.25em);
+}
+/* תפריט קטן, כש0 הוא סגור*/
+.show-nav {
+  height: 0px;
+}
+/*אייקון בין הכפתורי תפריט*/
+.anchor{
+  margin-top: 2px;
+  height: 14px;
+  width: 8px;
+}
+/*מסך גדול */
+@media screen and (min-width: 900px) {
+/*אייקון בין הכפתורי תפריט*/
+.anchor{
+    height: 34px;
+    width: 22px;
+    margin: auto 3px;
+  }
+  .nav-btn {
+    /*מעלים אייקון תפריט קטן */
+    display: none;
+  }
+  /*עיצוב תפריט*/
+    .nav-center {
+    direction: rtl;
+    display: flex;
+    width: 800px;
+    margin: auto;
+  }
+/*עיצוב גובה התפריט*/
+    .nav-links {
+    height: auto;
+    display: flex;
+  }
+  /* כפתורי תפריט */
+  .nav-links a {
+    padding: 2px 12px;
+    width: 100px;
+    margin: 4px;
+  }
+  .nav-links a:hover,
+  .nav-links a:focus {
+    box-shadow: 0 0.5em 0.9em -0.4em #050a5c ;
+    transform: translateY(-0.25em);
+    color: aliceblue;
+    background-color: var(--primaryColor);
+  }
+}
+/* end of navbar */
+
 /* globals */
 .sep{
   width: 49%;
   height: 35px;
+  background-position:center;
   /* width: 15%; */
   /* height: 25px; */
   background-image: url("./images/icons/mirror.png");
   margin: 1rem auto;
+}
+.btn-primary2 {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainBlack);
+  background: var(--primaryColor);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--primaryColor);
+  transition: var(--mainTransition);
+  cursor: pointer;
+}
+.btn-primary2:hover {
+  background: transparent;
+  color: var(--primaryColor);
 }
 body {
   padding-top: 66px;
@@ -105,25 +246,11 @@ h6 {
   direction: rtl;
   font-size: 1em;
   margin-bottom: 0.5em;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 div{
   direction: rtl;
-}
-
-.btn-primary2 {
-  display: inline-block;
-  text-decoration: none;
-  letter-spacing: var(--mainSpacing);
-  color: var(--mainBlack);
-  background: var(--primaryColor);
-  padding: 0.4rem 0.9rem;
-  border: 3px solid var(--primaryColor);
-  transition: var(--mainTransition);
-  cursor: pointer;
-}
-.btn-primary2:hover {
-  background: transparent;
-  color: var(--primaryColor);
 }
 .loading {
   text-transform: capitalize;
@@ -147,41 +274,37 @@ div{
 /*contact form*/
 .contact-icon{
   position: absolute;
-  top:140px;
-  right: 10px;
+  top:195px;
+  right: 6px;
 }
 .contact-icon div{
   margin: 5px;
   margin-left: 20px;
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 20%;
   cursor: pointer;
   background-position: center;
-  border: 1px groove var(--mainWhite);
+  border: 2px groove var(--offWhite);
 }
 .contact-icon div:hover{
-  width: 4.2rem;
-  height: 4.2rem;
+  width: 3.3rem;
+  height: 3.3rem;
 }
 
-/*abuot in homepage*/
+/*2 columns, for abuot & contact*/
 .abuot { 
   display: grid;
   grid-template-columns: 1fr;
   padding-bottom: 20px;
-}
-.pic div{
-  padding-bottom: 20px;
-  height: 240px;
-  width: 240px;
 }
 @media screen and (min-width: 935px) {
   .abuot {
     display: grid;
     grid-row-gap: 2rem;
     grid-column-gap: 10px;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 3fr;
+    padding:10px;
   }
 }
 .abuot h5 {
@@ -195,7 +318,7 @@ div{
 
 /*OLMap page*/
 .map {
-  width: 280px;
+  width: 70vw;
   height: 300px;
   margin: auto;
   margin-bottom: 15px;
@@ -227,15 +350,37 @@ div{
 }
 /*end of gallery*/
 
+
+/*switch pictures hero*/
+.switch{
+  background-color: var(--offWhite);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+/* Hero */
+.defaultHero,
+.roomsHero {
+  width: 96vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 150px);
+}
+.roomsHero {
+  background-image: url("./images/def.jpg");
+}
 /* Banner */
 .banner {
+  padding: 0.5rem 1.5rem;
   text-align: center;
   color: var(--mainWhite);
   background: rgba(0, 0, 0, 0.377);
   letter-spacing: var(--mainSpacing);
 }
 .banner h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .banner div {
   width: 7rem;
@@ -248,189 +393,12 @@ div{
   margin-bottom: 2rem;
 }
 /*end of Banner */
-
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 0.6rem 0rem 0.3rem;
-  background: var(--mainWhite);
-  z-index: 1;
-}
-/* כותרת במסך קטן*/
-.nav-header {
-  display: flex;
-  justify-content: space-between;
-}
-/* במסך קטן - כפתור התפריט*/
-.nav-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-/* הקטן אייקון התפריט*/
-.nav-icon {
-  font-size: 1.5rem;
-  color:var(--myblue);
-}
-/* הגדול אייקון התפריט*/
-.nav-logo {
-  margin-left: 5px;
-  border-radius: 10px;
-}
-.nav-logo:hover {
-  box-shadow: 2 1em 2em -0.4em var(--myblue) ;
-  transform: translateY(-0.25em);
-}
-  /*תפריט במסך קטן*/
-.nav-links {
-  text-align: center;
-  list-style-type: none;
-  overflow: hidden;
-  height: 210px;
-}
-  /*הכפתורים בתפריט במסך קטן*/
-.nav-links a {
-  color:var(--myblue);
-  font-weight: 600;
-  font-size: 1rem;
-  justify-content: center;  
-  text-decoration: none;
-  letter-spacing: var(--mainSpacing);
-  transition: var(--mainTransition);
-  cursor: pointer;
-  border-radius:7px;
-  padding: 3px 9px;
-}
-.nav-links a:hover,
-.nav-links a:focus {
-  box-shadow: 0 0.5em 0em -0.3em var(--myblue) ;
-  transform: translateY(-0.25em);
-}
-
-/* תפריט של מסך קטן, כש0 הוא סגור*/
-.show-nav {
-  height: 0px;
-}
-/*אייקון עוגן בין הכפתורי תפריט*/
-.anchor{
-  margin-top: 2px;
-  height: 14px;
-  width: 8px;
-  color: var(--myblue);
-}
-/*מסך גדול */
-@media screen and (min-width: 900px) {
-  .anchor{
-    height: 34px;
-    width: 22px;
-    margin: auto 3px;
-  }
-  .nav-btn {
-    /*גורם לאייקון מסך קטן להיעלם*/
-    display: none;
-  }
-  .nav-center {
-    /*משנה סדר כותרת במסך מלא*/
-    direction: rtl;
-    display: flex;
-    width: 800px;
-    margin: auto;
-  }
-/*מוריד שורת כותרת לגובה הלוגו במסך מלא*/
-    .nav-links {
-    height: auto;
-    display: flex;
-  }
-  .nav-links a {
-    padding: 2px 12px;
-    width: 100px;
-    margin: 4px;
-  }
-  .nav-links a:hover,
-  .nav-links a:focus {
-    box-shadow: 0 0.5em 0.9em -0.4em #050a5c ;
-    transform: translateY(-0.25em);
-    color: aliceblue;
-    background-color: var(--primaryColor);
-  }
-}
-/* end of navbar */
-
-
-/*switch pictures hero*/
-.switch{
-  position:relative;
-  background-color: var(--offWhite);
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-/* Hero */
-.defaultHero,
-.roomsHero {
-  width: 400px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: calc(100vh - 120px);
-}
-.roomsHero {
-  background-image: url("./images/rooms/room-2.jpeg");
-  min-height: 60vh;
-}
-/* End of Hero */
-
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 580px) {
   .defaultHero,
   .roomsHero {
-  width: 560px;
-}
-.map{
-  width: 350px;
-}
-.banner {
-  padding: 2rem 3rem;
-}}
-@media screen and (min-width: 680px) {
-  .defaultHero,
-  .roomsHero {
-  width: 660px;
-}
-.map{
-  width: 400px;
-}}
-@media screen and (min-width: 760px) {
-  .defaultHero,
-  .roomsHero {
-  width: 740px;
-}
-.map{
-  width: 530px;
-}}
-@media screen and (min-width: 800px) {
-  .defaultHero,
-  .roomsHero {
-  width: 780px;
-}
-.map{
-  width: 580px;
-}}
-@media screen and (min-width: 960px) {
-  .map{
-    width: 750px;
-  }
-  .defaultHero,
-  .roomsHero {
-  width: 1335px;
-  }
-  .banner {
-    padding: 2rem 6rem;
+    width: 98vw;
+}  .banner {
+    padding: 2rem 3rem;
 }}
 
 /* Title */
@@ -454,78 +422,6 @@ div{
 }
 /* end of Title */
 
-.empty-services {
-  padding-bottom: 1rem;
-  text-align: center;
-  justify-content: center;
-  margin: 10px auto 10px;
-  width: 85vw;
-  padding: 1.2rem;
-}
-
-/* services */
-.services {
-  background-color: var(--offWhite);
-  padding: 1.2rem;
-  text-align: center;
-  margin: auto;
-  margin-bottom: 10px;
-  width: 85vw;
-  border-radius: 10px;
-  box-shadow: 0 0.4em 0em -0.3em var(--darkGrey) ;
-}
-.services-center {
-  width: 90vw;
-  padding-top: 30px;
-  padding-left: 10rem;
-  display: grid;
-  grid-row-gap: 2rem;
-  grid-column-gap: 5rem;  
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-}
-@media screen and (min-width: 1245px) {
-  .services-center {
-    padding-right: 3rem;
-  }
-}@media screen and (min-width: 1300px) {
-  .services-center {
-    padding-right: 4rem;
-    padding-left: 5rem;
-  }
-}
-
-.services article {
-  margin: auto;
-}
-.services span {
-  background-color: var(--mainWhite);
-  color: var(--mainBlack);
-  padding: 0.7rem 0.7rem 0.2rem;
-  border-radius: 50%;
-  font-size: 2rem;
-}
-.services h6 {
-  font-weight: 500;  
-  margin-top: 5px;
-  letter-spacing: 2px;
-}
-.services p {
-  width: 80%;
-}
-@media screen and (min-width: 992px) {
-  .services-center {
-    width: 95vw;
-    max-width: 1170px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .services p {
-    width: 100%;
-  }
-}
-/*end of services */
-
 /* room */
 .room {
   box-shadow: var(--lightShadow);
@@ -543,6 +439,8 @@ div{
   display: block;
   transition: var(--mainTransition);
 }
+
+/* צריך מחיר? */
 .price-top {
   position: absolute;
   top: 0;
@@ -561,6 +459,11 @@ div{
   font-weight: 300;
   letter-spacing: var(--mainSpacing);
 }
+.img-container:hover .price-top {
+  opacity: 0;
+}
+/* צריך מחיר? */
+
 .room-link {
   position: absolute;
   top: 50%;
@@ -573,9 +476,6 @@ div{
 }
 .img-container:hover img {
   opacity: 0.3;
-}
-.img-container:hover .price-top {
-  opacity: 0;
 }
 .img-container:hover .room-link {
   transform: translate(-50%, -50%) scale(1);
@@ -605,6 +505,7 @@ div{
 }
 .description p {
   line-height: 1.5;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .info h3,
 .info h6 {
@@ -627,7 +528,39 @@ div{
   grid-column-gap: 2rem;
   grid-row-gap: 1rem;
 }
-@media screen and (min-width: 992px) {
+.extras li{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/* בעמוד החדרים! לא בתפריט */
+.book-now-btn {
+  padding: 0.5rem;
+  margin: 0 5rem 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: 2px groove ;
+  color: var(--mainWhite);
+  background : var(--mainGreen);
+  transition: var(--mainTransition);
+  letter-spacing: var(--mainSpacing);
+  justify-content: center;  
+  text-decoration: none;
+  border-radius:10px;
+  width: 250px;
+}
+.book-now-btn:hover,
+.book-now-btn:focus {
+  box-shadow: 0 0.5em 0.5em -0.2em #3bb193 ;
+  transform: translateY(-0.25em);
+}
+.calander-icon{
+  font-size: 1rem;
+  margin-top: 3px;
+  margin-right:8px;
+}
+@media screen and (min-width: 935px) {
+  .calander-icon{
+    font-size: 2rem;
+  }
   .single-room-info,
   .room-extras {
     width: 75vw;
@@ -652,18 +585,6 @@ div{
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   grid-row-gap: 2rem;
   grid-column-gap: 30px;
-}
-
-@media screen and (min-width: 776px) {
-  .roomslist-center {
-    width: 90vw;
-  }
-}
-@media screen and (min-width: 992px) {
-  .roomslist-center {
-    width: 95vw;
-    max-width: 1170px;
-  }
 }
 /* end of roomlist */
 
@@ -708,19 +629,23 @@ div{
   font-size: 0.8rem;
   margin-left: 0.5rem;
 }
+/* end of rooms fitler*/
+
 @media screen and (min-width: 776px) {
   .filter-form {
     width: 70vw;
   }
+  .roomslist-center {
+    width: 90vw;
+  }
 }
 @media screen and (min-width: 992px) {
-  .filter-form {
+  .filter-form,
+  .roomslist-center {
     width: 95vw;
     max-width: 1170px;
   }
 }
-/* end of rooms fitler*/
-
 /* activitylist */
 .activitylist {
   padding-bottom: 1rem;
@@ -789,6 +714,7 @@ div{
 .img__description p{
   color: var(--lightblue);
   font-weight: 500;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .img__description a{
  color: var(--primaryColor);
