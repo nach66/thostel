@@ -16,12 +16,16 @@ export default function ContactForm() {
                     <article>
                     <h6>אל תהססו לפנות אלינו בכל שאלה!</h6>
                     <h6>שעות הקבלה שלנו הן 8:00-23:00</h6>
-                        <FaPhone style={{ color:'rgb(7, 161, 58)'}}/>
-                        <h6>04-679-2611</h6>
+                        <a href="tel:04-679-2611">
+                            <FaPhone style={{ color:'rgb(7, 161, 58)'}}/>
+                            <h6>04-679-2611</h6>
+                        </a>
                         <a href={"mailto:tiberiashostel@gmail.com"} rel="noopener noreferrer" target="_blank">
                             <FaEnvelope style={{ color:'#ebe050'}}/>
                         </a>
-                        <h6>tiberiashostel@gmail.com</h6>
+                        <a href={"mailto:tiberiashostel@gmail.com"} rel="noopener noreferrer" target="_blank">
+                            <h6>tiberiashostel@gmail.com</h6>
+                        </a>
                         <FaSearchLocation style={{ color:'var(--myblue)'}}/>
                         <h6>כיכר רבין, טבריה. מיקוד: 1411501, תיבת דואר 1514.</h6>
                         <h6>הכניסה מימין לבנק הבינלאומי.</h6>
@@ -57,7 +61,7 @@ export default function ContactForm() {
                                 <div className="col-10 mx-auto col-md-6 my-3">
                                     <form
                                         className="mt-5" method="POST"
-                                        action="https://formspree.io/nach666@gmail.com"
+                                        action="https://formspree.io/tiberiashostel@gmail.com"
                                     >
                                         {/* first */}
                                         <div className="form-group">

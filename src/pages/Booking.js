@@ -22,7 +22,7 @@ export default class Booking extends Component {
                             <FaEnvelope style={{ color:'#ebe050'}}/></a>
                             <h6>tiberiashostel@gmail.com</h6>
                         </article>
-                    <iframe title="book" width="85%" height="600px" scrolling="auto"
+                    <iframe title="book" width="95%" height="600px" scrolling="auto"
                         src="https://new-booking.frontdeskmaster.com?hostelId=AJKOwMNX%2F5UDIgGxDhqQRY6JrRNTS%2BGr"/>
                 </section>
                 <div className="sep"/>

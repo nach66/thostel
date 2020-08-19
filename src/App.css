@@ -374,7 +374,7 @@ div{
 /* Hero */
 .defaultHero,
 .roomsHero {
-  width: 96vw;
+  width: 98vw;
   margin: auto;
   display: flex;
   align-items: center;
@@ -697,16 +697,17 @@ div{
   left: 0;
   right: 0;  
   border-radius: 10px;
-  padding: 20px;
+  padding: 12px;
   /* transition effect. not necessary */
   transition: opacity .2s, visibility .2s;
 }
+/* טקסט תיאור */
 .img__description p{
   color: var(--lightblue);
-  font-weight: 500;
-  margin-bottom: 10px;
+  font-weight: 200;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+/* לינק */
 .img__description a{
  color: var(--primaryColor);
  font-weight:600;
@@ -717,7 +718,7 @@ div{
   opacity: 1;
 }
 .activity-name {
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 0.3rem;
   text-align: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   letter-spacing: var(--mainSpacing);

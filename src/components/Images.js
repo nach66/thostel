@@ -37,7 +37,7 @@ export default class Images extends Component {
     }
 
     componentDidMount() {
-        setInterval(this.switchImage, 3000);
+        setInterval(this.switchImage, 4000);
     } 
 
     render() {
