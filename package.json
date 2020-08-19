@@ -23,6 +23,7 @@
     "react-grid-gallery": "^0.5.5",
     "react-helmet": "^6.1.0",
     "react-icons": "^3.10.0",
+    "react-image-lightbox": "^5.1.1",
     "react-images": "^1.1.7",
     "react-mailto": "^0.4.0",
     "react-router-dom": "^5.2.0",

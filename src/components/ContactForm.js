@@ -14,7 +14,8 @@ export default function ContactForm() {
                 <Title title="דברו אלינו"/> 
                 <div className="abuot">
                     <article>
-                        <h6>אל תהססו לפנות אלינו בכל שאלה, אנו נענה בשעות הקבלה 8:00-23:00</h6>
+                    <h6>אל תהססו לפנות אלינו בכל שאלה!</h6>
+                    <h6>שעות הקבלה שלנו הן 8:00-23:00</h6>
                         <FaPhone style={{ color:'rgb(7, 161, 58)'}}/>
                         <h6>04-679-2611</h6>
                         <a href={"mailto:tiberiashostel@gmail.com"} rel="noopener noreferrer" target="_blank">
@@ -24,9 +25,33 @@ export default function ContactForm() {
                         <FaSearchLocation style={{ color:'var(--myblue)'}}/>
                         <h6>כיכר רבין, טבריה. מיקוד: 1411501, תיבת דואר 1514.</h6>
                         <h6>הכניסה מימין לבנק הבינלאומי.</h6>
+
+                        <div className="contact-icon">
+                            <a rel="noopener noreferrer" target={"_blank"} 
+                                href='https://www.facebook.com/tiberiashostel/'>
+                                <div style={{backgroundImage: `url(${face})`}}/>   
+                            </a>
+
+                            <a rel="noopener noreferrer" target={"_blank"} 
+                                href='https://www.tripadvisor.co.il/Hotel_Review-g297765-d1198814-Reviews-Tiberias_Hostel-Tiberias_Galilee_Region_Northern_District.html'>
+                                <div style={{backgroundImage: `url(${tripadvisor})`}}/>   
+                            </a> 
+
+                            <a rel="noopener noreferrer" target={"_blank"} 
+                                href='http://www.hostels-israel.com/'>
+                                <div style={{backgroundImage: `url(${ilh})`}}/>   
+                            </a> 
+
+                            <a rel="noopener noreferrer" target={"_blank"} 
+                                href='https://www.instagram.com/tiberiashostel/'>
+                                <div style={{backgroundImage: `url(${instagram})`}}/>   
+                            </a>
+                        </div>
+
                     </article>
 
                     <article>
+                        <h6>אפשר להשאיר הודעה ונחזור אליכם:</h6>
                         <section className="py-5">
                             <div className="row">
                                 <div className="col-10 mx-auto col-md-6 my-3">

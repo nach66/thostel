@@ -69,7 +69,7 @@ export default function RoomsFilter({ rooms }) {
                 </div>
                 {/* end guests  */}
                 {/* room price */}
-                <div className="form-group">
+{/*                 <div className="form-group">
                     <label htmlFor="price">‎עד מחיר ₪{price}</label>
                     <input
                         type="range"
@@ -82,7 +82,7 @@ export default function RoomsFilter({ rooms }) {
                         className="form-control"
                         style={{  direction: 'ltr'}}
                     />
-                </div>
+                </div> */}
                 {/* end of room price */}
                 {/* extras  */}
                 <div className="form-group">

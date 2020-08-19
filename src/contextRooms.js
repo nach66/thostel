@@ -10,9 +10,9 @@ export default class RoomProvider extends Component {
     loading: true,
     type: 'all',
     capacity: 1,
-    price: 0,
-    minPrice: 0,
-    maxPrice: 0,
+//    price: 0,
+//    minPrice: 0,
+//    maxPrice: 0,
     minibar: false,
     tv: false
   };
@@ -22,16 +22,16 @@ export default class RoomProvider extends Component {
       let response = await Client.getEntries({
         content_type: "thostel",
 //        order:"sys.createdAt"
-        order:"fields.price"
+        order:"fields.capacity"
       });
       let rooms = this.formatData(response.items);
-      let maxPrice = Math.max(...rooms.map(item => item.price));
+      //let maxPrice = Math.max(...rooms.map(item => item.price));
       this.setState({
           rooms,
           sortedRooms: rooms,
           loading: false,
-          price: maxPrice,
-          maxPrice
+//          price: maxPrice,
+//          maxPrice
         });
     } catch (error) {
       console.log(error);
@@ -76,7 +76,7 @@ export default class RoomProvider extends Component {
         rooms,
         type,
         capacity,
-        price,
+//        price,
         minibar,
         tv
       } = this.state;
@@ -84,7 +84,7 @@ export default class RoomProvider extends Component {
       let tempRooms = [...rooms];
       // transform value
       capacity = parseInt(capacity);
-      price = parseInt(price);
+//      price = parseInt(price);
 
       // filter by type
       if (type !== "הכול") {
@@ -96,7 +96,7 @@ export default class RoomProvider extends Component {
         tempRooms = tempRooms.filter(room => room.capacity >= capacity);
       }
       // filter by price
-      tempRooms = tempRooms.filter(room => room.price <= price);
+      //tempRooms = tempRooms.filter(room => room.price <= price);
       // filter by minibar
       if (minibar) {
         tempRooms = tempRooms.filter(room => room.minibar === true);

@@ -53,28 +53,7 @@ export default class Images extends Component {
                             </Link>
                         </Banner>
                     </Hero>
-                    <div className="contact-icon">
-                        <a rel="noopener noreferrer" target={"_blank"} 
-                            href='https://www.facebook.com/Tiberias-Hostel-1419006915066941/'>
-                            <div style={{backgroundImage: `url(${face})`}}/>   
-                        </a>
-
-                        <a rel="noopener noreferrer" target={"_blank"} 
-                            href='https://www.tripadvisor.co.il/Hotel_Review-g297765-d1198814-Reviews-Tiberias_Hostel-Tiberias_Galilee_Region_Northern_District.html'>
-                            <div style={{backgroundImage: `url(${tripadvisor})`}}/>   
-                        </a> 
-
-                        <a rel="noopener noreferrer" target={"_blank"} 
-                            href='http://www.hostels-israel.com/'>
-                            <div style={{backgroundImage: `url(${ilh})`}}/>   
-                        </a> 
-
-                        <a rel="noopener noreferrer" target={"_blank"} 
-                            href='https://www.instagram.com/tiberiashostel/'>
-                            <div style={{backgroundImage: `url(${instagram})`}}/>   
-                        </a>
-                    </div>
-                </div>
+                 </div>
             </div>
         );
     }

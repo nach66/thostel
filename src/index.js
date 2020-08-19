@@ -5,19 +5,19 @@ import { BrowserRouter as Router} from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
 import {ActivityProvider} from "./contextActivities";
 import {RoomProvider} from "./contextRooms";
+import ScrollToTop from "./ScrollToTop";
 import { ParallaxProvider } from 'react-scroll-parallax';
 
 ReactDOM.render(
   <RoomProvider>
-  <ActivityProvider>
-      <Router>
-      <ParallaxProvider>
-
-        <App/>
-        </ParallaxProvider>
-
-      </Router>
-  </ActivityProvider>
+    <ActivityProvider>
+        <Router>
+          <ParallaxProvider>
+            <ScrollToTop/>
+              <App/>
+          </ParallaxProvider>
+        </Router>
+    </ActivityProvider>
   </RoomProvider>
 ,
   document.getElementById("root")

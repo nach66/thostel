@@ -57,7 +57,7 @@ export default class SingleRoom extends Component {
                 </StyledHero>
                 <div className="sep"/>
 
-                <section className="room-extras">
+                <section className="room-section">
                     <div className="container" style={{marginTop: '70px'}}>
                         {defuldImg.map((item,index)=>{
                             return ( <div
@@ -82,32 +82,18 @@ export default class SingleRoom extends Component {
                         )}
                     </div>
                 </section>
-                    
-                <section >
-                    <div className="single-room-info">
-                        <article className="description">
-                            <h3>פרטים</h3>
-                            <p>{description}</p>
-                        </article>
-                        <article className="info">
-                            <h3>מידע</h3>
-                            <h6>
-                                כמות אנשים בחדר : {" "} {capacity > 1? 
-                                `${capacity} אנשים`: 
-                                `אדם אחד`}
-                            </h6>
-                            <h6> {tv? "טלוויזיה בכבלים עם מסך שטוח" : "חדר טלוויזיה משותף בסמוך לחדר"}</h6>
-                            <h6> {minibar && "מיני בר בחדר"} </h6>                            
-                            {/* <h6>מחיר: ₪{price}</h6> */}
-                        </article>
-                    </div>
+                <section className="room-section">
+                    <h3>פרטים</h3>
+                    <p>{description}</p>
                 </section>
-
-                <section className="room-extras">
-                    <h6>מתקנים</h6>
+                <section className="room-section">
+                    <h3>מידע ומתקנים</h3>
                     <ul className="extras">
                         {extras.map((item,index)=>{
-                        return<li key={index}>- {item}</li> })}
+                            return<li key={index}>
+                                - {item}
+                                </li> 
+                        })}
                     </ul>
                 </section>
 
@@ -116,16 +102,14 @@ export default class SingleRoom extends Component {
                     className="book-now-btn"
                     >
                         הזמן עכשיו!
-                        <span style={{ fontSize: '1.2rem',margin:'9px'}}>
+                        <span className="calander-icon">
                             <FaCalendarAlt/>
                         </span>
                     </Link>
                 </section>
 
                 <div className="sep"/>
-
                 <ContactForm/>
-
                 <Footer/>
             </>
         );

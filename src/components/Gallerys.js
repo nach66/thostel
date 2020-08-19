@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Title from './Title';
-import Lightbox from 'lightbox-react';
-import 'lightbox-react/style.css';
+import Lightbox from "react-image-lightbox";
+import 'react-image-lightbox/style.css';
 
 var viewImages =[];
 var hostelImages =[];
@@ -38,16 +38,16 @@ export default class Gallerys extends Component {
                         )}
                         {isOpen_hostel && (
                             <Lightbox
-                                            mainSrc={hostelImages[photoIndex]}
-                                            nextSrc={hostelImages[(photoIndex + 1) % hostelImages.length]}
-                                            prevSrc={hostelImages[(photoIndex + hostelImages.length - 1) % hostelImages.length]}
-                                            onCloseRequest={() => this.setState({ isOpen_hostel: false })}
-                                            onMovePrevRequest={() => this.setState({
-                                                photoIndex: (photoIndex + hostelImages.length - 1) % hostelImages.length
-                                            })}
-                                            onMoveNextRequest={() => this.setState({
-                                                photoIndex: (photoIndex + 1) % hostelImages.length
-                                            })}
+                                mainSrc={hostelImages[photoIndex]}
+                                nextSrc={hostelImages[(photoIndex + 1) % hostelImages.length]}
+                                prevSrc={hostelImages[(photoIndex + hostelImages.length - 1) % hostelImages.length]}
+                                onCloseRequest={() => this.setState({ isOpen_hostel: false })}
+                                onMovePrevRequest={() => this.setState({
+                                    photoIndex: (photoIndex + hostelImages.length - 1) % hostelImages.length
+                                })}
+                                onMoveNextRequest={() => this.setState({
+                                    photoIndex: (photoIndex + 1) % hostelImages.length
+                                })}
                             />
                         )}
                     </div>

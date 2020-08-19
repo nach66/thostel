@@ -94,14 +94,18 @@
 }
 /* כפתור התפריט*/
 .nav-btn {
+  margin-left: 10px;
   background: transparent;
-  border: none;
+  border: 2px groove;
+  border-radius: 4px;
+  padding: 0.3rem;
   cursor: pointer;
   outline: none;
 }
 /*אייקון התפריט*/
 .nav-icon {
-  font-size: 1.5rem;
+  padding-top: 5px;
+  font-size: 2rem;
   color:var(--myblue);
 }
   /*עיצוב התפריט */
@@ -109,7 +113,7 @@
   text-align: center;
   list-style-type: none;
   overflow: hidden;
-  height: 210px;
+  height: 250px;
 }
   /*הכפתורים בתפריט*/
 .nav-links a {
@@ -155,7 +159,7 @@
     .nav-center {
     direction: rtl;
     display: flex;
-    width: 800px;
+    width: 910px;
     margin: auto;
   }
 /*עיצוב גובה התפריט*/
@@ -273,13 +277,10 @@ div{
 
 /*contact form*/
 .contact-icon{
-  position: absolute;
-  top:195px;
-  right: 6px;
+  display: inline-flex;
 }
 .contact-icon div{
   margin: 5px;
-  margin-left: 20px;
   width: 3rem;
   height: 3rem;
   border-radius: 20%;
@@ -296,23 +297,30 @@ div{
 .abuot { 
   display: grid;
   grid-template-columns: 1fr;
-  padding-bottom: 20px;
-}
-@media screen and (min-width: 935px) {
-  .abuot {
-    display: grid;
-    grid-row-gap: 2rem;
-    grid-column-gap: 10px;
-    grid-template-columns: 2fr 3fr;
-    padding:10px;
-  }
 }
 .abuot h5 {
   letter-spacing: 2px;
-  padding-right: 1rem;
-  padding-left: 1rem;
   font-weight: 500;
   text-align: right;
+}
+.abuot img{
+  padding: 20px;
+  padding-top: 0.4rem;
+  height: 280px;
+  width: 270px;
+}
+.abuot article {
+  margin: 10px;
+}
+@media screen and (min-width: 1050px) {
+  .abuot {
+    grid-row-gap: 2rem;
+    grid-column-gap: 10px;
+    grid-template-columns: 2fr 4fr;
+  }
+  .abuot h5 {
+    width: 700px;
+  }
 }
 /*end of abuot*/
 
@@ -348,6 +356,11 @@ div{
 .container div:hover {
   box-shadow: var(--lightShadow);
 }
+.vv{
+  margin: 100px;
+  background-position-y: bottom;
+}
+
 /*end of gallery*/
 
 
@@ -490,37 +503,19 @@ div{
 }
 /* end of room  */
 /* single room*/
-.single-room-info {
-  width: 75vw;
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: auto;
-}
-.description,
-.info {
-  margin: 1rem 0;
-}
-.description h3 {
-  letter-spacing: var(--mainSpacing);
-}
-.description p {
-  line-height: 1.5;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.info h3,
-.info h6 {
-  letter-spacing: var(--mainSpacing);
-}
-.info h6 {
-  font-weight: 300;
-}
-.room-extras {
+.room-section {
   width: 75vw;
   margin: 0 auto 3rem auto;
 }
-.room-extras h6 {
-  letter-spacing: var(--mainSpacing);
+.room-section p {
+  line-height: 1.5;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
 }
+.room-section h3 {
+  letter-spacing: var(--mainSpacing);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+
 .extras {
   list-style-type: none;
   display: grid;
@@ -529,14 +524,17 @@ div{
   grid-row-gap: 1rem;
 }
 .extras li{
+  font-weight: 300;
+  letter-spacing: var(--mainSpacing);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
 /* בעמוד החדרים! לא בתפריט */
 .book-now-btn {
   padding: 0.5rem;
-  margin: 0 5rem 1rem;
-  font-size: 1.4rem;
   font-weight: 600;
+  font-size: 1rem;
+
   border: 2px groove ;
   color: var(--mainWhite);
   background : var(--mainGreen);
@@ -545,7 +543,6 @@ div{
   justify-content: center;  
   text-decoration: none;
   border-radius:10px;
-  width: 250px;
 }
 .book-now-btn:hover,
 .book-now-btn:focus {
@@ -553,23 +550,21 @@ div{
   transform: translateY(-0.25em);
 }
 .calander-icon{
-  font-size: 1rem;
-  margin-top: 3px;
-  margin-right:8px;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  margin-right:6px;
 }
 @media screen and (min-width: 935px) {
   .calander-icon{
-    font-size: 2rem;
+    font-size: 1.1rem;
+    margin:8px;
   }
-  .single-room-info,
-  .room-extras {
+  .book-now-btn {
+    font-size: 1.3rem;
+  }
+  .room-section {
     width: 75vw;
     max-width: 1170px;
-  }
-  .single-room-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2rem;
   }
 }
 /* end of single room*/
@@ -659,11 +654,6 @@ div{
   grid-column-gap: 30px;
 }
 
-@media screen and (min-width: 776px) {
-  .activitylist-center {
-    width: 90vw;
-  }
-}
 @media screen and (min-width: 992px) {
   .activitylist-center {
     width: 80vw;
@@ -691,7 +681,7 @@ div{
 .img-container-activity img {
   border-radius: 10px;
   width: 100%;
-  height: 280px;
+  height: 290px;
   display: block;
   transition: var(--mainTransition);
 }
@@ -707,13 +697,14 @@ div{
   left: 0;
   right: 0;  
   border-radius: 10px;
-  padding: 30px;
+  padding: 20px;
   /* transition effect. not necessary */
   transition: opacity .2s, visibility .2s;
 }
 .img__description p{
   color: var(--lightblue);
   font-weight: 500;
+  margin-bottom: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .img__description a{
