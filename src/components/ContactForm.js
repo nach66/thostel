@@ -1,6 +1,6 @@
 import React from 'react'
 import Title from './Title'
-import {FaEnvelope,FaPhone, FaSearchLocation} from 'react-icons/fa';
+import {FaMapMarked, FaLocationArrow, FaEnvelope,FaPhone, FaSearchLocation} from 'react-icons/fa';
 import tripadvisor from '../images/icons/tripadvisor.png'
 import instagram from '../images/icons/instagram.jpg'
 import ilh from '../images/icons/ilh.png'
@@ -39,7 +39,7 @@ export default function ContactForm() {
                     <h6>tiberiashostel@gmail.com</h6>
 
                     <a href={"https://www.google.co.il/maps/place/Tiberias+Hostel/@32.7886111,35.5219349,14z/data=!4m11!1m2!2m1!1z15DXm9eh16DXmdeZ16og15jXkdeo15nXlA!3m7!1s0x151c3e48ddd195df:0x2bf279e8d24c26b4!5m2!4m1!1i2!8m2!3d32.7886111!4d35.5394444"} rel="noopener noreferrer" target="_blank">
-                            <FaSearchLocation style={{ 
+                            <FaMapMarked style={{ 
                                 padding: '4px',
                                 fontSize: '1.9rem',
                                 borderRadius: '5px',

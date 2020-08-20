@@ -8,7 +8,6 @@ import Contact from "./pages/Contact";
 import Booking from "./pages/Booking";
 import Rooms from "./pages/Rooms";
 import Error from "./pages/Error";
-import Home from "./pages/Home";
 import SingleRoom from "./pages/SingleRoom";
 import Activities from "./pages/Activities";
 import "./App.css";
@@ -18,14 +17,13 @@ function App() {
     <>
         <NavBar/>
             <Switch>
-                <Route exact path="/" component={Home}/>
-                <Route exact path="/about" component={Aboutus}/>
+                <Route exact path="/" component={Aboutus}/>
                 <Route exact path="/rooms" component={Rooms}/>
+                <Route exact path="/Activities" component={Activities}/>
                 <Route exact path="/location" component={Location}/>
                 <Route exact path="/contact" component={Contact}/>
                 <Route exact path="/bookhere" component={Booking}/>
                 <Route exact path="/rooms/:slug" component={SingleRoom}/>
-                <Route exact path="/Activities" component={Activities}/>
                 
                 <Route exact path="/jerusalem" component={() => { 
                     window.location.href = 

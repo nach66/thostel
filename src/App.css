@@ -114,6 +114,7 @@
   list-style-type: none;
   overflow: hidden;
   height: 250px;
+  box-shadow: var(--lightShadow);
 }
   /*הכפתורים בתפריט*/
 .nav-links a {
@@ -127,6 +128,7 @@
   cursor: pointer;
   border-radius:7px;
   padding: 3px 9px;
+  box-shadow: none;
 }
 .nav-links a:hover,
 .nav-links a:focus {
@@ -166,6 +168,7 @@
     .nav-links {
     height: auto;
     display: flex;
+    box-shadow: none;
   }
   /* כפתורי תפריט */
   .nav-links a {

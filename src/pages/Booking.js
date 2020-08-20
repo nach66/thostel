@@ -3,6 +3,7 @@ import Images from '../components/Images'
 import Footer from '../components/Footer'
 import {FaEnvelope,FaPhone} from 'react-icons/fa';
 import ContactForm from '../components/ContactForm'
+import Title from '../components/Title';
 
 export default class Booking extends Component {
     render() {
@@ -12,6 +13,7 @@ export default class Booking extends Component {
                     link_text="חזרה לעמוד הבית"/>
                 <div className="sep"/>
                 <section className="empty-services">
+                    <Title title="הזמנה ישירה"/>
                     <h6>להזמנות קבוצתיות של 10 אנשים ומעלה, אנא פנו אלינו - בדוא"ל, בטלפון, או בעזרת הצ'אטבוט</h6>
                         <article>
                             <FaPhone style={{ color:'rgb(7, 161, 58)'}}/>

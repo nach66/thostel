@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
-import {FaAlignLeft, FaCalendarAlt, FaAnchor} from 'react-icons/fa'
+import { Link } from 'react-router-dom'
+import {FaWindowClose, FaAlignLeft, FaCalendarAlt, FaAnchor} from 'react-icons/fa'
 import logo from '../images/icons/logo.jpg'
 import l from '../images/icons/bet.png'
-import { Link } from 'react-router-dom'
-
+//import ScrollToTop from "../ScrollToTop";
+import * as Scroll from 'react-scroll';
+import { Link as ll, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+ 
 export default class NavBar extends Component {
     state={
         isOpen: true
@@ -13,23 +16,38 @@ export default class NavBar extends Component {
             isOpen: !this.state.isOpen
         })
     }
+    componentDidMount () {
+        this.setState({
+            isOpen: true
+        });
+    }
+
+    scrollToTop () {
+        scroll.scrollToTop();
+    }
     
     render() {
         return (
             <nav className="navbar">
                 <div className="nav-center">
                     <div className="nav-header">
-                        <Link to="/">                        
-                            <img src={logo} className="nav-logo" alt="logo"/>
+                        <Link to="/" >                        
+                            <img src={logo} onClick={this.scrollToTop} className="nav-logo" alt="logo"/>
                         </Link>
                         <button type="button" onClick={this.handleToggle} className="nav-btn">
-                            <FaAlignLeft className="nav-icon"/>
-                        </button>
+                            {this.state.isOpen? 
+                                <FaAlignLeft className="nav-icon"/> :
+                                <FaWindowClose className="nav-icon"/> 
+                            }
+                            </button>
                     </div>
 
-                    <ul className={this.state.isOpen? "nav-links show-nav" : "nav-links"}>
+                    <ul 
+                    className={this.state.isOpen? "nav-links show-nav" : "nav-links"} 
+                    onClick={this.handleToggle}
+                    >
                         <li>
-                            <Link to="/" className="nav-links">מי אנחנו</Link>
+                            <Link to="/" className="nav-links" >מי אנחנו</Link>
                         </li>
                         <img src={l} className="anchor" alt="logo"/>
                         <li>

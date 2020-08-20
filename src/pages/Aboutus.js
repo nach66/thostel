@@ -9,10 +9,11 @@ export default class Aboutus extends Component {
     render() {
         return (
             <>
-                <Images title="מי אנחנו" 
-                    link="/"
-                    link_text="חזרה לעמוד הבית"
-                />
+            <Images title="אכסניית טבריה" 
+                    subtitle="הבית שלך בצפון"
+                    link="/rooms"
+                    link_text="לחדרים"
+            />
                 <div className="sep"/>
                 <About/>
                 <div className="sep"/>
