@@ -30,8 +30,6 @@ export default class Gallerys extends Component {
         return(
             <>
 
-<ImageGallery items={hostelImages} slideDuration={550} showPlayButton={false} showThumbnails={false} />
-
                 <section className="services">
                     <Title title="תמונות מההוסטל"/> 
                     <div className="container">
