@@ -7,10 +7,6 @@ import b from '../images/כותרת/n2.jpg'
 import c from '../images/כותרת/n3.jpg'
 import d from '../images/כותרת/n5.jpg'
 
-import tripadvisor from '../images/icons/tripadvisor.png'
-import instagram from '../images/icons/instagram.jpg'
-import ilh from '../images/icons/ilh.png'
-import face from '../images/icons/fa.png'
 import CrossfadeImage from 'react-crossfade-image'
 
 export default class Images extends Component {

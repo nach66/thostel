@@ -11,8 +11,8 @@ const getUnique = (items, value) => {
 export default function RoomsFilter({ rooms }) {
 
     const context = useContext(RoomContext);
-    const {handleChange,type,capacity,price,
-        minPrice, maxPrice, minibar, tv} = context;
+    const {handleChange,type,capacity,
+        minibar, tv} = context;
 // get unique types
     let types = getUnique(rooms,'type');
 // add all

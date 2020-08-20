@@ -1,7 +1,6 @@
 import React from 'react'
 import c from '../images/odot.jpg'
 import Title from '../components/Title';
-import { Parallax } from 'react-scroll-parallax';
 
 export default function About() {
     return (
@@ -10,7 +9,7 @@ export default function About() {
                 <Title title="מי אנחנו?"/> 
                 <div className="abuot">
                     <article className="pic">
-                        <img src={c}/>  
+                        <img src={c} alt="היי"/>  
                     </article>
                     <article>
                         <h5>אכסניית טבריה הוקמה בשנת 2015, לאחר שהבנו שקיים חוסר במקומות אירוח למטיילים בצפון הארץ, מהם ניתן לצאת לטיולי יום ולחזור למקום ביתי ובטוח.</h5>

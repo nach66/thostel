@@ -1,12 +1,12 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+// import { useEffect } from "react";
+// import { useLocation } from "react-router-dom";
 
-export default function ScrollTo500() {
-  const { pathname } = useLocation();
+// export default function ScrollTo500() {
+//   const { pathname } = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(500, 500);
-  }, [pathname]);
+//   useEffect(() => {
+//     window.scrollTo(500, 500);
+//   }, [pathname]);
 
-  return null;
-}
+//   return null;
+// }

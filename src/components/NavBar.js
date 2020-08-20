@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import {FaWindowClose, FaAlignLeft, FaCalendarAlt, FaAnchor} from 'react-icons/fa'
+import {FaWindowClose, FaAlignLeft, FaCalendarAlt} from 'react-icons/fa'
 import logo from '../images/icons/logo.jpg'
 import l from '../images/icons/bet.png'
 //import ScrollToTop from "../ScrollToTop";
-import * as Scroll from 'react-scroll';
-import { Link as ll, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import {animateScroll as scroll } from 'react-scroll'
  
 export default class NavBar extends Component {
     state={
@@ -23,9 +22,12 @@ export default class NavBar extends Component {
     }
 
     scrollToTop () {
-        scroll.scrollToTop();
+        scroll.scrollToTop(0);
     }
-    
+    scrollTo () {
+        scroll.scrollTo(500);
+    }
+
     render() {
         return (
             <nav className="navbar">
@@ -44,10 +46,10 @@ export default class NavBar extends Component {
 
                     <ul 
                     className={this.state.isOpen? "nav-links show-nav" : "nav-links"} 
-                    onClick={this.handleToggle}
+                    onClick={this.handleToggle} onClick={this.scrollTo}
                     >
                         <li>
-                            <Link to="/" className="nav-links" >מי אנחנו</Link>
+                            <Link to="/"  className="nav-links" >מי אנחנו</Link>
                         </li>
                         <img src={l} className="anchor" alt="logo"/>
                         <li>

@@ -3,6 +3,10 @@ import Title from './Title';
 import Lightbox from "react-image-lightbox";
 import 'react-image-lightbox/style.css';
 
+import ImageGallery from 'react-image-gallery';
+import Carousel from 'react-responsive-carousel'
+
+
 var viewImages =[];
 var hostelImages =[];
 
@@ -25,9 +29,13 @@ export default class Gallerys extends Component {
         const { photoIndex } = this.state;
         return(
             <>
+
+<ImageGallery items={hostelImages} slideDuration={550} showPlayButton={false} showThumbnails={false} />
+
                 <section className="services">
                     <Title title="תמונות מההוסטל"/> 
                     <div className="container">
+
                         {hostelImages.map((image, index) =>
                             <div
                                 key={index} alt="pic"
@@ -50,6 +58,7 @@ export default class Gallerys extends Component {
                                 })}
                             />
                         )}
+
                     </div>
                 </section>
 
