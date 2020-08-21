@@ -7,8 +7,6 @@ import b from '../images/כותרת/n2.jpg'
 import c from '../images/כותרת/n3.jpg'
 import d from '../images/כותרת/n5.jpg'
 
-import CrossfadeImage from 'react-crossfade-image'
-
 export default class Images extends Component {
     constructor(props) {
         super(props);
@@ -56,7 +54,7 @@ export default class Images extends Component {
 }
 
 
-{/* <CrossfadeImage
+/* <CrossfadeImage
                     src={this.state.images[this.state.currentImage]}
                     timingFunction={"ease-out"}
                 /> 
@@ -64,4 +62,4 @@ export default class Images extends Component {
                     <div style={{ backgroundRepeat: 'no-repeat', 
                     backgroundImage: `url(${this.state.images[this.state.currentImage]})`}}>
                     <Hero>...</Hero>
-    </div> */}
+    </div> */
