@@ -13,7 +13,9 @@ export default function ContactForm() {
             <section className="empty-services">
                 <Title title="דברו אלינו"/> 
                 <div className="abuot">
-                    <article>
+                    <article style={{
+                        paddingTop:'4px'
+                    }}>
                         <h6>אל תהססו לפנות אלינו בכל שאלה!</h6>
                         <h6>שעות הקבלה שלנו הן 8:00-23:00</h6>
                         <a href="tel:04-679-2611">
@@ -114,7 +116,7 @@ export default function ContactForm() {
                                         <textarea
                                             name="message"
                                             className="form-control"
-                                            rows="10"
+                                            rows="11"
                                             placeholder="היי שלום, רציתי לדעת..."
                                         />
                                         </div>
