@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import {FaFlagUsa, FaFlag, FaWindowClose, FaAlignLeft, FaCalendarAlt} from 'react-icons/fa'
+import {FaWindowClose, FaAlignLeft, FaCalendarAlt} from 'react-icons/fa'
+import {animateScroll as scroll } from 'react-scroll'
 import logo from '../images/icons/logo.jpg'
 import l from '../images/icons/bet.png'
 import en from '../images/en.png'
 import he from '../images/he.jpg'
-//import ScrollToTop from "../ScrollToTop";
-import {animateScroll as scroll } from 'react-scroll'
- 
+
 export default class NavBar extends Component {
     state={
         isOpen: false
@@ -90,12 +89,12 @@ export default class NavBar extends Component {
                     <a rel="noopener noreferrer" 
                         //href='https://tiberiashostel.netlify.app/'
                         >
-                        <img src={he} />
+                        <img src={he} alt="flagi"/>
                     </a>
                     <br/>
                     <a rel="noopener noreferrer"
                         href='https://tiberiashostel-en.netlify.app/'>                        
-                        <img src={en}/>
+                        <img src={en} alt="flage"/>
                     </a>
                 </div>
             </>
