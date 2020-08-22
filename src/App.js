@@ -14,8 +14,8 @@ import "./App.css";
 
 function App() {
     return (
-    <>
-        <NavBar/>
+        <>
+            <NavBar/>
             <Switch>
                 <Route exact path="/" component={Aboutus}/>
                 <Route exact path="/rooms" component={Rooms}/>
@@ -43,12 +43,6 @@ function App() {
                 <Route exact path="/nazeret" component={() => { 
                     window.location = 
                     'https://www.google.co.il/maps/dir/Nazareth/Tiberias+Hostel,+%D7%9B%D7%99%D7%9B%D7%A8+%D7%A8%D7%91%D7%99%D7%9F,+%D7%98%D7%91%D7%A8%D7%99%D7%94%E2%80%AD/@32.7075631,35.2468783,11z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x151c4e7cf16c0fff:0xd2385b30c1275dd6!2m2!1d35.303546!2d32.699635!1m5!1m1!1s0x151c3e48ddd195df:0x2bf279e8d24c26b4!2m2!1d35.5394368!2d32.7887133!3e0?hl=en&shorturl=1'
-                    return null;
-                }} />
-
-                <Route exact path="/booking" component={() => { 
-                    window.location = 
-                    'https://new-booking.frontdeskmaster.com?hostelId=AJKOwMNX%2F5UDIgGxDhqQRY6JrRNTS%2BGr'
                     return null;
                 }} />
 

@@ -107,7 +107,7 @@ export default class SingleRoom extends Component {
 
                     <a rel="noopener noreferrer" target="_blank" className="book-now-btn"
                         href={
-"https://minihotelpms.net/frame/reservas/getAvailability?hotelToken=a41ce7814d16061ac9a951e3bb1c534e&nAdults=1&nChilds=0&nBabies=0&language=HE&rateCode=*ALL&roomId=&from=2020-08-21&to=2020-08-22&minToDate=2020-08-22&nochesPedidas=1&bloggerId=&languageDirection=rtl"
+        "https://minihotelpms.net/frame/reservas/getAvailability?hotelToken=a41ce7814d16061ac9a951e3bb1c534e&nAdults=1&nChilds=0&nBabies=0&language=HE&rateCode=*ALL&roomId=&from=2020-08-22&to=2020-08-23&minToDate=2020-08-23&nochesPedidas=1&bloggerId=&languageDirection=rtl"
                         }
                     >
                         הזמן עכשיו!
