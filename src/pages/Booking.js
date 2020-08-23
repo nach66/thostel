@@ -38,8 +38,8 @@ export default class minihotel extends Component {
                             </a> */}
 
 
-                            <iframe id="be_iframe" frameborder="0" scrolling="no" 
-                                    style={{width: '100%', height: '172px', minHeight: '500px', overflow: 'hidden'}} 
+                            <iframe id="be_iframe" frameborder="1" scrolling="yes" 
+                                    style={{width: '100%', height: '500px', padding:'40px', overflow: 'hidden'}} 
                                     onload="window.scrollTo(0,0)" 
                                     src="https://minihotelpms.net/frame/reservas?hotelToken=a41ce7814d16061ac9a951e3bb1c534e||from=||to=||nAdults=1||nChilds=0||nBabies=0||start_date=||end_date=||language=HE||currency=ILS||rateCode=*ALL||roomId=||bloggerId=">
                             </iframe>
