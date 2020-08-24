@@ -81,11 +81,10 @@ export default class NavBar extends Component {
                             <li>
                             </li>
                         </ul>
-
                     </div>     
                 </nav>
 
-                <div className="languegus">
+    {/*             <div className="languegus">
                     <a rel="noopener noreferrer" 
                         //href='https://tiberiashostel.netlify.app/'
                         >
@@ -96,7 +95,8 @@ export default class NavBar extends Component {
                         href='https://tiberiashostel-en.netlify.app/'>                        
                         <img src={en} alt="flage"/>
                     </a>
-                </div>
+                </div> */}
+
             </>
         )
     }
