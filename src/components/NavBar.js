@@ -4,8 +4,8 @@ import {FaWindowClose, FaAlignLeft, FaCalendarAlt} from 'react-icons/fa'
 import {animateScroll as scroll } from 'react-scroll'
 import logo from '../images/icons/logo.jpg'
 import l from '../images/icons/bet.png'
-import en from '../images/en.png'
-import he from '../images/he.png'
+//import en from '../images/en.png'
+//import he from '../images/he.png'
 
 export default class NavBar extends Component {
     state={
@@ -20,7 +20,7 @@ export default class NavBar extends Component {
         scroll.scrollToTop(0);
     }
     onClickMenuItem = () => {
-        scroll.scrollTo(380);
+        scroll.scrollTo(430);
         this.setState({
             isOpen: !this.state.isOpen
         })

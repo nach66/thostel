@@ -42,14 +42,14 @@ width: 7px;
 .empty-services {
   margin: auto;
   width: 90vw;
-  padding: 1.2rem;
+  padding: 0.5rem;
   text-align: center;
 }
 .services {
   margin: auto;
   margin-bottom: 15px;
   width: 90vw;
-  padding: 1.2rem;
+  padding: 1rem;
   text-align: center;
   border-radius: 10px;
   background-color: var(--offWhite);
@@ -425,7 +425,7 @@ div{
 }
 /* Banner */
 .banner {
-  padding: 0.5rem 1.5rem;
+  padding: 1.5rem 2rem;
   text-align: center;
   color: var(--mainWhite);
   background: rgba(0, 0, 0, 0.377);
@@ -445,10 +445,6 @@ div{
   margin-bottom: 2rem;
 }
 /*end of Banner */
-@media screen and (min-width: 580px) {
-.banner {
-    padding: 2rem 3rem;
-}}
 
 /* Title */
 .section-title {
@@ -486,30 +482,6 @@ div{
   display: block;
   transition: var(--mainTransition);
 }
-
-/* צריך מחיר? */
-.price-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.8);
-  color: var(--mainWhite);
-  padding: 0.3rem 0.6rem 0.5rem;
-  border-bottom-right-radius: 1rem;
-  font-size: 0.5rem;
-  text-align: center;
-  transition: var(--mainTransition);
-}
-.price-top h6 {
-  margin-bottom: 0;
-  font-size: 0.9rem;
-  font-weight: 300;
-  letter-spacing: var(--mainSpacing);
-}
-.img-container:hover .price-top {
-  opacity: 0;
-}
-/* צריך מחיר? */
 
 .room-link {
   position: absolute;
