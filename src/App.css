@@ -404,7 +404,7 @@ div{
   position: absolute;
   top: 0;
   width: 99vw;
-  height: calc(100vh - 200px);
+  height: calc(100vh - 150px);
   background-size: cover;
   will-change: opacity;
 }
@@ -418,7 +418,7 @@ div{
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 250px);
+  min-height: calc(100vh - 200px);
 }
 .roomsHero {
   background-image: url("./images/def.jpg");
