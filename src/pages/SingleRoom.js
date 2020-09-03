@@ -7,7 +7,6 @@ import Footer from '../components/Footer'
 import def from '../images/def.jpg';
 import {FaCalendarAlt} from 'react-icons/fa';
 import {Link} from 'react-router-dom';
-import Lightbox from 'lightbox-react';
 import 'lightbox-react/style.css';
 import {animateScroll as scroll } from 'react-scroll'
 
@@ -15,8 +14,6 @@ export default class SingleRoom extends Component {
     constructor(props){
         super(props);
         this.state={
-            photoIndex: 0,
-            isOpen: false,
             slug:this.props.match.params.slug,
             def
         };
@@ -26,16 +23,10 @@ export default class SingleRoom extends Component {
         scroll.scrollToTop(0);
     }
 
-    handleExpand() {
-        this.setState({ isOpen: true });
-    }
     static contextType = RoomContext;
     
-    render() {
-        
-        const { isOpen } = this.state;
+    render() {        
         const { getRoom } = this.context;
-        const { photoIndex } = this.state;
         const room = getRoom(this.state.slug);
         if (!room){
             return (
@@ -71,20 +62,6 @@ export default class SingleRoom extends Component {
                                 onClick={() => this.setState({ isOpen: true, photoIndex: index })}
                                 ></div>);                       
                         })}
-                        {isOpen && (
-                            <Lightbox
-                                mainSrc={defuldImg[photoIndex]}
-                                nextSrc={defuldImg[(photoIndex + 1) % defuldImg.length]}
-                                prevSrc={defuldImg[(photoIndex + defuldImg.length - 1) % defuldImg.length]}
-                                onCloseRequest={() => this.setState({ isOpen: false })}
-                                onMovePrevRequest={() => this.setState({
-                                    photoIndex: (photoIndex + defuldImg.length - 1) % defuldImg.length
-                                })}
-                                onMoveNextRequest={() => this.setState({
-                                    photoIndex: (photoIndex + 1) % defuldImg.length
-                                })}
-                            />
-                        )}
                     </div>
                 </section>
                 <section className="room-section">
@@ -102,20 +79,14 @@ export default class SingleRoom extends Component {
                     </ul>
                 </section>
 
-                <section className="empty-services">
-
-
-                    <a rel="noopener noreferrer" target="_blank" className="book-now-btn"
-                        href={
-        "https://minihotelpms.net/frame/reservas/getAvailability?hotelToken=a41ce7814d16061ac9a951e3bb1c534e&nAdults=1&nChilds=0&nBabies=0&language=HE&rateCode=*ALL&roomId=&from=2020-08-22&to=2020-08-23&minToDate=2020-08-23&nochesPedidas=1&bloggerId=&languageDirection=rtl"
-                        }
-                    >
-                        הזמן עכשיו!
+                <section className="empty-services">                    
+                    <Link to="/bookhere" 
+                            className="book-now-btn"
+                            >הזמן עכשיו!
                         <span className="calander-icon">
                             <FaCalendarAlt/>
                         </span>
-                    </a>
-
+                    </Link>
                 </section>
 
                 <div className="sep"/>

@@ -20,7 +20,7 @@ export default class NavBar extends Component {
         scroll.scrollToTop(0);
     }
     onClickMenuItem = () => {
-        scroll.scrollTo(500);
+        scroll.scrollTo(380);
         this.setState({
             isOpen: !this.state.isOpen
         })

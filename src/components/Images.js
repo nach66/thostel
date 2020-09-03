@@ -18,7 +18,7 @@ function Images (props) {
     const [index, set] = useState(0);
 
     useEffect(() => {
-        setInterval(() => set(state => (state + 1) % 4), 3000);
+        setInterval(() => set(state => (state + 1) % 4), 5000);
     }, []);
 
     const transitions = useTransition(slides[index], item => item.id, {
