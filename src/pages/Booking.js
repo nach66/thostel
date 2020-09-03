@@ -8,7 +8,7 @@ import {animateScroll as scroll } from 'react-scroll'
 
 export default class minihotel extends Component {
     componentDidMount () {
-        scroll.scrollTo(430);
+        scroll.scrollTo(410);
     }
 
     render() {
