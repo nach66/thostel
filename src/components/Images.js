@@ -6,19 +6,17 @@ import { useTransition, animated, config } from 'react-spring'
 import a from '../images/כותרת/n1.jpg'
 import b from '../images/כותרת/n2.jpg'
 import c from '../images/כותרת/n3.jpg'
-import d from '../images/כותרת/n5.jpg'
 
 const slides = [
     { id: 0, url: a },
     { id: 1, url: b },
     { id: 2, url: c },
-    { id: 3, url: d },
   ]
 function Images (props) {
     const [index, set] = useState(0);
 
     useEffect(() => {
-        setInterval(() => set(state => (state + 1) % 4), 5000);
+        setInterval(() => set(state => (state + 1) % 3), 5000);
     }, []);
 
     const transitions = useTransition(slides[index], item => item.id, {
