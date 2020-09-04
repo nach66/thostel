@@ -110,7 +110,9 @@ width: 7px;
   z-index: 1;
 }
 /*לוגו העוגן*/
-.nav-logo:hover {
+.nav-logo {
+  margin-top: 2px;
+}.nav-logo:hover {
   box-shadow: 2 1em 2em -0.4em var(--myblue) ;
   transform: translateY(-0.25em);
 }
