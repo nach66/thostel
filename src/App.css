@@ -405,10 +405,12 @@ div{
   z-index: -1;
   position: absolute;
   top: 0;
-  width: 99vw;
+  width: 80vw;
   height: calc(100vh - 150px);
   background-size: cover;
   will-change: opacity;
+  margin-right: 9vw;
+  margin-left: 9vw;
 }
 .switch{
   display: flex;

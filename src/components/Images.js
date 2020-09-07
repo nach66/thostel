@@ -3,9 +3,9 @@ import Banner from '../components/Banner';
 import {Link} from 'react-router-dom';
 import Hero from '../components/Hero';
 import { useTransition, animated, config } from 'react-spring'
-import a from '../images/כותרת/n1.jpg'
-import b from '../images/כותרת/n2.jpg'
-import c from '../images/כותרת/n3.jpg'
+import a from '../images/כותרת/b1.jpg'
+import b from '../images/כותרת/b2.jpg'
+import c from '../images/כותרת/b3.jpg'
 
 const slides = [
     { id: 0, url: a },

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Images from '../components/Images'
 import Footer from '../components/Footer'
 import {FaEnvelope,FaPhone} from 'react-icons/fa';
 import ContactForm from '../components/ContactForm'
@@ -8,17 +7,15 @@ import {animateScroll as scroll } from 'react-scroll'
 
 export default class minihotel extends Component {
     componentDidMount () {
-        scroll.scrollTo(430);
+        scroll.scrollTo(0);
     }
 
     render() {
         return (
             <>
-                <Images title="הזמנה" link="/"
-                        link_text="חזרה לעמוד הבית"/>
                 <div className="sep"/>
                     <section className="empty-services">
-                        <Title title="הזמנה ישירה"/>
+                        <Title title="הזמנה"/>
                         <h6>להזמנות קבוצתיות של 10 אנשים ומעלה, אנא פנו אלינו - בדוא"ל או בטלפון</h6>
                             <article>
                                 <FaPhone style={{ color:'rgb(7, 161, 58)'}}/>

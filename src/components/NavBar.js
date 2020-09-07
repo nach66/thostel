@@ -20,7 +20,7 @@ export default class NavBar extends Component {
         scroll.scrollToTop(0);
     }
     onClickMenuItem = () => {
-        scroll.scrollTo(430);
+        scroll.scrollTo(0);
         this.setState({
             isOpen: !this.state.isOpen
         })
@@ -62,17 +62,17 @@ export default class NavBar extends Component {
                             </li>
                             <img src={l} className="anchor" alt="logo"/>
                             <li>
-                                <Link to="/contact" className="nav-links">דברו אלינו</Link>
+                                <Link to="/contact" className="nav-links">צור קשר</Link>
                             </li>
                             <img src={l} className="anchor" alt="logo"/>
                             <li>
                             <Link to="/bookhere" 
                                 className="nav-links"
-                                style={{width: '200px',  
+                                style={{width: '140px',  
                                     marginRight: '15PX',                         
                                     color: 'var(--mainWhite)',
                                     background : 'var(--mainGreen)'}}
-                                >אפשר כבר להזמין!
+                                >הזמן עכשיו!
                                 <span className="calander-icon" >
                                     <FaCalendarAlt/>
                                 </span>
