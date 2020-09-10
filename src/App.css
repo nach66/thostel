@@ -22,6 +22,17 @@
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
+.book-now-comp{
+  width: 250px;
+  align-content: center;
+  margin: auto;
+}
+.header-form{
+  width: 100px;
+  display: inline-block;
+  margin: 7px 15px;
+}
+
 .languegus {
   z-index: 1;
   color: #ecb80e;
