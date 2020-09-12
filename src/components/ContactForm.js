@@ -12,7 +12,7 @@ export default function ContactForm() {
         <>
             <section className="empty-services">
                 <Title title="דברו אלינו"/> 
-                <div className="abuot">
+                <div className="about">
                     <article style={{
                         paddingTop:'4px'
                     }}>

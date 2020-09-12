@@ -39,9 +39,9 @@ function Images (props) {
                 <Hero>
                         <Banner title={props.title}
                             subtitle={props.subtitle}>
-                            <Link to={props.link} className="btn-primary2">
+                            {/*  <Link to={props.link} className="btn-primary2">
                                 {props.link_text}
-                            </Link>
+                            </Link> */}
                         </Banner>
                     </Hero>
             </div>

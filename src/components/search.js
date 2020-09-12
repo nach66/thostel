@@ -53,56 +53,46 @@ export default class search extends Component {
     render() {
         return (
             <>
-
+            <div className="comp">
                 <div className="book-now-comp">
-                    <div class="header-form">
-                        <label>מ:</label>
+                    <h1>חפשו חדר</h1>
                         <DatePicker
-                            className="header-form"
-                            type="text"
-                            selected={this.state.startDate}
-                            onChange={this.handleChangeFrom}
-                            dateFormat="yyyy-MM-dd"
-                            name='from'
-                            readonly='readonly' 
-                        />
-                    </div>
-                    <div className="header-form">
-                        <label>עד:</label>
+                                className="header-form"
+                                selected={this.state.startDate}
+                                onChange={this.handleChangeFrom}
+                                dateFormat="yyyy-MM-dd"
+                                name='from'
+                                placeholderText="מ:"
+                            />
                         <DatePicker
-                            className="header-form"
-                            type="text"
-                            selected={this.state.toDate}
-                            onChange={this.handleChangeTo}
-                            dateFormat="yyyy-MM-dd"
-                            name='to' 
-                            readonly='readonly' 
-                        />
-                    </div>
+                                className="header-form"
+                                selected={this.state.toDate}
+                                onChange={this.handleChangeTo}
+                                dateFormat="yyyy-MM-dd"
+                                name='to' 
+                                placeholder="עד:"
+                            />
 
-{/*                     <div className="header-form">
-                        <label>מבוגרים:</label>
-                        <select 
-                            onChange={this.handleChangeAdults}
-                            className="header-form"
-                            name='nAdults'>
-                        <option value='1' selected>1</option><option value='2' >2</option><option value='3' >3</option><option value='4' >4</option><option value='5' >5</option><option value='6' >6</option><option value='7' >7</option><option value='8' >8</option><option value='9' >9</option><option value='10' >10</option>                            </select>
-                    </div>
-                    <div className="header-form">
-                        <label>ילדים:</label>
-                        <select 
-                            onChange={this.handleChangeChilds}
-                            className="header-form"
-                            name='nChilds'>
-                        <option value='0' selected>0</option><option value='1' >1</option><option value='2' >2</option><option value='3' >3</option><option value='4' >4</option><option value='5' >5</option><option value='6' >6</option><option value='7' >7</option><option value='8' >8</option><option value='9' >9</option>                            </select>
-                    </div>
- */}
-                    <div className="header-form">
-                        <input type='submit'
+                            <h5>מבוגרים:</h5>
+                            <select 
+                                className="ppl" 
+                                onChange={this.handleChangeAdults} 
+                                name='nAdults'>
+                                <option value='1' selected>1</option><option value='2' >2</option><option value='3' >3</option><option value='4' >4</option><option value='5' >5</option><option value='6' >6</option><option value='7' >7</option><option value='8' >8</option><option value='9' >9</option><option value='10' >10</option></select>
+                            <h5>ילדים:</h5>
+                            <select 
+                                className="ppl" 
+                                onChange={this.handleChangeChilds} 
+                                name='nChilds'>
+                                <option value='0' selected>0</option><option value='1' >1</option><option value='2' >2</option><option value='3' >3</option><option value='4' >4</option><option value='5' >5</option><option value='6' >6</option><option value='7' >7</option><option value='8' >8</option><option value='9' >9</option></select>
+
+                        <input 
+                            className="book"
+                            type='submit'
                             onClick={this.handleSubmit}
-                            value='חיפוש'/>
-                    </div>   
-                </div>     
+                            value='הזמינו עכשיו'/>
+                </div>
+            </div>
             </>
         )
     }

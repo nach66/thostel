@@ -7,7 +7,7 @@ export default function About() {
         <>
             <section className="empty-services">
                 <Title title="מי אנחנו?"/> 
-                <div className="abuot">
+                <div className="about">
                     <article className="pic">
                         <img src={c} alt="היי"/>  
                     </article>

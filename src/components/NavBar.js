@@ -14,18 +14,21 @@ export default class NavBar extends Component {
     handleToggle = () => {
         this.setState({
             isOpen: !this.state.isOpen
-        })
-    }
-    scrollToTop () {
-        scroll.scrollToTop(0);
+        });
     }
     onClickMenuItem = () => {
         scroll.scrollTo(0);
         this.setState({
             isOpen: !this.state.isOpen
-        })
+        });
     }
-
+    onClicklogo = () => {
+        scroll.scrollTo(0);
+        this.setState({
+            isOpen: false
+        });
+    }
+    
     render() {
         return (
             <>
@@ -33,7 +36,7 @@ export default class NavBar extends Component {
                     <div className="nav-center" >
                         <div className="nav-header">
                             <Link to="/" >                        
-                                <img src={logo} onClick={this.scrollToTop} className="nav-logo" alt="logo"/>
+                                <img src={logo} onClick={this.onClicklogo} className="nav-logo" alt="logo"/>
                             </Link>
                             <button type="button" onClick={this.handleToggle} className="nav-btn">
                                 {this.state.isOpen? 
@@ -46,7 +49,7 @@ export default class NavBar extends Component {
                         <ul onClick={this.onClickMenuItem}
                             className={this.state.isOpen? "nav-links" : "nav-links hide-nav" }>
                             <li>
-                                <Link to="/"  className="nav-links" >מי אנחנו</Link>
+                                <Link to="/about"  className="nav-links" >מי אנחנו</Link>
                             </li>
                             <img src={l} className="anchor" alt="logo"/>
                             <li>
