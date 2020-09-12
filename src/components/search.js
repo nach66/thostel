@@ -70,6 +70,8 @@ export default class Search extends Component {
                                 onChange={this.handleChangeTo}
                                 dateFormat="yyyy-MM-dd"
                                 name='to' 
+                                readOnly="true"
+                                placeholder="Choose a date"
                                 placeholder="עד:"
                             />
 
