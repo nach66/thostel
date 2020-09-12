@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Banner from '../components/Banner';
-import {Link} from 'react-router-dom';
+//import {Link} from 'react-router-dom';
 import Hero from '../components/Hero';
 import { useTransition, animated, config } from 'react-spring'
 import a from '../images/כותרת/b1.jpg'

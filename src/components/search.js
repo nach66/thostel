@@ -4,7 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import addDays from 'date-fns/addDays'
 import { format } from "date-fns";
 
-export default class search extends Component {
+export default class Search extends Component {
 
     state = {
         startDate: new Date(),
