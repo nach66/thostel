@@ -70,9 +70,8 @@ export default class Search extends Component {
                                 onChange={this.handleChangeTo}
                                 dateFormat="yyyy-MM-dd"
                                 name='to' 
-                                readOnly="true"
-                                placeholder="Choose a date"
-                                placeholder="עד:"
+                                value="עד:"
+                                placeholderText={this.state.childs}
                             />
 
                             <h5>מבוגרים:</h5>
@@ -96,6 +95,6 @@ export default class Search extends Component {
                 </div>
             </div>
             </>
-        )
+        );
     }
 }
