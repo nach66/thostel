@@ -103,21 +103,21 @@
 @media screen and (max-width: 700px) {
   .react-datepicker-wrapper{
     width: 30vh;
-  }  .react-datepicker__input-container input {
-    background-color: coral;
   }
 }
 @media screen and (max-width: 560px) {
   .react-datepicker-wrapper{
     width: 150px;
-  }  .react-datepicker__input-container input {
-    background-color: brown;
   }
 }
-
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 480px) {
   .react-datepicker-wrapper{
-    width: 150px;
+    width: 130px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .react-datepicker-wrapper{
+    width: 130px;
   }  .react-datepicker__input-container input {
     background-color: yellow;
   }
