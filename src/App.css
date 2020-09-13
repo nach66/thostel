@@ -50,6 +50,7 @@
       padding-right: 5px;
       border-radius: 2px;
       border: 1px solid var(--primaryColor);
+      background-color: var(--mainWhite);
   }
   .ppl{
     width: 99%;
