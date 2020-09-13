@@ -115,7 +115,7 @@
     width: 130px;
   }
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 400px) {
   .react-datepicker-wrapper{
     width: 130px;
   }  .react-datepicker__input-container input {
