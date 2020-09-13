@@ -51,7 +51,7 @@ export default class Search extends Component {
             <div className="comp">
                 <div className="book-now-comp">
                     <h1>חפשו חדר</h1>
-                    <div style={{position: 'relative', display: 'inline-block'}}>
+                    <div style={{position: 'relative', display: 'inline-block', zIndex: '3'}}>
                         <DatePicker
                             selected={this.state.startDate}
                             onChange={this.handleChangeFrom}
