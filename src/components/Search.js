@@ -9,8 +9,8 @@ export default class Search extends Component {
     state = {
         startDate: new Date(),
         toDate: addDays(new Date(), 1),
-        adults: 1,
-        childs: 0
+        adults: '',
+        childs: ''
     };
     handleChangeFrom = date => {
         this.setState({
@@ -51,36 +51,39 @@ export default class Search extends Component {
             <div className="comp">
                 <div className="book-now-comp">
                     <h1>חפשו חדר</h1>
-                    <DatePicker
-                        className="header-form"
-                        selected={this.state.startDate}
-                        onChange={this.handleChangeFrom}
-                        dateFormat="yyyy-MM-dd"
-                        name='from'
-                        placeholderText="מ:"
-                    />
-                    <DatePicker
-                        className="header-form"
-                        selected={this.state.toDate}
-                        onChange={this.handleChangeTo}
-                        dateFormat="yyyy-MM-dd"
-                        name='to' 
-                        value="עד:"
-                        placeholderText={this.state.childs}
-                    />
-                    <h5>מבוגרים:</h5>
+                    <div style={{position: 'relative', display: 'inline-block'}}>
+                        <DatePicker
+                            className="header-form"
+                            selected={this.state.startDate}
+                            onChange={this.handleChangeFrom}
+                            dateFormat="yyyy-MM-dd"
+                            name='from'
+                        />
+                        </div>
+                        <div style={{position: 'relative', display: 'inline-block'}}>
+                        <DatePicker
+                            className="header-form"
+                            selected={this.state.toDate}
+                            onChange={this.handleChangeTo}
+                            dateFormat="yyyy-MM-dd"
+                            name='to' 
+                        />
+                        </div>
                         <select 
+                            defaultValue=""                            
                             className="ppl" 
                             onChange={this.handleChangeAdults} 
                             name='nAdults'>
-                            <option value='1' selected>1</option><option value='2' >2</option><option value='3' >3</option><option value='4' >4</option><option value='5' >5</option><option value='6' >6</option><option value='7' >7</option><option value='8' >8</option><option value='9' >9</option><option value='10' >10</option></select>
-                    <h5>ילדים:</h5>
+                            <option disabled={true} value="">מבוגרים:</option>
+                            <option value='1'>1</option><option value='2' >2</option><option value='3' >3</option><option value='4' >4</option><option value='5' >5</option><option value='6' >6</option><option value='7' >7</option><option value='8' >8</option><option value='9' >9</option><option value='10' >10</option></select>
                         <select 
+                            defaultValue=""
                             className="ppl" 
                             onChange={this.handleChangeChilds} 
                             name='nChilds'>
-                        <option value='0' selected>0</option><option value='1' >1</option><option value='2' >2</option><option value='3' >3</option><option value='4' >4</option><option value='5' >5</option><option value='6' >6</option><option value='7' >7</option><option value='8' >8</option><option value='9' >9</option></select>
-                    <button 
+                        <option disabled={true} value="">ילדים:</option>
+                        <option value='0'>0</option><option value='1' >1</option><option value='2' >2</option><option value='3' >3</option><option value='4' >4</option><option value='5' >5</option><option value='6' >6</option><option value='7' >7</option><option value='8' >8</option><option value='9' >9</option></select>
+                    <input 
                         className="book"
                         type='submit'
                         onClick={this.handleSubmit}
