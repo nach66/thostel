@@ -57,6 +57,7 @@
     height: 35px;
     border-radius: 2px;
     border: 1px solid var(--primaryColor);
+    background-color: var(--mainWhite);
   }
   .book{
       width: 99%;
@@ -83,27 +84,29 @@
     margin:auto;
     width: 100%;
   }
+  .book-now-comp h1{
+    padding-top: 0px;
+  }
   .ppl{  
-    margin: 0.5%;
+    margin: 0.5vh;
     width: 41%;
   }
   .react-datepicker-wrapper{
     margin: 0.5vh;
-    width: 38vh;
+    width: 37vh;
   }
   .book{
-    margin-top: 0.5%;
+    margin-top: 0.5vh;
   }
 }
-/* מסך קטן מאוד*/
-@media screen and (max-width: 550px) {
-  .ppl{  
-    width: 41%;
-    margin: 0.5%;
-  }
+@media screen and (max-width: 700px) {
   .react-datepicker-wrapper{
-    margin: 1%;
-    width: 99%;
+    width: 30vh;
+  }
+}
+@media screen and (max-width: 530px) {
+  .react-datepicker-wrapper{
+    width: 25vh;
   }
 }
 
