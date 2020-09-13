@@ -107,13 +107,22 @@
     background-color: coral;
   }
 }
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 560px) {
   .react-datepicker-wrapper{
-    width: 25vh;
+    width: 150px;
   }  .react-datepicker__input-container input {
     background-color: brown;
   }
 }
+
+@media screen and (max-width: 460px) {
+  .react-datepicker-wrapper{
+    width: 150px;
+  }  .react-datepicker__input-container input {
+    background-color: yellow;
+  }
+}
+
 
 .languegus {
   color: #ecb80e;
