@@ -10,7 +10,7 @@ export default function ContactForm() {
 
     return (
         <>
-            <section className="empty-services">
+            <section className="services">
                 <Title title="דברו אלינו"/> 
                 <div className="about">
                     <article style={{
