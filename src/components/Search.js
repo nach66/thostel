@@ -53,20 +53,29 @@ export default class Search extends Component {
                     <h1>חפשו חדר</h1>
                     <div style={{position: 'relative', display: 'inline-block'}}>
                         <DatePicker
-                            className="header-form"
                             selected={this.state.startDate}
                             onChange={this.handleChangeFrom}
                             dateFormat="yyyy-MM-dd"
                             name='from'
-                        />
+                            popperModifiers={{
+                                offset: {
+                                    enabled: true,
+                                    offset: "-100px, 2px"
+                                }
+                            }}                            />
                         </div>
                         <div style={{position: 'relative', display: 'inline-block'}}>
                         <DatePicker
-                            className="header-form"
                             selected={this.state.toDate}
                             onChange={this.handleChangeTo}
                             dateFormat="yyyy-MM-dd"
                             name='to' 
+                            popperModifiers={{
+                                offset: {
+                                    enabled: true,
+                                    offset: "40px, 2px"
+                                }
+                            }}
                         />
                         </div>
                         <select 
