@@ -60,7 +60,7 @@ export default class Search extends Component {
                             popperModifiers={{
                                 offset: {
                                     enabled: true,
-                                    offset: "-100px, 2px"
+                                    offset: "-120px, 2px"
                                 }
                             }}                            />
                         </div>
