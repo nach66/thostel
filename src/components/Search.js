@@ -53,6 +53,7 @@ export default class Search extends Component {
                     <h1>חפשו חדר</h1>
                     <div style={{position: 'relative', display: 'inline-block'}}>
                         <DatePicker
+                            readOnly={true}
                             selected={this.state.startDate}
                             onChange={this.handleChangeFrom}
                             dateFormat="yyyy-MM-dd"
@@ -62,10 +63,12 @@ export default class Search extends Component {
                                     enabled: true,
                                     offset: "-100px, 2px"
                                 }
-                            }}                            />
+                            }}
+                        />
                         </div>
                         <div style={{position: 'relative', display: 'inline-block'}}>
                         <DatePicker
+                            readOnly={true}
                             selected={this.state.toDate}
                             onChange={this.handleChangeTo}
                             dateFormat="yyyy-MM-dd"
