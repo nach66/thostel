@@ -45,6 +45,11 @@ export default class Search extends Component {
             , '_blank');
     }
 
+    componentDidMount() {
+        const datePickers = document.getElementsByClassName("react-datepicker__input-container");
+        Array.from(datePickers).forEach((el => el.childNodes[0].setAttribute("readOnly", true)))
+    };
+
     render() {
         return (
             <>

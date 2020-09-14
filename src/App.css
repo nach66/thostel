@@ -116,10 +116,10 @@
     width: 130px;
   }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 380px) {
   .react-datepicker-wrapper{
-    width: 130px;
-  }  .react-datepicker__input-container input {
+    width: 110px;
+  } .react-datepicker__input-container input {
     background-color: yellow;
   }
 }
