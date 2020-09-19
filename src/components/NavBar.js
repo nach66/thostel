@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import {FaWindowClose, FaAlignLeft, FaCalendarAlt} from 'react-icons/fa'
-import {animateScroll as scroll } from 'react-scroll'
+//import {animateScroll as scroll } from 'react-scroll'
 import logo from '../images/icons/logo.jpg'
 import l from '../images/icons/bet.png'
 //import en from '../images/en.png'
@@ -16,14 +16,8 @@ export default class NavBar extends Component {
             isOpen: !this.state.isOpen
         });
     }
-    onClickMenuItem = () => {
-        scroll.scrollTo(0);
-        this.setState({
-            isOpen: !this.state.isOpen
-        });
-    }
     onClicklogo = () => {
-        scroll.scrollTo(0);
+    //    scroll.scrollTo(0);
         this.setState({
             isOpen: false
         });
@@ -46,7 +40,7 @@ export default class NavBar extends Component {
                                 </button>
                         </div>
 
-                        <ul onClick={this.onClickMenuItem}
+                        <ul onClick={this.handleToggle}
                             className={this.state.isOpen? "nav-links" : "nav-links hide-nav" }>
                             <li>
                                 <Link to="/about"  className="nav-links" >מי אנחנו</Link>
@@ -67,12 +61,11 @@ export default class NavBar extends Component {
                             <li>
                                 <Link to="/contact" className="nav-links">צור קשר</Link>
                             </li>
-                            <img src={l} className="anchor" alt="logo"/>
+                            <br/>
                             <li>
                             <Link to="/bookhere" 
                                 className="nav-links"
                                 style={{width: '140px',  
-                                    marginRight: '15PX',                         
                                     color: 'var(--mainWhite)',
                                     background : 'var(--mainGreen)'}}
                                 >הזמן עכשיו!

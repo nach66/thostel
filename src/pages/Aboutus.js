@@ -3,11 +3,13 @@ import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
 import About from '../components/About'
 import Gallerys from '../components/Gallerys'
+import Search from '../components/Search'
 
 export default class Aboutus extends Component {
     render() {
         return (
             <>
+                <Search/>
                 <div className="sep"/>
                 <About/>
                 <div className="sep"/>

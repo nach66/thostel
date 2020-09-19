@@ -11,7 +11,7 @@ export default function ContactForm() {
     return (
         <>
             <section className="services">
-                <Title title="דברו אלינו"/> 
+                <Title title="צור קשר"/> 
                 <div className="about">
                     <article style={{
                         paddingTop:'4px'

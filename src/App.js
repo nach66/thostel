@@ -1,7 +1,9 @@
 import React from "react";
 import {Route, Switch} from "react-router-dom";
 import NavBar from "./components/NavBar";
-
+import PrivateRooms from "./pages/PrivateRooms";
+import PublicRooms from "./pages/PublicRooms";
+import SingleRoom from "./pages/SingleRoom";
 import Location from "./pages/Location";
 import Aboutus from "./pages/Aboutus";
 import Contact from "./pages/Contact";
@@ -9,7 +11,6 @@ import Booking from "./pages/Booking";
 import Rooms from "./pages/Rooms";
 import Error from "./pages/Error";
 import Home from "./pages/Home";
-import SingleRoom from "./pages/SingleRoom";
 import Activities from "./pages/Activities";
 import "./App.css";
 
@@ -21,6 +22,8 @@ function App() {
                 <Route exact path="/" component={Home}/>
                 <Route exact path="/about" component={Aboutus}/>
                 <Route exact path="/rooms" component={Rooms}/>
+                <Route exact path="/public" component={PublicRooms}/>
+                <Route exact path="/private" component={PrivateRooms}/>
                 <Route exact path="/Activities" component={Activities}/>
                 <Route exact path="/location" component={Location}/>
                 <Route exact path="/contact" component={Contact}/>

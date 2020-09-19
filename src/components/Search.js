@@ -55,9 +55,10 @@ export default class Search extends Component {
             <>
             <div className="comp">
                 <div className="book-now-comp">
-                    <h1>חפשו חדר</h1>
+                    <h1>הזמינו חדר</h1>
                     <div style={{position: 'relative', display: 'inline-block'}}>
                         <DatePicker
+                            minDate={this.state.startDate}
                             selected={this.state.startDate}
                             onChange={this.handleChangeFrom}
                             dateFormat="yyyy-MM-dd"

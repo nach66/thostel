@@ -8,7 +8,7 @@ import def from '../images/def.jpg';
 import {FaCalendarAlt} from 'react-icons/fa';
 import {Link} from 'react-router-dom';
 import 'lightbox-react/style.css';
-import {animateScroll as scroll } from 'react-scroll'
+//import {animateScroll as scroll } from 'react-scroll'
 
 export default class SingleRoom extends Component {
     constructor(props){
@@ -19,15 +19,17 @@ export default class SingleRoom extends Component {
         };
     }
 
-    componentDidMount () {
-        scroll.scrollToTop(0);
-    }
+    // componentDidMount () {
+    //     scroll.scrollToTop(0);
+    // }
 
     static contextType = RoomContext;
     
     render() {        
         const { getRoom } = this.context;
         const room = getRoom(this.state.slug);
+
+        console.log(room);
         if (!room){
             return (
                 <div className="error">
@@ -66,7 +68,7 @@ export default class SingleRoom extends Component {
                 </section>
                 <section className="room-section">
                     <h3>פרטים</h3>
-                    <p>{description}</p>
+                    <p>{description.content[0].content[0].value}</p>
                 </section>
                 <section className="room-section">
                     <h3>מידע ומתקנים</h3>
