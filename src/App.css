@@ -31,7 +31,7 @@
     width: 85%;
     height: 100px;
     padding: 10px;
-    padding-top: 33px;
+    padding-top: 36px;
     display: grid; 
     grid-column-gap: 1rem; 
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -297,7 +297,7 @@ width: 7px;
 }
 
 /*מסך גדול */
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 910px) {
   /*אייקון בין הכפתורי תפריט*/
 .anchor{
     height: 34px;
