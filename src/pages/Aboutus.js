@@ -9,6 +9,7 @@ export default class Aboutus extends Component {
     render() {
         return (
             <>
+                <br/>
                 <Search/>
                 <div className="sep"/>
                 <About/>
