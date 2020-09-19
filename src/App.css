@@ -447,6 +447,9 @@ div{
   width: 3.3rem;
   height: 3.3rem;
 }
+.cform input{
+  margin-bottom: 2px;
+}
 
 /*2 columns, for about & contact*/
 .about { 

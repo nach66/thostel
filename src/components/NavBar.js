@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import {FaWindowClose, FaAlignLeft, FaCalendarAlt} from 'react-icons/fa'
-//import {animateScroll as scroll } from 'react-scroll'
 import logo from '../images/icons/logo.jpg'
 import l from '../images/icons/bet.png'
 //import en from '../images/en.png'
@@ -17,7 +16,6 @@ export default class NavBar extends Component {
         });
     }
     onClicklogo = () => {
-    //    scroll.scrollTo(0);
         this.setState({
             isOpen: false
         });
@@ -73,8 +71,6 @@ export default class NavBar extends Component {
                                     <FaCalendarAlt/>
                                 </span>
                             </Link>
-                            </li>
-                            <li>
                             </li>
                         </ul>
                     </div>     

@@ -78,12 +78,8 @@ export default function ContactForm() {
                     <article>
                         <h6>אפשר להשאיר הודעה ונחזור אליכם:</h6>
                         <section className="py-5">
-                            <div className="row">
-                                <div className="col-10 mx-auto col-md-6 my-3">
-                                    <form
-                                        className="mt-5" method="POST"
-                                        action="https://formspree.io/tiberiashostel@gmail.com"
-                                    >
+                            <form className="cform" method="POST"
+                                action="https://formspree.io/tiberiashostel@gmail.com">
                                         {/* first */}
                                         <div className="form-group">
                                         <input
@@ -135,8 +131,6 @@ export default function ContactForm() {
                                             }}
                                         />
                                     </form>
-                                </div>
-                            </div>
                         </section>
                     </article>
                 </div>
