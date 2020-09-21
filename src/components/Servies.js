@@ -61,7 +61,7 @@ export default class Servies extends Component {
     render() {
         return (
             <>
-            <section className="services">
+            <section className="empty-services">
                 <Title title="אז איך זה עובד?"/> 
                 <h6>אנחנו באכסניית טבריה מציעים יחידות אירוח מודרניות ונעימות, למטיילים בתקציב מוגבל.</h6>
                 <h6>החדרים הפרטיים שלנו יכולים להכיל 2-4 אנשים. בחדרים הפרטיים השירותים והמקלחת הם בתוך החדר.</h6>
@@ -72,8 +72,8 @@ export default class Servies extends Component {
                     {this.state.services.map(
                         (item, index) => {return (
                             <article key={index}>
-                                <span>{item.icon}</span>
-                                <h6>{item.title}</h6>
+                                <span className="icon-services">{item.icon}</span>
+                                <h6 className="h6-services">{item.title}</h6>
                             </article>
                         )}
                     )}
