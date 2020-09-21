@@ -719,6 +719,8 @@ div{
 /*rooms*/
 .btn-room-contain {
   padding-top: 10px;
+  position: relative;
+  left: 2px;
   width: 70vw;
   margin: auto;
   display: grid;
@@ -729,10 +731,9 @@ div{
   width: 100%;
   text-align: center;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480) {
   .btn-room-contain {
-    margin-left: 4rem;
-    width: 90vw;
+    left: 5px;
   }
 }
 .form-group {
