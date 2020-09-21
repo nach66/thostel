@@ -731,9 +731,14 @@ div{
   width: 100%;
   text-align: center;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
   .btn-room-contain {
     left: 14px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .btn-room-contain {
+    left: 24px;
   }
 }
 .form-group {
