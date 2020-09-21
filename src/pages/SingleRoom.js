@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom';
+import {FaCalendarAlt} from 'react-icons/fa';
 import ContactForm from '../components/ContactForm';
 import StyledHero from "../components/StyledHero";
-import {RoomContext} from '../contextRooms';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer'
 import def from '../images/def.jpg';
-import {FaCalendarAlt} from 'react-icons/fa';
-import {Link} from 'react-router-dom';
-import 'lightbox-react/style.css';
-//import {animateScroll as scroll } from 'react-scroll'
+import {RoomContext} from '../contextRooms';
 
 export default class SingleRoom extends Component {
     constructor(props){
