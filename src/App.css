@@ -733,7 +733,7 @@ div{
 }
 @media screen and (max-width: 500px) {
   .btn-room-contain {
-    left: 20px;
+    left: 16px;
   }
 }
 .form-group {
