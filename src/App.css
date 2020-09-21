@@ -724,7 +724,7 @@ div{
   width: 70vw;
   margin: auto;
   display: grid;
-  grid-column-gap: 2rem;
+  grid-column-gap: 2.2rem;
   grid-template-columns: 1fr 1fr;
 }
 .room-btns {
@@ -733,7 +733,7 @@ div{
 }
 @media screen and (max-width: 480) {
   .btn-room-contain {
-    left: 5px;
+    left: 10px;
   }
 }
 .form-group {
