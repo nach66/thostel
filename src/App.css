@@ -728,13 +728,14 @@ div{
   grid-template-columns: 1fr 1fr;
 }
 .room-btns {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
-@media screen and (max-width: 480) {
+@media screen and (max-width: 500px) {
   .btn-room-contain {
-    margin-left: 1.5rem;
-}}
+    padding-left: 2rem;
+  }
+}
 .form-group {
   text-transform: capitalize;
 }
