@@ -718,22 +718,17 @@ div{
 }
 /* end of roomlist */
 
-/*  rooms fitler*/
-.filter-container {
-  padding: 2rem 0;
-}
-.filter-form {
+/*rooms*/
+.btn-room-contain {
   padding-top: 10px;
-  width: 60vw;
+  width: 70vw;
   margin: auto;
   display: grid;
-  grid-row-gap: 2rem;
   grid-column-gap: 2rem;
   grid-template-columns: 1fr 1fr;
 }
-.filter-btns {
+.room-btns {
     width: 100%;
-    margin: auto;
     text-align: center;
 }
 .form-group {

@@ -20,10 +20,14 @@ export default function Rooms() {
 
 function RoomsFilter() {
     return (
-        <section className="filter-form">
-                <Link className="btn-primary2 filter-btns"
+        <section className="btn-room-contain">
+                <Link className="btn-primary2 room-btns"
+                    style={{
+                        paddingLeft: '23px',
+                        paddingRight: '23px'
+                    }}
                     to="/private" >לחדרים הפרטיים</Link>
-                <Link className="btn-primary2 filter-btns"
+                <Link className="btn-primary2 room-btns"
                     to="/public" >לחדרים המשותפים</Link>
         </section>
     );
