@@ -731,9 +731,9 @@ div{
     width: 100%;
     text-align: center;
 }
-@media screen and (min-width: 935px) {
+@media screen and (max-width: 480) {
   .btn-room-contain {
-margin-left: 1rem;
+    margin-left: 1.5rem;
 }}
 .form-group {
   text-transform: capitalize;
