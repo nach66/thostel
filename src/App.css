@@ -759,11 +759,6 @@ div{
     padding: 7px;
   }
 }
-@media screen and (max-width: 480px) {
-  .btn-room-contain {
-    left: 14px;
-  }
-} */
 .form-group {
   text-transform: capitalize;
 }
