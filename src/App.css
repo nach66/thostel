@@ -754,19 +754,14 @@ div{
 @media screen and (max-width: 600px) {
   .btn-room-contain {
     width: 90vw;
-    padding: 30px;
   }
   .room-btns {
     padding: 7px;
   }
 }
-/*   .btn-room-contain {
-    left: 24px;
-  }
-}
-@media screen and (max-width: 515px) {
+@media screen and (max-width: 480px) {
   .btn-room-contain {
-    left: 40px;
+    left: 14px;
   }
 } */
 .form-group {
