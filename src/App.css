@@ -164,11 +164,11 @@ width: 7px;
 }
 .services-center {
   width: 80vw;
-  padding: 30px;
+  padding: 20px;
   display: grid;
   grid-row-gap: 2rem;
   grid-column-gap: 5rem;  
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: 1fr 1fr;
 }
 .gallery-background {
   margin: auto;
@@ -187,6 +187,7 @@ width: 7px;
   .services-center {
     width: 90vw;
     max-width: 1170px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }.gallery-services {
     width: 70vw;
   }
@@ -529,7 +530,7 @@ div{
   top: 0;
   width: 100vw;
   height: calc(100vh - 150px);
-  background-size: cover;
+  background: center/cover no-repeat;
   will-change: opacity;
   /* 
   margin-right: 9vw;
@@ -550,26 +551,34 @@ div{
 .roomsHero {
   background-image: url("./images/def.jpg");
 }
+@media screen and (max-width: 540px) {
+  .bg {
+    height: calc(100vh - 350px);
+  }
+  .defaultHero, .roomsHero {
+    min-height: calc(100vh - 416px);
+  }
+}
 /* Banner */
 .banner {
-  padding: 1.5rem 2rem;
+  padding: 1rem;
   text-align: center;
+  padding-top: 10px;
   color: var(--mainWhite);
-  background: rgba(0, 0, 0, 0.377);
+  background: rgba(0, 0, 0, 0.507);
   letter-spacing: var(--mainSpacing);
 }
 .banner h1 {
   font-size: 1.5rem;
 }
+.banner p {
+  font-size: 1.2rem;
+}
 .banner div {
   width: 7rem;
   height: 3px;
   background-color: var(--primaryColor);
-  margin: 1.7rem auto;
-}
-.banner p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin: 1.5rem auto;
 }
 /*end of Banner */
 
@@ -734,17 +743,32 @@ div{
   text-align: center;
   height: 100%;
   padding: 10px;
+  border-radius: 3%;
+  box-shadow: 0 0.5em 0.4em -0.4em #050a5c ;
 }
-@media screen and (max-width: 580px) {
-  .btn-room-contain {
-    left: 44px;
+@media screen and (max-width: 900px) {
+  .room-btns {
+    font-size: x-large;
   }
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 600px) {
   .btn-room-contain {
-    left: 54px;
+    width: 90vw;
+    padding: 30px;
+  }
+  .room-btns {
+    padding: 7px;
   }
 }
+/*   .btn-room-contain {
+    left: 24px;
+  }
+}
+@media screen and (max-width: 515px) {
+  .btn-room-contain {
+    left: 40px;
+  }
+} */
 .form-group {
   text-transform: capitalize;
 }
