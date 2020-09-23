@@ -19,7 +19,7 @@ export default class minihotel extends Component {
             this.setState({
                 isloading: false
             });
-        }.bind(this), 1200);
+        }.bind(this), 1000);
     }
     
     render() {

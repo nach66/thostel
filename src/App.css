@@ -70,7 +70,7 @@
       color: var(--mainBlack);
       background: var(--primaryColor);
       padding: 0.4rem 0.9rem;
-      border: 1px solid var(--primaryColor);
+      border: none;
       transition: var(--mainTransition);
       border-radius: 2px;
       font-size: medium;
@@ -80,7 +80,7 @@
   }
   .book:hover {
   box-shadow: 0 0.5em 0.5em -0.2em var(--mainWhite) ;
-  transform: translateY(-0.25em);
+  transform: translateY(-0.03em);
   }
 /*מסך קטן*/
 @media screen and (max-width: 850px) {
@@ -115,6 +115,10 @@
 @media screen and (max-width: 560px) {
   .react-datepicker-wrapper{
     width: 150px;
+  }
+  .book{
+    background: rgb(0, 88, 139);
+    color: var(--primaryColor);
   }
 }
 /*הטלפון שלי*/
