@@ -79,7 +79,7 @@
       cursor: pointer;
   }
   .book:hover {
-  box-shadow: 0 0.5em 0.5em -0.2em var(--mainWhite) ;
+  box-shadow: 0 0.1em 0.9em -0.4em var(--mainWhite) ;
   transform: translateY(-0.03em);
   }
 /*מסך קטן*/
@@ -118,7 +118,7 @@
   }
   .book{
     background: rgb(0, 88, 139);
-    color: var(--primaryColor);
+    color: var(--mainWhite);
   }
 }
 /*הטלפון שלי*/
@@ -733,6 +733,7 @@ div{
 .btn-room-contain {
   position: relative;
   width: 70vw;
+  left: 3px;
   margin: auto;
   display: grid;
   grid-column-gap: 2rem;
@@ -754,10 +755,15 @@ div{
     font-size: x-large;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
+  .btn-room-contain {
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 380px) {
   .btn-room-contain {
     width: 90vw;
-    left: 5px;
+    left: 13px;
   }
 }
 .form-group {
