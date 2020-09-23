@@ -757,7 +757,7 @@ div{
 @media screen and (max-width: 480px) {
   .btn-room-contain {
     width: 90vw;
-    left: 25px;
+    left: 5px;
   }
 }
 .form-group {
