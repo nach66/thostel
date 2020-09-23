@@ -757,13 +757,14 @@ div{
 }
 @media screen and (max-width: 500px) {
   .btn-room-contain {
-    width: 80vw;
+    width: 90vw;
+    left: 4px;
   }
 }
 @media screen and (max-width: 380px) {
   .btn-room-contain {
     width: 90vw;
-    left: 13px;
+    left: 14px;
   }
 }
 .form-group {
