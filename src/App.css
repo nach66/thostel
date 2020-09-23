@@ -753,10 +753,17 @@ div{
 }
 @media screen and (max-width: 600px) {
   .btn-room-contain {
-    width: 85vw;
+    width: 98;
+    left: 10px;
   }
   .room-btns {
     padding: 7px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .btn-room-contain {
+    width: 98;
+    left: 15px;
   }
 }
 .form-group {

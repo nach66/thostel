@@ -3,13 +3,26 @@ import Footer from '../components/Footer'
 import {FaEnvelope,FaPhone} from 'react-icons/fa';
 import ContactForm from '../components/ContactForm'
 import Title from '../components/Title';
-import {animateScroll as scroll } from 'react-scroll'
+import Loading from '../components/Loading';
 
 export default class minihotel extends Component {
-    componentDidMount () {
-        scroll.scrollTo(0);
+    constructor(props) {
+        super(props);
+        this.state = {
+            idloading: true
+        }
     }
-
+/*
+    // Now its an arrow function
+    componentDidMount = () => {
+        const iframe = document.getElementById("be_iframe");
+        iframe.addEventListener("load", function() {
+            this.setState({
+                loading: false
+            });
+        });
+    }
+*/
     render() {
         return (
             <>
@@ -28,11 +41,13 @@ export default class minihotel extends Component {
                             </article>
                             <br/>
                         </section>
-                        <iframe id="be_iframe" frameborder="1" scrolling="yes" title="booking"
-                                    style={{width: '100%', height:'500px', padding:'30px', overflow: 'hidden'}} 
-                                    onload="window.scrollTo(0,0)"
+                    {this.state.idloading && <Loading/>}
+                    
+                    <iframe id="be_iframe" frameborder="0.5" scrolling="yes" title="booking"
+                                    style={{width: '100%', height:'2700px', 
+                                            padding:'30px', overflow: 'hidden'}} 
                                     src="https://minihotelpms.net/frame/reservas?hotelToken=a41ce7814d16061ac9a951e3bb1c534e||from=||to=||nAdults=1||nChilds=0||nBabies=0||start_date=||end_date=||language=HE||currency=ILS||rateCode=*ALL||roomId=||bloggerId=">
-                        </iframe>
+                    </iframe>
                     <div className="sep"/>
                     <ContactForm/>
                     <Footer/>
