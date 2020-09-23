@@ -17,10 +17,6 @@ export default class SingleRoom extends Component {
         };
     }
 
-    // componentDidMount () {
-    //     scroll.scrollToTop(0);
-    // }
-
     static contextType = RoomContext;
     
     render() {        
@@ -59,7 +55,6 @@ export default class SingleRoom extends Component {
                             return ( <div
                                 key={index} alt="pic"
                                 style={{backgroundImage: `url(${item})`}}
-                                onClick={() => this.setState({ isOpen: true, photoIndex: index })}
                                 ></div>);                       
                         })}
                     </div>

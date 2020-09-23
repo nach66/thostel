@@ -6,24 +6,24 @@ import Title from '../components/Title';
 import Loading from '../components/Loading';
 
 export default class minihotel extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
-            idloading: true
+            isloading: true
         }
     }
-/*
-    // Now its an arrow function
-    componentDidMount = () => {
-        const iframe = document.getElementById("be_iframe");
-        iframe.addEventListener("load", function() {
+
+    componentDidMount() {
+        setTimeout(function() {
             this.setState({
-                loading: false
+                isloading: false
             });
-        });
+        }.bind(this), 1200);
     }
-*/
+    
     render() {
+        console.log(this.state.idloading);
         return (
             <>
                 <div className="sep"/>
@@ -41,7 +41,8 @@ export default class minihotel extends Component {
                             </article>
                             <br/>
                         </section>
-                    {this.state.idloading && <Loading/>}
+
+                    {this.state.isloading && <Loading/>}
                     
                     <iframe id="be_iframe" frameborder="0.5" scrolling="yes" title="booking"
                                     style={{width: '100%', height:'2700px', 
