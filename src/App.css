@@ -768,7 +768,7 @@ div{
 }
 @media screen and (max-width: 380px) {
   .btn-room-contain {
-    left: 20px;
+    left: 10px;
   }
 }
 
