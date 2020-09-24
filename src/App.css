@@ -751,6 +751,9 @@ div{
   box-shadow: 0 0.5em 0.4em -0.4em #050a5c;
 }
 @media screen and (max-width: 555px) {
+  .btn-room-contain {
+    width: 80vw;
+  }
   .room-btns {
     font-size: 1.2rem;
   }
