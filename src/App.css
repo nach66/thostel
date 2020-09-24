@@ -760,7 +760,7 @@ div{
 }
 @media screen and (max-width: 480px) {
   .btn-room-contain {
-    left:5px;
+    left:3px;
   }
   .room-btns {
     font-size: 0.9rem;
@@ -768,7 +768,7 @@ div{
 }
 @media screen and (max-width: 380px) {
   .btn-room-contain {
-    left: 10px;
+    left: 5px;
   }
 }
 
