@@ -12,15 +12,15 @@ export default class Servies extends Component {
             },
             {
                 icon:<FaAngellist/>,
-                title:"גג עם נוף מטריף לכנרת ולהרי הגולן"
+                title:"גג עם נוף לכנרת ולהרי הגולן"
             },
             {
                 icon:<FaRegSmileBeam/>,
-                title:"צוות מנוסה ואדיב"
+                title:"צוות אדיר"
             },
             {
                 icon:<FaMapMarked/>,
-                title:"3 דקות מתחנת האוטובוס, 3 דקות מקו המים..."
+                title:"מיקום מרכזי"
             },
             /* 
             {
