@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Title from './Title';
-import {FaUtensils,FaAngellist, FaSmileBeam, FaMapMarked} 
+import {FaUtensils,FaAngellist, FaSmileBeam, FaMapMarked, FaSmile, FaSmileWink, FaRegSmile, FaRegSmileBeam} 
 from 'react-icons/fa';
 
 export default class Servies extends Component {
@@ -15,7 +15,7 @@ export default class Servies extends Component {
                 title:"גג עם נוף מטריף לכנרת ולהרי הגולן"
             },
             {
-                icon:<FaSmileBeam/>,
+                icon:<FaRegSmileBeam/>,
                 title:"צוות מנוסה ואדיב"
             },
             {

@@ -204,9 +204,9 @@ width: 7px;
 .icon-services {
   background-color: var(--offWhite);
   color: var(--mainBlack);
-  padding: 0.9rem 0.9rem 0.6rem;
+  padding: 0.4rem 0.4rem 0.1rem;
   border-radius: 50%;
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 .h6-services {
   font-weight: 600;  
