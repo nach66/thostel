@@ -5,7 +5,6 @@ import RoomsList from '../components/RoomsList';
 import {RoomConsumer} from '../contextRooms';
 import Title from '../components/Title';
 import Loading from '../components/Loading';
-import Services from '../components/Servies'
 
 export default function PrivateRooms() {
     return (
@@ -20,7 +19,7 @@ export default function PrivateRooms() {
                         <div className="sep"/>
                         <Title title="חדרים פרטיים" />
                         <section className="empty-services">
-                            <h6>החדרים הפרטיים שלנו יכולים להכיל 2-4 אנשים. בחדרים הפרטיים השירותים והמקלחת הם בתוך החדר.</h6>
+                            <h6>החדרים הפרטיים שלנו יכולים להכיל 1-4 אנשים. בחדרים הפרטיים השירותים והמקלחת הם בתוך החדר.</h6>
                         </section>
                         <RoomsList rooms={privateRooms}/>
                         <ContactForm/>

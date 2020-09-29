@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import Footer from '../components/Footer'
-import {FaEnvelope,FaPhone} from 'react-icons/fa';
 import ContactForm from '../components/ContactForm'
 import Title from '../components/Title';
 import Loading from '../components/Loading';
+import { Link } from 'react-router-dom'
 
 export default class minihotel extends Component {
 
@@ -27,20 +27,21 @@ export default class minihotel extends Component {
         return (
             <>
                 <div className="sep"/>
-                    <section className="empty-services">
-                        <Title title="הזמנה"/>
-                        <h6>להזמנות קבוצתיות של 10 אנשים ומעלה, אנא פנו אלינו - בדוא"ל או בטלפון</h6>
-                            <article>
-                                <FaPhone style={{ color:'rgb(7, 161, 58)'}}/>
-                                <h6>04-679-2611</h6>
-                            </article>
-                            <article>
-                                <a href={"mailto:tiberiashostel@gmail.com"} rel="noopener noreferrer" target="_blank">
-                                <FaEnvelope style={{ color:'#ebe050'}}/></a>
-                                <h6>tiberiashostel@gmail.com</h6>
-                            </article>
-                            <br/>
-                        </section>
+                    <Title title="הזמנה"/>
+                    <div style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                        }}>
+                            <h6>להזמנות קבוצתיות של 10 אנשים ומעלה, אנא</h6>
+                            <Link 
+                                style={{
+                                    marginRight: '5px',
+                                    fontWeight: '600',
+                                    fontFamily: 'Trebuchet MS, Lucida Sans Unicode, Lucida Grande, Lucida Sans, Arial, sans-serif'
+                                }}
+                                to="/contact" > פנו אלינו ישירות  :) 
+                            </Link>
+                    </div>
 
                     {this.state.isloading && <Loading/>}
                     

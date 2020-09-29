@@ -5,7 +5,6 @@ import RoomsList from '../components/RoomsList';
 import {RoomConsumer} from '../contextRooms';
 import Title from '../components/Title';
 import Loading from '../components/Loading';
-import Services from '../components/Servies'
 
 export default function PublicRooms() {
     return (
