@@ -27,16 +27,18 @@ export default class minihotel extends Component {
         return (
             <>
                 <div className="sep"/>
-                    <Title title="הזמנה"/>
-                    <div style={{
-                            display: 'flex',
-                            justifyContent: 'center',
-                        }}>
+                    {/* <Title title="הזמנה"/> */}
+                    <div
+                        style={{
+                            padding: '0rem',
+                            textAlign: 'center'
+                        }}
+                    >
                             <h6>להזמנות קבוצתיות של 10 אנשים ומעלה, אנא</h6>
                             <Link 
                                 style={{
-                                    marginRight: '5px',
                                     fontWeight: '600',
+                                    color: 'rgb(0, 88, 139)',
                                     fontFamily: 'Trebuchet MS, Lucida Sans Unicode, Lucida Grande, Lucida Sans, Arial, sans-serif'
                                 }}
                                 to="/contact" > פנו אלינו ישירות  :) 
@@ -46,7 +48,7 @@ export default class minihotel extends Component {
                     {this.state.isloading && <Loading/>}
                     
                     <iframe id="be_iframe" frameborder="0.5" scrolling="yes" title="booking"
-                                    style={{width: '100%', height:'2700px', 
+                                    style={{width: '100%', height:'2850px', 
                                             padding:'30px', overflow: 'hidden'}} 
                                     src="https://minihotelpms.net/frame/reservas?hotelToken=a41ce7814d16061ac9a951e3bb1c534e||from=||to=||nAdults=1||nChilds=0||nBabies=0||start_date=||end_date=||language=HE||currency=ILS||rateCode=*ALL||roomId=||bloggerId=">
                     </iframe>

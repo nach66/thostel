@@ -22,29 +22,6 @@
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-@keyframes customEnterAnimation {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes customLeaveAnimation {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-.customOverlay {
-  background:rgba(17, 16, 16, 0.808);
-}
-.customModal {
-  max-width: 450px;
-  width: 100%;
-}
 
 /*search*/
 .comp{
@@ -67,7 +44,7 @@
   background-image: url("./images/icons/bb.png");
   background-size: cover;
   position: relative;
-  height: 140px;
+  height: 142px;
   width: 160px;
   right: 40px;
   margin: 6px;
@@ -76,8 +53,8 @@
   background-image: url("./images/icons/bb.png");
   background-size: cover;
   position: absolute;
-  height: 120px;
-  width: 134px;
+  height: 125px;
+  width: 137px;
   top: 12px;
   left: 40vw;
   display: none;
@@ -206,6 +183,31 @@
 /*end of search*/
 
 
+/*popup*/
+@keyframes customEnterAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes customLeaveAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.customOverlay {
+  background:rgba(17, 16, 16, 0.808);
+}
+.customModal {
+  max-width: 450px;
+  width: 100%;
+}
+/*end of popup*/
 
 .languegus {
   color: #ecb80e;
@@ -659,10 +661,10 @@ div{
       margin-bottom: 10px;
   }
   .bg {
-    height: calc(100vh - 250px);
+    height: calc(390px);
   }
   .defaultHero, .roomsHero {
-    min-height: calc(100vh - 314px);
+    min-height: calc(327px);
   }
 }
 
