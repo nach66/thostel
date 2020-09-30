@@ -12,7 +12,13 @@ export default function Rooms() {
             <Services/>
             <RoomsFilter/>
             <div className="sep"/>
-            <ContactForm/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
             <Footer/>
         </>
     );

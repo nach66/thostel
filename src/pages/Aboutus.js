@@ -9,6 +9,10 @@ export default class Aboutus extends Component {
     render() {
         return (
             <>
+                <div className="sbest_price"
+                    style={{
+                        zIndex: '1'
+                    }}/>
                 <br/>
                 <Search/>
                 <div className="sep"/>

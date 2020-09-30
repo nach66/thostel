@@ -22,7 +22,12 @@ export default function PublicRooms() {
                             <h6>החדרים משותפים שלנו מכילים 8-10 אנשים. לחדרים המשותפים יש שירותים ומקלחות מחוץ לחדר.</h6>
                         </section>
                         <RoomsList rooms={publicRooms}/>
-                        <ContactForm/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
                         <Footer/>
                     </>
                 );

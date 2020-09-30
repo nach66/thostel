@@ -20,6 +20,10 @@ export default class Home extends React.Component {
         const { open } = this.state;
         return (
             <>
+                <div className="sbest_price"
+                    style={{
+                        top: '48vh'
+                    }}/>
                 <Images title="אכסניית טבריה" 
                         subtitle="הבית שלך בצפון"
                 />

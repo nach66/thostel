@@ -22,7 +22,12 @@ export default function PrivateRooms() {
                             <h6>החדרים הפרטיים שלנו יכולים להכיל 1-4 אנשים. בחדרים הפרטיים השירותים והמקלחת הם בתוך החדר.</h6>
                         </section>
                         <RoomsList rooms={privateRooms}/>
-                        <ContactForm/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
                         <Footer/>
                     </>
                 );
