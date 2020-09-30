@@ -56,7 +56,7 @@
   height: 125px;
   width: 137px;
   top: 12px;
-  left: 40vw;
+  left: 39vw;
   display: none;
 }
 
@@ -160,13 +160,16 @@
     width: 30vh;
   }
   .sbest_price{
-    left: 35vw;
+    left: 36vw;
   }
 }
 /*מחשב*/
 @media screen and (max-width: 560px) {
   .react-datepicker-wrapper{
     width: 151px;
+  }
+  .sbest_price{
+    left: 33vw;
   }
 }
 /*הטלפון שלי*/

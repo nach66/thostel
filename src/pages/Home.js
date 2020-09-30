@@ -22,8 +22,8 @@ export default class Home extends React.Component {
             <>
                 <div className="sbest_price"
                     style={{
-                        top: '340px',
-                        left: '20px'
+                        top: '310px',
+                        left: '5px'
                     }}/>
                 <Images title="אכסניית טבריה" 
                         subtitle="הבית שלך בצפון"
@@ -42,7 +42,8 @@ export default class Home extends React.Component {
                         },
                     }}
                 >
-                    <h2>כותרת</h2>
+                    <br/>
+                    <br/>
                     <p>
                         בהתאם להנחיות משרד הבריאות אנחנו נהיה סגורים 😢 
                         החל מיום שישי ה - 18 לספטמבר (מ- 14:00) עד ה - 11 באוקטובר. 
