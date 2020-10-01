@@ -3,7 +3,6 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import addDays from 'date-fns/addDays'
 import { format } from "date-fns";
-import Webook from './Webook'
 
 export default class Search extends Component {
 
@@ -56,7 +55,6 @@ export default class Search extends Component {
             <>
                 <div className="comp">
                 <div className="best_price"/>
-                    {/* <h1 className="h1b">מתחייבים למחירים הזולים ביותר בהזמנה ישירה באתר</h1> */}
                     <div className="book-now-comp">
                         <div style={{position: 'relative', display: 'inline-block'}}>
                                 <DatePicker

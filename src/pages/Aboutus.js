@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import About from '../components/About'
 import Gallerys from '../components/Gallerys'
 import Search from '../components/Search'
+import Services from '../components/Services'
 
 export default class Aboutus extends Component {
     render() {
@@ -18,6 +19,7 @@ export default class Aboutus extends Component {
                 <div className="sep"/>
                 <About/>
                 <div className="sep"/>
+                <Services/>
                 <Gallerys/>
                 <div className="sep"/>
                 <ContactForm/>

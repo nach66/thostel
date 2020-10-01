@@ -1,6 +1,5 @@
 import React from 'react'
 import Footer from '../components/Footer'
-import ContactForm from '../components/ContactForm'
 import RoomsList from '../components/RoomsList';
 import {RoomConsumer} from '../contextRooms';
 import Title from '../components/Title';

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Footer from '../components/Footer'
 import ContactForm from '../components/ContactForm'
-import Title from '../components/Title';
 import Loading from '../components/Loading';
 import { Link } from 'react-router-dom'
 

@@ -46,8 +46,8 @@
   position: relative;
   height: 142px;
   width: 160px;
-  right: 40px;
-  margin: 6px;
+  right: 20px;
+  margin: 4px;
 }
 .sbest_price{
   background-image: url("./images/icons/bb.png");
@@ -65,7 +65,6 @@
     padding-top: 12px;
     height: 110px;
     width: 70%;
-    right: 15px;
     display: grid; 
     grid-column-gap: 1rem; 
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -614,9 +613,6 @@ div{
   height: calc(100vh - 150px);
   background: center/cover no-repeat;
   will-change: opacity;
-  /* 
-  margin-right: 9vw;
-  margin-left: 9vw; */
 }
 .switch{
   display: flex;

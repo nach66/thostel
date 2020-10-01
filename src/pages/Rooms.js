@@ -1,30 +1,50 @@
 import React from 'react'
-import Footer from '../components/Footer'
-//import RoomsFilter from '../components/RoomsFilter';
-import ContactForm from '../components/ContactForm'
-import Services from '../components/Servies'
-import {Link} from 'react-router-dom'
+import RoomsList from '../components/RoomsList';
+import {RoomConsumer} from '../contextRooms';
+import Loading from '../components/Loading';
+import Footer from '../components/Footer';
+import Title from '../components/Title';
 
 export default function Rooms() {
     return (
         <>
-            <div className="sep"/>
+        <RoomConsumer>
+            {value => {
+                const {loading, publicRooms, privateRooms} = value;
+                if (loading) {
+                    return <Loading/>;
+                }
+                return (
+                    <>
+                        <div className="sep"/>
+                        <Title title="חדרים פרטיים"/> 
+                        <section className="empty-services">
+                            <h6>החדרים הפרטיים שלנו יכולים להכיל 1-4 אנשים. בחדרים הפרטיים השירותים והמקלחת הם בתוך החדר.</h6>
+                        </section>
+                        <RoomsList rooms={privateRooms}/>
+                        <div className="sep"/>
+                        <Title title="חדרים משותפים"/>
+                        <section className="empty-services">
+                            <h6>החדרים משותפים שלנו מכילים 8-10 אנשים. לחדרים המשותפים יש שירותים ומקלחות מחוץ לחדר.</h6>
+                        </section>
+                        <RoomsList rooms={publicRooms}/>
+                        <div className="sep"/>
+                        <Footer/>
+                    </>
+                );
+            }}
+        </RoomConsumer>
+
+            {/* <div className="sep"/>
             <Services/>
             <RoomsFilter/>
             <div className="sep"/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <Footer/>
+            <Footer/> */}
         </>
     );
 }
 
-function RoomsFilter() {
+/* function RoomsFilter() {
     return (
         <section className="btn-room-contain">
                 <Link className="btn-primary2 room-btns"
@@ -37,4 +57,4 @@ function RoomsFilter() {
                     to="/public" >לחדרים המשותפים</Link>
         </section>
     );
-}
+} */
