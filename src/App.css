@@ -857,6 +857,8 @@ div{
 .form-control {
   width: 100%;
   font-size: 1rem;
+  border-radius: 5%;
+  border: #ecb80e 1px groove;
   color: var(--primaryColor);
   padding: 3px;
   margin: 1px;
