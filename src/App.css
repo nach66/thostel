@@ -160,7 +160,7 @@
     width: 30vh;
   }
   .sbest_price{
-    left: 36vw;
+    left: 35vw;
   }
 }
 /*מחשב*/
@@ -169,7 +169,7 @@
     width: 151px;
   }
   .sbest_price{
-    left: 32vw;
+    left: 31vw;
   }
 }
 /*הטלפון שלי*/
@@ -178,12 +178,15 @@
     width: 130px;
   }
   .sbest_price{
-    left: 30vw;
+    left: 28vw;
   }
 }
 @media screen and (max-width: 380px) {
   .react-datepicker-wrapper{
     width: 110px;
+  }
+  .sbest_price{
+    left: 26vw;
   }
 }
 /*end of search*/
