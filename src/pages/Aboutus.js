@@ -14,7 +14,6 @@ export default class Aboutus extends Component {
                     style={{
                         zIndex: '1'
                     }}/>
-                <br/>
                 <Search/>
                 <div className="sep"/>
                 <About/>

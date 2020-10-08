@@ -11,7 +11,6 @@ export default class Contact extends Component {
                     style={{
                         zIndex: '1'
                     }}/>
-                <br/>
                 <Search/>
                 <div className="sep"/>
                 <ContactForm/>

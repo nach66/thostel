@@ -47,7 +47,7 @@ export default class Home extends React.Component {
 
                 <div className="sbest_price"
                     style={{
-                        top: '310px',
+                        top: '328px',
                         left: '5px'
                     }}/>
                 <Images title="אכסניית טבריה" 

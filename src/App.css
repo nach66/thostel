@@ -48,18 +48,8 @@
 .comp{
   background-color: var(--mainGreen);
   display: flex;
-  margin: auto;
   width: 100%;
-}
-.h1b{
-  padding-top: 7px;
-  font-size: 18px;
-  font-weight: 500;
-  text-align: center;
-  display: none;
-  padding-right: 15px;
-  color:  rgb(0, 88, 139);
-  text-decoration: double;
+  margin-top: 17px;
 }
 .book-now-comp{
     position: relative;
@@ -68,7 +58,7 @@
     width: 70%;
     display: grid; 
     grid-column-gap: 1rem; 
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
     margin: auto;
   }
   .react-datepicker-wrapper{
@@ -124,27 +114,27 @@
   .sbest_price{
     display: flex;
   }
-  .h1b, .comp {
+  .comp {
     display: inline-block;
   }
   .book-now-comp{
     display: inline-block;
     padding: 10px;
     padding-top: 75px;
-    margin:auto;
+    margin: auto;
     width: 100%;
     height: 100%;
     right: 0px;
   }
   .ppl{  
     margin: 0.5vh;
-    width: 41%;
+    width: 21.7vw;
     margin-top: 2px;
     height: 35px;
   }
   .react-datepicker-wrapper{
     margin: 0.5vh;
-    width: 40vh;
+    width: 21.8vw;
     padding-top: 0px;
   }
   .react-datepicker-wrapper input{
@@ -155,30 +145,26 @@
     height: 35px;
   }
 }
-@media screen and (max-width: 700px) {
-  .react-datepicker-wrapper{
-    width: 30vh;
-  }
+@media screen and (max-width: 640px) {
   .sbest_price{
-    left: 35vw;
+    left: 35.5vw;
   }
 }
 /*מחשב*/
 @media screen and (max-width: 560px) {
-  .react-datepicker-wrapper{
-    width: 151px;
-  }
   .sbest_price{
-    left: 31vw;
+    left: 32vw;
   }
 }
 /*הטלפון שלי*/
 @media screen and (max-width: 480px) {
   .react-datepicker-wrapper{
     width: 130px;
+  }.ppl{
+    width: 41%;
   }
   .sbest_price{
-    left: 28vw;
+    left: 29vw;
   }
 }
 @media screen and (max-width: 380px) {
@@ -306,21 +292,23 @@ width: 7px;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0.6rem 0rem 0.3rem;
+  padding: 0.2rem 0rem 0.1rem 0rem;
   background: var(--mainWhite);
   z-index: 1;
 }
 /*לוגו העוגן*/
 .nav-logo {
-  margin-top: 2px;
+  margin-top: 7px;
   transition: var(--mainTransition);
 }
   .nav-logo:hover,
   .nav-logo:focus {
     box-shadow: 0 0.5em 0.4em -0.4em #050a5c ;
-    transform: translateY(-0.25em);
+    transform: translateY(-0.1em);
 }
+
 /*** במסך קטן ***/
+
 /* כותרת*/
 .nav-header {
   display: flex;
@@ -330,9 +318,9 @@ width: 7px;
 .nav-btn {
   margin-left: 10px;
   background: transparent;
-  border: 2px groove;
+  border: 3px groove;
   border-radius: 4px;
-  padding: 0.3rem;
+  padding: 0.2rem;
   cursor: pointer;
   outline: none;
 }
@@ -342,7 +330,7 @@ width: 7px;
   font-size: 2rem;
   color:var(--myblue);
 }
-  /*עיצוב התפריט */
+  /* עיצוב התפריט הנפתח */
 .nav-links {
   z-index: 1;
   text-align: center;
@@ -409,7 +397,7 @@ width: 7px;
     height: auto;
     display: flex;
     box-shadow: none;
-    margin-top: 0px;
+    margin-top: 5px;
   }
   /* כפתורי תפריט */
   .nav-links a {
@@ -617,7 +605,7 @@ div{
   position: absolute;
   top: 0;
   width: 100vw;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 133px);
   background: center/cover no-repeat;
   will-change: opacity;
 }
@@ -667,7 +655,7 @@ div{
       margin-bottom: 10px;
   }
   .bg {
-    height: calc(390px);
+    height: calc(408px);
   }
   .defaultHero, .roomsHero {
     min-height: calc(327px);
@@ -768,7 +756,6 @@ div{
   padding: 0.5rem;
   font-weight: 600;
   font-size: 1rem;
-
   border: 2px groove ;
   color: var(--mainWhite);
   background : var(--mainGreen);
@@ -778,8 +765,7 @@ div{
   text-decoration: none;
   border-radius:10px;
 }
-.book-now-btn:hover,
-.book-now-btn:focus {
+.book-now-btn:hover {
   box-shadow: 0 0.5em 0.5em -0.2em #3bb193 ;
   transform: translateY(-0.25em);
 }
