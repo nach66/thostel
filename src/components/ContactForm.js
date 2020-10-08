@@ -111,7 +111,7 @@ export default function ContactForm() {
                                         <div className="form">
                                         <textarea
                                             name="message"
-                                            className="form-control"
+                                            className="form-control long"
                                             rows="11"
                                             placeholder="היי שלום, רציתי לדעת..."
                                         />
@@ -122,10 +122,11 @@ export default function ContactForm() {
                                             value="שלח"
                                             style={{
                                                 position: 'relative',
-                                                bottom:'23px',
-                                                color: 'var(--mainBlack)',
+                                                bottom:'25px',
+                                                color: 'var(--myblue)',
+                                                fontWeight: '500',
                                                 background: 'var(--primaryColor)',
-                                                padding: '0.4rem 0.9rem',
+                                                padding: '0.3rem 0.8rem',
                                                 border: '3px solid var(--primaryColor)',
                                                 cursor: 'pointer'
                                             }}
