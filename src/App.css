@@ -8,7 +8,7 @@
 :root {
   --myblue: #050a5c;
   --lightblue: rgb(154, 189, 189);
-  --primaryColor: #ecb80e;
+  --primaryColor: rgb(236, 184, 14);
   --mainWhite: #fff;
   --offWhite:rgba(154, 189, 189, 0.432);
   --mainBlack: #222;
@@ -41,21 +41,20 @@
   text-decoration: double;
 }
 .best_price{
-  background-image: url("./images/icons/bb.png");
+  background-image: url("./images/icons/bestp.png");
   background-size: cover;
   position: relative;
-  height: 142px;
+  height: 160px;
   width: 160px;
-  right: 20px;
-  margin: 4px;
+  right: 1.5rem;
 }
 .sbest_price{
-  background-image: url("./images/icons/bb.png");
+  background-image: url("./images/icons/bestp.png");
   background-size: cover;
   position: absolute;
-  height: 125px;
-  width: 137px;
-  top: 12px;
+  height: 160px;
+  width: 160px;
+  top: 5px;
   left: 39vw;
   display: none;
 }
@@ -129,7 +128,7 @@
   .book-now-comp{
     display: inline-block;
     padding: 10px;
-    padding-top: 52px;
+    padding-top: 80px;
     margin:auto;
     width: 100%;
     height: 100%;

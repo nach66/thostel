@@ -22,24 +22,21 @@ export default function Rooms() {
                             <h6>החדרים הפרטיים שלנו יכולים להכיל 1-4 אנשים. בחדרים הפרטיים השירותים והמקלחת הם בתוך החדר.</h6>
                         </section>
                         <RoomsList rooms={privateRooms}/>
+
                         <div className="sep"/>
+
                         <Title title="חדרים משותפים"/>
                         <section className="empty-services">
-                            <h6>החדרים משותפים שלנו מכילים 8-10 אנשים. לחדרים המשותפים יש שירותים ומקלחות מחוץ לחדר.</h6>
+                            <h6>החדרים משותפים שלנו מכילים 4-10 אנשים. בחדרים משותפים עם 4 מיטות יש שירותים ומקלחת בתוך החדר, ובשאר יש שירותים ומקלחות פרטיים, מחוץ לחדר.</h6>
                         </section>
                         <RoomsList rooms={publicRooms}/>
                         <div className="sep"/>
+
                         <Footer/>
                     </>
                 );
             }}
         </RoomConsumer>
-
-            {/* <div className="sep"/>
-            <Services/>
-            <RoomsFilter/>
-            <div className="sep"/>
-            <Footer/> */}
         </>
     );
 }

@@ -16,7 +16,8 @@ export default class RoomProvider extends Component {
     try {
       let response = await Client.getEntries({
         content_type: "room",
-        order:"sys.createdAt"
+        order:"fields.capacity"
+//        order:"sys.createdAt"
       });
       let rooms = this.formatData(response.items);
       let privateRooms = rooms.filter(room => room.type === "פרטי");

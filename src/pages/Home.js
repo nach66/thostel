@@ -20,14 +20,6 @@ export default class Home extends React.Component {
         const { open } = this.state;
         return (
             <>
-                <div className="sbest_price"
-                    style={{
-                        top: '310px',
-                        left: '5px'
-                    }}/>
-                <Images title="אכסניית טבריה" 
-                        subtitle="הבית שלך בצפון"
-                />
                 <Modal open={open} center
                     onClose={this.onCloseModal}
                     classNames={{
@@ -53,6 +45,14 @@ export default class Home extends React.Component {
                     </p>
                 </Modal>
 
+                <div className="sbest_price"
+                    style={{
+                        top: '310px',
+                        left: '5px'
+                    }}/>
+                <Images title="אכסניית טבריה" 
+                        subtitle="הבית שלך בצפון"
+                />
                 <Search/>
                 <div className="sep"/>
                 <ContactForm/>

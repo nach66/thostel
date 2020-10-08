@@ -11,16 +11,16 @@ export default class Servies extends Component {
                 title:"מטבח משותף מאובזר וביתי"
             },
             {
-                icon:<FaAngellist/>,
-                title:"גג עם נוף לכנרת ולהרי הגולן"
-            },
-            {
                 icon:<FaRegSmileBeam/>,
                 title:"צוות אדיר"
             },
             {
                 icon:<FaMapMarked/>,
                 title:"מיקום מרכזי"
+            },
+            {
+                icon:<FaAngellist/>,
+                title:"גג עם נוף לכנרת ולהרי הגולן"
             },
             /* 
             {
