@@ -622,7 +622,7 @@ div{
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(67.3vh);
+  min-height: calc(67.15vh);
 }
 .roomsHero {
   background-image: url("./images/def.jpg");
@@ -662,7 +662,7 @@ div{
     height: calc(360.5px);
   }
   .defaultHero, .roomsHero {
-    min-height: calc(277.7px);
+    min-height: calc(276px);
   }
 }
 
