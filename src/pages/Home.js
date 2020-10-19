@@ -9,15 +9,16 @@ import { Modal } from "react-responsive-modal";
 export default class Home extends React.Component {
 
     state = {
-        open: true,
+        open: true
     };
-    
+
     onCloseModal = () => {
         this.setState({ open: false });
     };
 
     render () {
         const { open } = this.state;
+
         return (
             <>
                 <Modal open={open} center
@@ -37,23 +38,28 @@ export default class Home extends React.Component {
                     <br/>
                     <br/>
                     <p>
-                        בהתאם להנחיות משרד הבריאות אנחנו נהיה סגורים 😢 
-                        החל מיום שישי ה - 18 לספטמבר (מ- 14:00) עד ה - 11 באוקטובר. 
-                        אבל...😏 
-                        אם אתם מחפשים מקום ידידותי להעביר בו את הסגר, אנחנו משכירים חדרים פרטיים לתקופות קצרות, 14 יום ויותר. 
-                        מוזמנים לפנות אלינו ולקבל הצעת מחיר.
+                        בהתאם להנחיות משרד הבריאות אנו פתוחים במתכונת של השכרת חדרים, ופועלים לפי הנחיות התו הסגול.
                     </p>
                 </Modal>
 
+                <Images title="אכסניית טבריה" 
+                        subtitle="הבית שלך בצפון"/>
+                <Search/>
+
                 <div className="sbest_price"
                     style={{
-                        top: '328px',
+                        top: '281px',
                         left: '5px'
                     }}/>
-                <Images title="אכסניית טבריה" 
-                        subtitle="הבית שלך בצפון"
-                />
-                <Search/>
+                <div className="best_price"
+                    style={{
+                        top: '360px',
+                        right: '5px',
+                        height: '240px',
+                        width: '240px',
+                        position: 'absolute'
+                    }}/>
+
                 <div className="sep"/>
                 <ContactForm/>
                 <Footer/>

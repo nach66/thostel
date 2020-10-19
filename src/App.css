@@ -22,15 +22,43 @@
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
+
+
+/*popup*/
+@keyframes customEnterAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes customLeaveAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.customOverlay {
+  background:rgba(17, 16, 16, 0.808);
+}
+.customModal {
+  max-width: 450px;
+  width: 100%;
+}
+/*end of popup*/
+
 /*עיגול של מחיר באתר*/
 .best_price{
   background-image: url("./images/icons/bestp.png");
   background-size: cover;
   position: relative;
-  height: 160px;
-  width: 165px;
+  height: 155px;
+  width: 155px;
   right: 1.5rem;
-  margin: 3px;
+  margin-bottom: 2px;
 }
 .sbest_price{
   background-image: url("./images/icons/bestp.png");
@@ -49,17 +77,17 @@
   background-color: var(--mainGreen);
   display: flex;
   width: 100%;
-  margin-top: 17px;
 }
 .book-now-comp{
     position: relative;
-    padding-top: 12px;
-    height: 110px;
+    padding-top: 17px;
+    height: 120px;
     width: 70%;
     display: grid; 
     grid-column-gap: 1rem; 
-    grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
-    margin: auto;
+    grid-template-columns: 1.2fr 1.2fr 1.2fr 1.2fr 1.7fr;
+    margin-right: 240px;
+    margin-left: 20px;
   }
   .react-datepicker-wrapper{
     width: 100%;
@@ -70,6 +98,7 @@
   .react-datepicker__input-container input {
       width: 100%;
       height: 45px;
+      padding: 4px;
       padding-right: 5px;
       border-radius: 2px;
       border: 1px solid var(--primaryColor);
@@ -120,7 +149,7 @@
   .book-now-comp{
     display: inline-block;
     padding: 10px;
-    padding-top: 75px;
+    padding-top: 85px;
     margin: auto;
     width: 100%;
     height: 100%;
@@ -177,32 +206,6 @@
 }
 /*end of search*/
 
-
-/*popup*/
-@keyframes customEnterAnimation {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes customLeaveAnimation {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
-.customOverlay {
-  background:rgba(17, 16, 16, 0.808);
-}
-.customModal {
-  max-width: 450px;
-  width: 100%;
-}
-/*end of popup*/
 
 .languegus {
   color: #ecb80e;
@@ -595,7 +598,6 @@ div{
   margin: 100px;
   background-position-y: bottom;
 }
-
 /*end of gallery*/
 
 
@@ -603,9 +605,9 @@ div{
 .bg {
   z-index: -1;
   position: absolute;
-  top: 0;
+  top: 0px;
   width: 100vw;
-  height: calc(100vh - 133px);
+  height: calc(80vh);
   background: center/cover no-repeat;
   will-change: opacity;
 }
@@ -616,10 +618,11 @@ div{
 .defaultHero,
 .roomsHero {
   margin: auto;
+  margin-top: 3vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - 214px);
+  min-height: calc(67.3vh);
 }
 .roomsHero {
   background-image: url("./images/def.jpg");
@@ -652,13 +655,14 @@ div{
     }
   .banner p {
       font-size: 0.9rem;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
   }
   .bg {
-    height: calc(408px);
+    top:0px;
+    height: calc(55vh);
   }
   .defaultHero, .roomsHero {
-    min-height: calc(327px);
+    min-height: calc(42.2vh);
   }
 }
 

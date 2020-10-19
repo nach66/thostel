@@ -11,6 +11,13 @@ export default class Contact extends Component {
                     style={{
                         zIndex: '1'
                     }}/>
+                <div className="best_price"
+                    style={{
+                        position: 'absolute',
+                        top: '70px',
+                        right: '55px'
+                    }}/>
+                <br/>
                 <Search/>
                 <div className="sep"/>
                 <ContactForm/>
