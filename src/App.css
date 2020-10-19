@@ -149,7 +149,7 @@
   .book-now-comp{
     display: inline-block;
     padding: 10px;
-    padding-top: 85px;
+    padding-top: 75px;
     margin: auto;
     width: 100%;
     height: 100%;
@@ -659,10 +659,10 @@ div{
   }
   .bg {
     top:0px;
-    height: calc(55vh);
+    height: calc(360.5px);
   }
   .defaultHero, .roomsHero {
-    min-height: calc(42.2vh);
+    min-height: calc(277.7px);
   }
 }
 
