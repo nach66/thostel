@@ -26,7 +26,6 @@
   color: var(--myblue);
   text-decoration: none;
   text-transform: capitalize;
-  text-align:center;
   direction: ltr;
   padding: 10px;
 }
