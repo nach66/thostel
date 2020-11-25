@@ -27,7 +27,6 @@
   text-decoration: none;
   text-transform: capitalize;
   direction: ltr;
-  padding: 10px;
 }
 .footer:hover {
   text-decoration: underline;
