@@ -29,12 +29,7 @@ export default class Footer extends Component {
                         <a className="footer"
                             rel="noopener noreferrer" target={"_blank"} 
                             href='https://portifolti.netlify.app/'
-                            // style={{
-                            //     // textDecoration: 'none',
-                            //     color: 'var(--myblue)',
-                            //     textTransform: 'capitalize',
-                            //     direction:'ltr'}}
-                                >
+                        >
                             {new Date().getFullYear()} &copy; by nachala vinograd
                         </a>
                     </div>
@@ -46,5 +41,6 @@ export default class Footer extends Component {
 
 const FooterWrapper = styled.footer`
     background: var(--primaryColor);
+    text-align: center;
     height: 40px;
     `;
