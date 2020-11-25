@@ -24,15 +24,19 @@ export default class Footer extends Component {
     render() {
         return (
             <>
-                {/* <div ref={el => (this.instance = el)} />; */}
-
                 <FooterWrapper>
                     <div className="container py-3">
-                        <p style={{
-                            textTransform: 'capitalize',
-                            direction:'ltr'}}>
+                        <a className="footer"
+                            rel="noopener noreferrer" target={"_blank"} 
+                            href='https://portifolti.netlify.app/'
+                            // style={{
+                            //     // textDecoration: 'none',
+                            //     color: 'var(--myblue)',
+                            //     textTransform: 'capitalize',
+                            //     direction:'ltr'}}
+                                >
                             {new Date().getFullYear()} &copy; by nachala vinograd
-                        </p>
+                        </a>
                     </div>
                 </FooterWrapper>
             </>
@@ -42,8 +46,5 @@ export default class Footer extends Component {
 
 const FooterWrapper = styled.footer`
     background: var(--primaryColor);
-    color: var(--myblue);
     height: 40px;
-    padding: 10px;
-    text-align:center;
     `;

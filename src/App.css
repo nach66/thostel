@@ -22,7 +22,17 @@
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-
+.footer {
+  color: var(--myblue);
+  text-decoration: none;
+  text-transform: capitalize;
+  text-align:center;
+  direction: ltr;
+  padding: 10px;
+}
+.footer:hover {
+  text-decoration: underline;
+}
 
 /*popup*/
 @keyframes customEnterAnimation {
