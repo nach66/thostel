@@ -6,10 +6,19 @@ import instagram from '../images/icons/instagram.jpg'
 import ilh from '../images/icons/ilh.png'
 import face from '../images/icons/fa.png'
 
-export default function ContactForm() {
+export default class ContactForm extends React.Component {
+    constructor(props) {
+        super(props);
+        this.submitForm = this.submitForm.bind(this);
+        this.state = {
+            status: ""
+        };
+    }
 
-    return (
-        <>
+    render() {
+        const { status } = this.state;
+        return (
+            <>
             <section className="services">
                 <Title title="צור קשר"/> 
                 <div className="about">
@@ -77,20 +86,20 @@ export default function ContactForm() {
 
                     <article>
                         <h6>אפשר להשאיר הודעה ונחזור אליכם:</h6>
-                        <section className="py-5">
-                            <form className="cform" method="POST"
-                                action="https://formspree.io/tiberiashostel@gmail.com">
-                                        {/* first */}
-                                        <div className="form-group">
+                        <form className="cform" method="POST"
+                            onSubmit={this.submitForm}
+                            action="https://formspree.io/f/xayldodj">
+                            {/* name */}
+                                <div className="form-group">
                                         <input
                                             type="text"
-                                            name="firstName"
+                                            name="Name"
                                             className="form-control"
                                             placeholder="שם"
                                         />
                                         </div>
-                                        {/* email */}
-                                        <div className="form-group">
+                            {/* email */}
+                                <div className="form-group">
                                         <input
                                             type="email"
                                             name="email"
@@ -98,8 +107,8 @@ export default function ContactForm() {
                                             placeholder="אימייל"
                                         />
                                         </div>
-                                        {/* phone */}
-                                        <div className="form-group">
+                            {/* phone */}
+                                <div className="form-group">
                                             <input
                                             type="phone"
                                             name="phone"
@@ -107,8 +116,8 @@ export default function ContactForm() {
                                             placeholder="מספר טלפון"
                                         />
                                         </div>
-                                        {/* message */}
-                                        <div className="form">
+                            {/* message */}
+                                <div className="form">
                                         <textarea
                                             name="message"
                                             className="form-control long"
@@ -116,26 +125,33 @@ export default function ContactForm() {
                                             placeholder="היי שלום, רציתי לדעת..."
                                         />
                                         </div>
-                                        {/* sumbit */}
-                                        <input 
-                                            type="submit"
-                                            value="שלח"
-                                            style={{
-                                                position: 'relative',
-                                                bottom:'25px',
-                                                color: 'var(--myblue)',
-                                                fontWeight: '500',
-                                                background: 'var(--primaryColor)',
-                                                padding: '0.3rem 0.8rem',
-                                                border: '3px solid var(--primaryColor)',
-                                                cursor: 'pointer'
-                                            }}
-                                        />
-                                    </form>
-                        </section>
+                            {/* sumbit */}
+                                {status === "SUCCESS" ? <p>תודה!</p> : <button className="submit" type="submit">שליחה</button>}
+                                {status === "ERROR" && <p>אוי! קרתה תקלה, אנא נסו שוב.</p>}
+                        </form>
                     </article>
                 </div>
             </section>
         </>
-    );
+        );
+    }
+
+    submitForm(ev) {
+        ev.preventDefault();
+        const form = ev.target;
+        const data = new FormData(form);
+        const xhr = new XMLHttpRequest();
+        xhr.open(form.method, form.action);
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onreadystatechange = () => {
+            if (xhr.readyState !== XMLHttpRequest.DONE) return;
+            if (xhr.status === 200) {
+            form.reset();
+            this.setState({ status: "SUCCESS" });
+            } else {
+            this.setState({ status: "ERROR" });
+            }
+        };
+        xhr.send(data);
+    }
 }

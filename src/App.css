@@ -536,6 +536,35 @@ div{
 .cform input{
   margin-bottom: 2px;
 }
+.form-group {
+  text-transform: capitalize;
+}
+.form-group label {
+  display: block;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 0.5rem;
+}
+.form-control {
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 5%;
+  border: #ecb80e 1px groove;
+  padding: 3px;
+  margin: 1px;
+}
+.long {
+  border-radius: 1%;
+}
+.submit {
+  bottom:25px;
+  font-weight: 500;
+  position: relative;
+  color: var(--myblue);
+  padding: 0.3rem 0.8rem;
+  background: var(--primaryColor);
+  border: 3px solid var(--primaryColor);
+  cursor: pointer;
+}
 
 /*2 columns, for about & contact*/
 .about { 
@@ -857,43 +886,6 @@ div{
     left: 5px;
   }
 }
-
-.form-group {
-  text-transform: capitalize;
-}
-.form-group label {
-  display: block;
-  letter-spacing: var(--mainSpacing);
-  margin-bottom: 0.5rem;
-}
-.form-control {
-  width: 100%;
-  font-size: 1rem;
-  border-radius: 5%;
-  border: #ecb80e 1px groove;
-  color: var(--primaryColor);
-  padding: 3px;
-  margin: 1px;
-}
-.long {
-  border-radius: 1%;
-}
-.size-inputs {
-  display: flex;
-}
-.size-input {
-  width: 40%;
-  padding: 0.2rem;
-  border: 1px solid var(--mainBlack);
-  border-radius: 0.3rem;
-  margin-right: 0.3rem;
-}
-.single-extra label {
-  display: inline-block;
-  font-size: 0.8rem;
-  margin-left: 0.5rem;
-}
-/* end of rooms fitler*/
 
 @media screen and (min-width: 776px) {
   .filter-form {
