@@ -28,7 +28,7 @@ export default class Footer extends Component {
                     <div className="container py-3">
                         <a className="footer"
                             rel="noopener noreferrer" target={"_blank"} 
-                            href='https://portifolti.netlify.app/'
+                            href='https://portfolyoni.com/'
                         >
                             {new Date().getFullYear()} &copy; by nachala vinograd
                         </a>
