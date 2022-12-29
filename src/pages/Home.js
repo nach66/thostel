@@ -21,7 +21,7 @@ export default class Home extends React.Component {
 
         return (
             <>
-                <Modal open={open} center
+                {/* <Modal open={open} center
                     onClose={this.onCloseModal}
                     classNames={{
                         overlay: 'customOverlay',
@@ -40,7 +40,7 @@ export default class Home extends React.Component {
                     <p>
                         בהתאם להנחיות משרד הבריאות אנו פתוחים במתכונת של השכרת חדרים, ופועלים לפי הנחיות התו הסגול.
                     </p>
-                </Modal>
+                </Modal> */}
 
                 <Images title="אכסניית טבריה" 
                         subtitle="הבית שלך בצפון"/>
