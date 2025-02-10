@@ -20,7 +20,7 @@ export default class ContactForm extends React.Component {
         return (
             <>
             <section className="services">
-                <Title title="צור קשר"/> 
+                <Title title="צור איתנו קשר"/> 
                 <div className="about">
                     <article style={{
                         paddingTop:'4px'
